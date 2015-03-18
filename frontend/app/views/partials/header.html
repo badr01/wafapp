@@ -1,6 +1,8 @@
-<h3 class="masthead-brand">Cover{{$path()}}</h3>
-<ul class="nav masthead-nav" bs-nav>
-  <li ng-class="{active: $path() == '/'}"><a href="#/">Home</a></li>
-  <li ng-class="{active: $path() == '/features'}"><a href="#/features">Features</a></li>
-  <li ng-class="{active: $path() == '/contact'}"><a href="#/contact">Contact</a></li>
+
+<ul class="nav nav-tabs" bs-nav>
+  <li ng-class="{active: $path() == '/'}"><a href="#/">Accueil</a></li>
+  <li ng-class="{active: $path() == '/etat'}"><a href="#/etat">Etat du WAF</a></li>
+  <li ng-class="{active: $path() == '/manage'}"><a href="#/manage">Gestion des sites</a></li>
+  <li ng-class="{active: $path() == '/whitelists'}"><a href="#/whitelists">Gestion des white lists</a></li>
+  <li ng-class="{active: $path() == '/journalisation'}"><a href="#/journalisation">Journalisation</a></li>
 </ul>

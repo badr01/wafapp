@@ -2,975 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe24c54c-97ec-497e-9e89-9792f92af6b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/angular.min.js.gzip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/angular.min.js.gzip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-animate/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-route/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-animate/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-route/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/.csscomb.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/.csscomb.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/.csslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/.csslintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/.jscsrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/.jscsrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/grunt/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/test/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/grunt/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/styles/0a2bea7f.components.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/scripts/67cdc10d.components.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/data/Data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/data/Data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/MIT-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/MIT-LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-animate/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-route/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-animate/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-route/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/effects/Tween.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/effects/Tween.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/WAFApp_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_animated.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_animated.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/manipulation/_evalUrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/manipulation/_evalUrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/data/accepts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/data/accepts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/core/access.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/core/access.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/addGetHookIf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/addGetHookIf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/affix/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/affix/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/affix.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/affix.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/affix.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/affix.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/event/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/event/ajax.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/alert/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/alert/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/alert.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/alert.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/alert.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/alert.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/alert/alert.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/alert/alert.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/alert.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/alert.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/alert.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/alert.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/alerts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/alerts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/alerts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/alerts.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/event/alias.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/event/alias.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/exports/amd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/exports/amd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-animate/angular-animate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-animate/angular-animate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-animate/angular-animate.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-animate/angular-animate.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-animate/angular-animate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-animate/angular-animate.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/dist/angular-bootstrap-switch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/dist/angular-bootstrap-switch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/angular-csp.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/angular-csp.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/angular-motion.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/angular-motion.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/angular-motion.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/angular-motion.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-route/angular-route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-route/angular-route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-route/angular-route.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-route/angular-route.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-route/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-route/angular-route.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/angular-strap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/angular-strap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/angular-strap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/angular-strap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/angular-strap.nuspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/angular-strap.nuspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/angular-strap.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/angular-strap.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/angular-strap.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/angular-strap.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/angular.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/angular.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/animated.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/animated.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/effects/animatedSelector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/effects/animatedSelector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/example/scripts/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/arr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/arr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/aside.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/aside/aside.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/aside.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/aside/aside.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/aside.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/aside.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/aside.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/aside.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/aside/aside.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/aside/aside.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/aside.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/aside.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/aside.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/aside.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/attributes/attr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/attributes/attr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/attributes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/attributes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/scripts/b445c289.app.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/background-variant.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/background-variant.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/badges.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/badges.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/coffee/bootstrap-switch.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/dist/js/bootstrap-switch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/less/bootstrap2/bootstrap-switch.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/less/bootstrap3/bootstrap-switch.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/bootstrap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/bootstrap.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/border-radius.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/border-radius.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-animate/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-route/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-animate/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-route/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/breadcrumbs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/breadcrumbs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/grunt/bs-commonjs-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/grunt/bs-commonjs-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/grunt/bs-glyphicons-data-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/grunt/bs-glyphicons-data-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/grunt/bs-lessdoc-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/grunt/bs-lessdoc-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/grunt/bs-raw-files-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/grunt/bs-raw-files-generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/src/directives/bsSwitch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/test/spec/directives/bsSwitchSpec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/less/bootstrap2/build.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/less/bootstrap3/build.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/button-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/button-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/button/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/button/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/button.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/button.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/button.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/button.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/buttons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/buttons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/buttons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/buttons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/callbacks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/callbacks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/carousel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/carousel.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/center-block.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/center-block.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/class2type.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/class2type.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/attributes/classes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/attributes/classes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/clearfix.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/clearfix.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/close.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/close.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/code.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/code.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/collapse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/collapse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/collapse/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/collapse/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/src/collapse/collapse.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/src/collapse/collapse.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/collapse.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/collapse.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/collapse.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/collapse.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/collapse.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/collapse.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/component-animations.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/component-animations.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/concat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/concat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/grunt/configBridge.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/grunt/configBridge.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/var/cssExpand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/var/cssExpand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/curCSS.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/curCSS.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/data/var/data_priv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/data/var/data_priv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/data/var/data_user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/data/var/data_user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/date-formatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/helpers/date-formatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/date-formatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/helpers/date-formatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/date-formatter.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/date-formatter.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/date-formatter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/date-formatter.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/date-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/helpers/date-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/date-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/helpers/date-parser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/date-parser.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/date-parser.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/date-parser.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/date-parser.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/datepicker/datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/datepicker/datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/datepicker.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/datepicker.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/datepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/datepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/datepicker/datepicker.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/datepicker/datepicker.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/datepicker.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/datepicker.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/datepicker.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/datepicker.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/debounce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/helpers/debounce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/debounce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/helpers/debounce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/debounce.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/debounce.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/debounce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/debounce.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/defaultDisplay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/defaultDisplay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/deferred.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/deferred.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/queue/delay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/queue/delay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/deprecated.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/deprecated.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/helpers/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/helpers/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/dimensions.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/dimensions.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/dimensions.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/dimensions.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/documentation-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/documentation-3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/dropdown/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/dropdown/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/dropdown.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/dropdown.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/dropdown.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/dropdown.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/dropdown/dropdown.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/dropdown/dropdown.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/dropdown.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/dropdown.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/dropdown.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/dropdown.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/dropdowns.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/dropdowns.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/effects.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/effects.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/etat.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/event.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/fade-and-scale.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/fade-and-scale.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/src/fade-and-scale/fade-and-scale.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/src/fade-and-scale/fade-and-scale.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/fade-and-scale.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/fade-and-scale.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/fade-and-slide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/fade-and-slide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/src/fade-and-slide/fade-and-slide.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/src/fade-and-slide/fade-and-slide.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/fade-and-slide.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/fade-and-slide.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/fade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/fade.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/src/fade/fade.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/src/fade/fade.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/fade.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/fade.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/traversing/findFilter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/traversing/findFilter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/flip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/flip.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/src/flip/flip.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/src/flip/flip.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/flip.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/flip.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/css/font-awesome.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/css/font-awesome.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/views/partials/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/partials/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/forms.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/var/getStyles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/var/getStyles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/exports/global.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/exports/global.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/glyphicons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/glyphicons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/gradients.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/gradients.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/grid-framework.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/grid-framework.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/grid.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/grid.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/grid.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/grid.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/gulpfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/hasOwn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/hasOwn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/views/partials/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/partials/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/hiddenVisibleSelectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/hiddenVisibleSelectors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/hide-text.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/hide-text.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/views/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/image.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/image.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/example/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-animate/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-route/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-animate/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-route/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/indexOf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/indexOf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/core/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/core/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/input-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/input-groups.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/intro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/intro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/var/isHidden.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/var/isHidden.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/journalisation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/dist/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/dist/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/dist/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/dist/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/dist/jquery.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/dist/jquery.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax/jsonp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax/jsonp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/jumbotron.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/jumbotron.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/labels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/labels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/labels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/labels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/list-group.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/list-group.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/list-group.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/list-group.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax/load.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax/load.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/example/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/example/scripts/controllers/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/manage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/manipulation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/manipulation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/media.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/media.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/less/bootstrap2/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/less/bootstrap3/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/modal/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/modal/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/modal.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/modal.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/modal.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/modal.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/modal/modal.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/modal/modal.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/modal.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/modal.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/modal.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/modal.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/modals.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/modals.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/common/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/nav-divider.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/nav-divider.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/nav-vertical-align.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/nav-vertical-align.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/navbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/navbar/navbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/navbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/navbar/navbar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/navbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/navbar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/navbar.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/navbar.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/navbar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/navbar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/navs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/navs.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax/var/nonce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax/var/nonce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/normalize.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/normalize.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/dist/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/dist/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/offset.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/offset.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/opacity.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/opacity.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/outro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/outro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-animate/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-route/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-animate/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-route/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/page.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/pager.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/pager.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/pagination.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/panels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/panels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/panels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/panels.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/parse-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/helpers/parse-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/parse-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/helpers/parse-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/parse-options.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/parse-options.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/parse-options.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/parse-options.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/core/parseHTML.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/core/parseHTML.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax/parseJSON.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax/parseJSON.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax/parseXML.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax/parseXML.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/pnum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/pnum.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/popover/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/popover/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/popover.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/popover.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/popover.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/popover.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/popover/popover.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/popover/popover.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/popover.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/popover.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/popover.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/popover.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/popovers.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/popovers.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/print.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/print.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/progress-bar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/progress-bar.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/progress-bars.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/progress-bars.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/attributes/prop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/attributes/prop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/push.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/push.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/queue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/queue.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/raf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/helpers/raf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/raf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/helpers/raf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/raf.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/raf.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/raf.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/raf.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/manipulation/var/rcheckableType.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/manipulation/var/rcheckableType.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/core/ready.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/core/ready.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/reset-filter.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/reset-filter.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/resize.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/resize.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/responsive-embed.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/responsive-embed.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/responsive-utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/responsive-utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/responsive-visibility.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/responsive-visibility.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/var/rmargin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/var/rmargin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/traversing/var/rneedsContext.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/traversing/var/rneedsContext.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/rnotwhite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/rnotwhite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/var/rnumnonpx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/var/rnumnonpx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax/var/rquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax/var/rquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/core/var/rsingleTag.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/core/var/rsingleTag.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-bootstrap-switch/test/runner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/grunt/sauce_browsers.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/grunt/sauce_browsers.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/scaffolding.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/scaffolding.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/scrollspy/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/scrollspy/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/scrollspy.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/scrollspy.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/scrollspy.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/scrollspy.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/select/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/select/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/select.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/select.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/select.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/select.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/select/select.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/select/select.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/select.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/select.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/select.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/select.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/selector-native.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/selector-native.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/selector-sizzle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/selector-sizzle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/selector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/selector.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/serialize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/serialize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/size.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/size.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/sizzle/dist/sizzle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/sizzle/dist/sizzle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/sizzle/dist/sizzle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/sizzle/dist/sizzle.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/sizzle/dist/sizzle.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/sizzle/dist/sizzle.min.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/slice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/slice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/slide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/slide.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/src/slide/slide.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/src/slide/slide.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-motion/dist/modules/slide.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-motion/dist/modules/slide.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/strundefined.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/strundefined.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/attributes/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/event/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/manipulation/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/attributes/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/event/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/manipulation/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/css/swap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/css/swap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/tab-focus.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/tab-focus.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/tab/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/tab/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tab.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tab.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tab.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tab.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/tab/tab.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/tab/tab.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tab.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tab.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tab.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tab.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/table-row.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/table-row.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/tables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/tables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/text-emphasis.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/text-emphasis.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/text-overflow.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/text-overflow.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/theme.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/theme.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/thumbnails.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/thumbnails.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/timepicker/timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/timepicker/timepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/timepicker.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/timepicker.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/timepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/timepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/timepicker/timepicker.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/timepicker/timepicker.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/timepicker.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/timepicker.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/timepicker.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/timepicker.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/var/toString.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/var/toString.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/tooltip/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/tooltip/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/tooltip.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/tooltip.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tooltip.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tooltip.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tooltip.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tooltip.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/tooltip/tooltip.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/tooltip/tooltip.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tooltip.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tooltip.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/tooltip.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/tooltip.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/js/transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/js/transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/traversing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/traversing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/type.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/type.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/typeahead/typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/typeahead/typeahead.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/typeahead.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/typeahead.min.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/typeahead.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/typeahead.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/src/typeahead/typeahead.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/src/typeahead/typeahead.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/typeahead.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/typeahead.tpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/angular-strap/dist/modules/typeahead.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/angular-strap/dist/modules/typeahead.tpl.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/utilities.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/attributes/val.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/attributes/val.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/font-awesome/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/less/bootstrap2/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap-switch/src/less/bootstrap3/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/font-awesome/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/mixins/vendor-prefixes.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/mixins/vendor-prefixes.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/bootstrap/less/wells.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/bootstrap/less/wells.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/whitelists.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/wrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/wrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/WAFApp_war_exploded/bower_components/jquery/src/ajax/xhr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bower_components/jquery/src/ajax/xhr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/styles/0a2bea7f.components.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/scripts/67cdc10d.components.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/.tmp/concat/scripts/app.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/scripts/b445c289.app.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/.tmp/concat/scripts/components.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/views/etat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/views/etat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/views/partials/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/views/partials/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/views/home.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/views/journalisation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/views/journalisation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/.tmp/styles/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/views/manage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/views/manage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/views/whitelists.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/dist/views/whitelists.html" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/app/views/contact.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/app/views/features.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/.bowerrc" afterPath="$PROJECT_DIR$/frontend/.bowerrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/Gruntfile.js" afterPath="$PROJECT_DIR$/frontend/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/README.md" afterPath="$PROJECT_DIR$/frontend/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WAFApp.iml" afterPath="$PROJECT_DIR$/WAFApp.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/app.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/bower.json" afterPath="$PROJECT_DIR$/frontend/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/partials/footer.html" afterPath="$PROJECT_DIR$/frontend/app/views/partials/footer.html" />
@@ -983,6 +38,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/directives/sample.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/directives/sample.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/filters/sample.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/filters/sample.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/services/sample.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/services/sample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WAFApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -996,11 +52,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -1011,7 +78,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+            <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180">
               <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
@@ -1021,8 +88,8 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3607843" vertical-offset="3358" max-vertical-offset="7506">
-              <caret line="148" column="10" selection-start-line="148" selection-start-column="10" selection-end-line="148" selection-end-column="10" />
+            <state vertical-scroll-proportion="-5.268022" vertical-offset="6846" max-vertical-offset="7506">
+              <caret line="222" column="6" selection-start-line="222" selection-start-column="6" selection-end-line="222" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -1062,6 +129,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="24" />
@@ -1093,7 +163,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1144,9 +214,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WAFApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WAFApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WAFApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WAFApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WAFApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WAFApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1159,7 +291,7 @@
     <property name="recentsLimit" value="5" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="editorconfig.notification" value="Applied .editorconfig settings" />
@@ -1456,7 +588,8 @@
       <option name="number" value="Default" />
       <updated>1426675914968</updated>
       <workItem from="1426675922306" duration="2771000" />
-      <workItem from="1426679136329" duration="665000" />
+      <workItem from="1426679136329" duration="1091000" />
+      <workItem from="1426680338077" duration="1532000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1426676170024</created>
@@ -1474,7 +607,27 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3436000" />
+    <option name="totallyTimeSpent" value="5394000" />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1282" height="977" extended-state="6" />
@@ -1485,30 +638,30 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32042253" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.50087565" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24900557" sideWeight="0.50087565" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.49912435" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.49912435" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33802816" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1529,7 +682,8 @@
     </option>
     <MESSAGE value="initial commit" />
     <MESSAGE value="added  yeoman angular- bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="added  yeoman angular- bootstrap" />
+    <MESSAGE value="layed the project foundation&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="layed the project foundation&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1540,6 +694,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7506">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="372" max-vertical-offset="900">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
@@ -1572,10 +750,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/app/styles/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="542">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3607843" vertical-offset="3358" max-vertical-offset="7506">
-          <caret line="148" column="10" selection-start-line="148" selection-start-column="10" selection-end-line="148" selection-end-column="10" />
+        <state vertical-scroll-proportion="-5.268022" vertical-offset="6846" max-vertical-offset="7506">
+          <caret line="222" column="6" selection-start-line="222" selection-start-column="6" selection-end-line="222" selection-end-column="6" />
           <folding />
         </state>
       </provider>

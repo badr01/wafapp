@@ -1,4 +1,4 @@
-// Generated on 2015-03-18 using generator-angular-bootstrap 0.4.3
+// Generated on 2015-03-16 using generator-angular-bootstrap 0.4.3
 'use strict';
 
 // # Globbing
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     yo: {
       // Configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
+      dist: '../web'
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -126,7 +126,9 @@ module.exports = function(grunt) {
           src: [
             '.tmp',
             '<%= yo.dist %>/*',
-            '!<%= yo.dist %>/.git*'
+            '!<%= yo.dist %>/.git*',
+            '!<%= yo.dist %>/index.jsp',
+            '!<%= yo.dist %>/WEB-INF/**'
           ]
         }]
       },
@@ -343,7 +345,7 @@ module.exports = function(grunt) {
     // Test settings
     karma: {
       options: {
-        configFile: 'test/karma.conf.js',
+        configFile: 'test/karma.conf.js'
       },
       unit: {
         singleRun: true

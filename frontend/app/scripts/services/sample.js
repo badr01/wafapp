@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('mgcrea.Webwaf')
+angular.module('mgcrea.WafApp');

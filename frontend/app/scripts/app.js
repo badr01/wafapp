@@ -1,10 +1,14 @@
 'use strict';
 
-angular.module('mgcrea.Webwaf', ['ngAnimate', 'ngRoute', 'mgcrea.ngStrap'])
+angular.module('mgcrea.WafApp', ['ngAnimate', 'ngRoute', 'frapontillo.bootstrap-switch','mgcrea.ngStrap'])
 
   .constant('version', 'v0.1.0')
 
-  .config(function($locationProvider, $routeProvider) {
+  .config(function($locationProvider, $routeProvider,$httpProvider) {
+
+      //Enable cross domain calls
+      $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
     $locationProvider.html5Mode(false);
 
@@ -12,11 +16,17 @@ angular.module('mgcrea.Webwaf', ['ngAnimate', 'ngRoute', 'mgcrea.ngStrap'])
       .when('/', {
         templateUrl: 'views/home.html'
       })
-      .when('/features', {
-        templateUrl: 'views/features.html'
+      .when('/etat', {
+        templateUrl: '../views/etat.html'
       })
-      .when('/contact', {
-        templateUrl: 'views/contact.html'
+      .when('/manage', {
+        templateUrl: '../views/manage.html'
+      })
+      .when('/whitelists', {
+        templateUrl: '../views/whitelists.html'
+      })
+      .when('/journalisation', {
+        templateUrl: '../views/journalisation.html'
       })
       .otherwise({
         redirectTo: '/'

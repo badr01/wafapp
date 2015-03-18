@@ -1,4 +1,4 @@
-# Webwaf
+# WafApp
 
 Yet another amazing AngularJS app
 

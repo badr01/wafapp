@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mgcrea.Webwaf')
+angular.module('mgcrea.WafApp')
 
   .filter('time', function() {
     return function(obj) {
