@@ -1,1 +1,60 @@
-<h1 class="cover-heading ng-scope">Journalisation</h1>
+<h1 class="cover-heading ng-scope" >Journalisation</h1>
+<div class="panel panel-default" ng-controller="paginationCtrl" >
+  <div class=" panel-body ">
+    <div class="row" ng-controller="DatepickerDemoCtrl">
+      <div class="col-md-6">
+        <p>logs from : </p>
+        <p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtFrom" is-open="opened1"  datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event,'opened1')"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p>to : </p>
+        <p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtTo" is-open="opened2"  datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event,'opened2')"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+      </div>
+    </div>
+    <table st-table="rowCollection" class="table table-striped">
+      <thead>
+      <tr>
+        <th class="sortable" st-sort="ip">IP Source</th>
+        <th class="sortable" st-sort="timestamp">Date et Heure</th>
+        <th class="sortable" st-sort="uri">URI</th>
+        <th class="sortable" st-sort="httpCode">Code HTTP</th>
+        <th class="sortable" st-sort="url">URL</th>
+      </tr>
+      <tr>
+        <th><input st-search="ip"/></th>
+        <th><input st-search="timestamp"/></th>
+        <th><input st-search="uri"/></th>
+        <th><input st-search="httpCode"/></th>
+        <th><input st-search="url"/></th>
+      </tr>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="row in rowCollection">
+        <td>{{row.ip }}</td>
+        <td>{{row.timestamp | date}}</td>
+        <td>{{row.uri }}</td>
+        <td>{{row.httpCode}}</td>
+        <td>{{row.url}}</td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+</div>
+</div>

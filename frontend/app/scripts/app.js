@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mgcrea.WafApp', ['ngAnimate', 'ngRoute', 'frapontillo.bootstrap-switch','mgcrea.ngStrap'])
+angular.module('mgcrea.WafApp', ['ui.bootstrap','smart-table','ngAnimate', 'ngRoute', 'frapontillo.bootstrap-switch','mgcrea.ngStrap'])
 
   .constant('version', 'v0.1.0')
 

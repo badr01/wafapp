@@ -1,0 +1,24 @@
+/* line 1, /home/laassiri/IdeaProjects/WAFApp/frontend/app/styles/main.less */
+th.head .nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer;
+}
+/* line 2, /home/laassiri/IdeaProjects/WAFApp/frontend/app/styles/main.less */
+.sortable {
+  cursor: pointer;
+}
+/* line 5, /home/laassiri/IdeaProjects/WAFApp/frontend/app/styles/main.less */
+.sortable:after {
+  content: url(data:image/gif;base64,R0lGODlhCwALAJEAAAAAAP///xUVFf///yH5BAEAAAMALAAAAAALAAsAAAIUnC2nKLnT4or00PvyrQwrPzUZshQAOw==);
+  padding-left: 1em;
+}
+/* line 9, /home/laassiri/IdeaProjects/WAFApp/frontend/app/styles/main.less */
+.st-sort-ascent:after {
+  content: '\25B2';
+}
+/* line 12, /home/laassiri/IdeaProjects/WAFApp/frontend/app/styles/main.less */
+.st-sort-descent:after {
+  content: '\25BC';
+}

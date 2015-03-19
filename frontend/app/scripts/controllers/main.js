@@ -9,7 +9,7 @@ var myApp = angular.module('mgcrea.WafApp');
     $scope.version = version;
 
   })
-myApp.controller('EtatCtrl', function ($scope,$http,$log) {
+myApp.controller('EtatCtrl', function ($scope,$http,$log,alertService) {
   $scope.isSelected = 'Allume';
   $scope.onText = 'ON';
 
@@ -33,11 +33,10 @@ myApp.controller('EtatCtrl', function ($scope,$http,$log) {
 
 
     res.error(function(data, status, headers, config) {
-      alert( "failure message: " + JSON.stringify({data: data}));
+      //alert( "failure message: " + JSON.stringify({data: data}));
+      alertService.addAlert('warning','Can\'t get data from server');
     });
-    res.error(function(data, status, headers, config) {
-      alert( "failure message: " + JSON.stringify({data: data}));
-    });
+
     });
   });
 myApp.directive('bootstrapSwitch', [
@@ -67,3 +66,26 @@ myApp.directive('bootstrapSwitch', [
     };
   }
 ]);
+myApp.service('alertService', function () {
+  var data = [];
+
+  this.alerts = function () {
+    return data;
+  };
+  this.addAlert = function (type,msg) {
+
+    data.push({
+      type:type, msg:msg
+    });
+  };
+  this.deleteAlert = function (index) {
+   data.splice(index, 1);
+  };
+});
+myApp.controller('alertCtrl',function ($scope,alertService) {
+  $scope.alerts =alertService.alerts();
+
+  $scope.closeAlert = function(index) {
+    alertService.deleteAlert(index);
+  };
+});
