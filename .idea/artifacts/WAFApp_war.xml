@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WAFApp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="WafWebApplication.war">
+      <element id="artifact" artifact-name="WAFApp:war exploded" />
+    </root>
+  </artifact>
+</component>
