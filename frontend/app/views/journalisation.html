@@ -1,75 +1,79 @@
 <h1 class="cover-heading ng-scope" >Journalisation</h1>
-<div class="panel panel-default" ng-controller="paginationCtrl" >
-  <div class=" panel-body ">
-    <div class="row" ng-controller="DatepickerDemoCtrl">
-      <div class="col-md-6">
-        <p>logs from : </p>
+<div  ng-controller="paginationCtrl" >
+  <div >
+    <div class="row" ng-controller="DatepickerCtrl">
+      <div class="col-md-3">
+
         <p class="input-group">
-          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtFrom" is-open="opened1"  datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtFrom" is-open="opened1" placeholder="Logs from date"  datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event,'opened1')"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
         </p>
       </div>
-      <div class="col-md-6">
-        <p>to : </p>
+      <div class="col-md-3">
+
         <p class="input-group">
-          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtTo" is-open="opened2"  datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtTo" is-open="opened2" placeholder="Logs to date" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event,'opened2')"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
         </p>
       </div>
+      <div class="col-md-2">
+        <a class="btn btn-primary btn-sm" href="#" role="button">Get logs</a>
+        </p>
+      </div>
     </div>
-    <table st-table="rowCollection" class="table table-striped">
+    <table style=" border:2px solid #ddd;" st-table="displayCollection" st-safe-src="rowCollection" class="table table-striped">
       <thead>
       <tr>
-        <th class="sortable" st-sort="time">Date et Heure</th>
+        <th class="sortable" st-sort="time">Request_time</th>
         <th class="sortable" st-sort="host">Host</th>
-        <th class="sortable" st-sort="client-ip">User IP</th>
+        <th class="sortable" st-sort="client-ip">User_IP</th>
         <th class="sortable" st-sort="client">User</th>
-        <th class="sortable" st-sort="path">URI Path</th>
+        <th class="sortable" st-sort="path">URI_Path</th>
         <th class="sortable" st-sort="method">Method</th>
-        <th class="sortable" st-sort="code">HTTP Status</th>
+        <th class="sortable" st-sort="code">HTTP_Status</th>
         <th class="sortable" st-sort="referer">Referer</th>
         <th class="sortable" st-sort="size">Bytes</th>
         <th class="sortable" st-sort="x_forwarded_for">X_Forwarded_For</th>
-        <th colspan="3" class="sortable" st-sort="user_agent">User Agent</th>
+        <th class="sortable" st-sort="user_agent">User_Agent</th>
       </tr>
       <tr>
-        <th><input st-search="time"/></th>
-        <th><input st-search="host"/></th>
-        <th><input st-search="client_ip"/></th>
-        <th><input st-search="client"/></th>
-        <th><input st-search="path"/></th>
-        <th><input st-search="method"/></th>
-        <th><input st-search="code"/></th>
-        <th><input st-search="referer"/></th>
-        <th><input st-search="size"/></th>
-        <th><input st-search="x_forwarded_for"/></th>
-        <th><input st-search="user_agent"/></th>
+        <th><input  class="form-control" placeholder="Search..." st-search="time.$date | date : 'dd.MM.yyyy HH:mm:ss'"/></th>
+        <th><input  class="form-control"  st-search="host"/></th>
+        <th><input  class="form-control"  st-search="client_ip"/></th>
+        <th><input  class="form-control"  st-search="client"/></th>
+        <th><input  class="form-control"  st-search="path"/></th>
+        <th><input  class="form-control"  st-search="method"/></th>
+        <th><input  class="form-control"  st-search="code"/></th>
+        <th><input  class="form-control"  st-search="referer"/></th>
+        <th><input  class="form-control"  st-search="size"/></th>
+        <th><input  class="form-control"  st-search="x_forwarded_for"/></th>
+        <th><input  class="form-control"  st-search="user_agent"/></th>
       </tr>
       </tr>
       </thead>
       <tbody>
-      <tr ng-repeat="row in rowCollection">
-        <td>{{row.time.$date | date}}</td>
-        <td>{{row.host }}</td>
-        <td>{{row.client_ip }}</td>
-        <td>{{row.client}}</td>
-        <td>{{row.path}}</td>
-        <td>{{row.method}}</td>
-        <td>{{row.code }}</td>
-        <td>{{row.referer }}</td>
-        <td>{{row.size}}</td>
-        <td>{{row.x_forwarded_for}}</td>
-        <td>{{row.user_agent}}</td>
+      <tr ng-repeat="row in displayCollection">
+        <td class="tdflow">{{row.time.$date | date : 'dd.MM.yyyy HH:mm:ss'}}</td>
+        <td class="tdflow">{{row.host }}</td>
+        <td class="tdflow">{{row.client_ip }}</td>
+        <td class="tdflow">{{row.client}}</td>
+        <td class="tdflow">{{row.path}}</td>
+        <td class="tdflow">{{row.method}}</td>
+        <td class="tdflow">{{row.code }}</td>
+        <td class="tdflow">{{row.referer }}</td>
+        <td class="tdflow">{{row.size}}</td>
+        <td class="tdflow">{{row.x_forwarded_for}}</td>
+        <td class="tdflow">{{row.user_agent}}</td>
       </tr>
       </tbody>
       <tfoot>
       <tr>
         <td colspan="11" class="text-center">
-          <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+          <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="10"></div>
         </td>
       </tr>
       </tfoot>

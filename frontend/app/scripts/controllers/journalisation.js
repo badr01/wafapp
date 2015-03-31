@@ -14,16 +14,15 @@ myApp.controller('paginationCtrl',['$scope','Access', function (scope,Access) {
     window.aa=angular.fromJson(data);
 
   });
-
+scope.displayCollection=[].concat(scope.rowCollection);
   scope.itemsByPage=15;
-
 
 
 }]);
 
 /*date picker controller logic*/
 
-myApp.controller('DatepickerDemoCtrl', function ($scope) {
+myApp.controller('DatepickerCtrl', function ($scope) {
   $scope.today = function(dt) {
     $scope[dt] = new Date();
   };
@@ -48,5 +47,5 @@ myApp.controller('DatepickerDemoCtrl', function ($scope) {
   };
 
 
-  $scope.format ='dd.MM.yyyy';
+  $scope.format ='dd.MM.yyyy HH:mm:ss';
 });
