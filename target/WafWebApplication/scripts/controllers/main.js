@@ -24,7 +24,7 @@ myApp.controller('EtatCtrl', function ($scope,$http,$log,alertService) {
 
   $scope.$watch('isSelected', function() {
     $log.info("selected");
-    var res = $http({method: 'POST', url: "http://localhost:8080/status",data:"{\"nginx\":\"kada\",\"haproxy\":\"kada\"}"})
+    var res = $http({method: 'GET', url: "http://localhost:8080/rest/status"})
     res.success(function(data) {
       //alert( "failure message: " + JSON.stringify({data: data}));
       alertService.addAlert('success',data);

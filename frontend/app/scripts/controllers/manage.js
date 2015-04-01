@@ -1,19 +1,25 @@
 'use strict';
-angular.module('mgcrea.WafApp');
+var myApp =angular.module('mgcrea.WafApp');
 
+myApp.factory("Site",function($resource){
 
-myApp.controller('ListCtrl', function($scope, $modal,$log) {
+  return $resource("/rest/site/:domain");
+});
 
-    $scope.sites=[{"https":true,"ip":"0.0.0.0","mode":true,"wlList":null,"msgError":"error nigga","nomDomaine":"fdzeefe","port":8945},{"https":true,"ip":"0.0.0.0","mode":false,"wlList":null,"msgError":"error ","nomDomaine":"kali.com","port":8945},{"https":true,"ip":"0.0.0.0","mode":false,"wlList":null,"msgError":"error ","nomDomaine":"reddit.com","port":8945},{"https":true,"ip":"0.0.0.0","mode":false,"wlList":["sfdfdfsdf","sdfsfdfsf","sdfsdfds","sdfsdfsdf","sfsdfsdffsd"],"msgError":"error","nomDomaine":"ilem.com","port":8945}];
+myApp.controller('ListCtrl', function($scope, $modal,$log,Site) {
+
+  Site.query(function(data){
+  $scope.sites=data;
+    });
     // Modal: called by edit(site) and Add new user
-    $scope.open = function() {
+    $scope.open = function(domain) {
       $log.info("running");
       var modalInstance = $modal.open({
         templateUrl: 'add_site_modal',
         controller: 'ModalCtrl',
         resolve: {
-          items: function () {
-            return $scope.sites;
+          domain: function () {
+            return domain;
           }
         }
       });
@@ -22,10 +28,13 @@ myApp.controller('ListCtrl', function($scope, $modal,$log) {
 
 });
 
-myApp.controller('ModalCtrl', function($scope, $modalInstance, items) {
+myApp.controller('ModalCtrl', function($scope, $modalInstance, domain,Site) {
 
-$scope.items=items;
-$scope.isSelected=false;
+  Site.get({domain:domain},function(data){
+    $scope.site=data;
+  });
+
+  //$scope.isSelected=false;
   $scope.cancel = function() {
     $modalInstance.dismiss('cancel');
   };
