@@ -1,0 +1,92 @@
+# this config needs haproxy-1.1.28 or haproxy-1.2.1
+
+global
+#       stats socket ./haproxy.stats level admin
+log 127.0.0.1   local0 debug
+log 127.0.0.1   local1 debug
+#log loghost    local0 info
+maxconn 4096
+#chroot /usr/share/haproxy
+user haproxy
+group haproxy
+#daemon
+#debug
+#quiet
+
+defaults
+log     global
+mode    http
+option  httplog
+#       option  dontlognull
+retries 3
+option redispatch
+timeout http-request 50s
+maxconn 2000
+timeout connect    50000
+timeout client     50000
+timeout server     100000
+
+#frontend www-https
+#        bind *:443 #ssl crt /etc/nginx/certificate/cert_key.pem
+#	option tcplog
+#	mode tcp
+#	default_backend direct
+#       acl support hdr_beg(host) -i nagios
+#       option forwardfor
+
+# DDOS protection
+# Use General Purpose Couter (gpc) 0 in SC1 as a global abuse counter
+# Monitors the number of request sent by an IP over a period of 10 seconds http_req_rate : taux de req http recues pendant (10s)
+##          stick-table type ip size 1m expire 3m store gpc0,http_req_rate(10s),http_err_rate(10s)
+# Compte le nombre de connection
+##          tcp-request connection track-sc2 src
+# Pas compris
+##          tcp-request content reject if { sc2_get_gpc0 gt 0 }
+# Abuser means more than 100reqs/1s
+##          acl abuse2 sc2_http_req_rate ge 5
+# acl flag_abuser sc1_inc_gpc0
+##        tcp-request content reject if abuse2
+
+#backend direct
+#        mode tcp
+#	option ssl-hello-chk
+#	server localhost 0.0.0.0:4433 check
+#        timeout server  20000
+
+frontend main *:80
+#       acl support hdr_beg(host) -i nagios
+#       option forwardfor
+# DDOS protection
+# Use General Purpose Couter (gpc) 0 in SC1 as a global abuse counter
+# Monitors the number of request sent by an IP over a period of 10 seconds http_req_rate : taux de req http recues pendant (10s)
+stick-table type ip size 1m expire 3m store gpc0,http_req_rate(10s),http_err_rate(10s)
+# Compte le nombre de connection
+tcp-request connection track-sc1 src
+# Pas compris
+tcp-request content reject if { sc1_get_gpc0 gt 0 }
+# Abuser means more than 100reqs/1s
+acl abuse sc1_http_req_rate ge $rate
+acl flag_abuser sc1_inc_gpc0
+
+tcp-request content reject if abuse flag_abuser
+
+#---------------------------Frontend-----------------------------
+
+#foreach($site in $sites)
+acl host_www_${site.nomDomaine} hdr(host) -i www.${site.nomDomaine}
+acl host_${site.nomDomaine} hdr(host) -i ${site.nomDomaine}
+acl host_${site.nomDomaine}_ip dst ${site.nomDomaine}
+use_backend ${site.nomDomaine} if host_www_${site.nomDomaine} or host_${site.nomDomaine}  or host_${site.nomDomaine}_ip
+
+#end
+#---------------------------Backend-----------------------------
+
+#foreach($site in $sites)
+backend ${site.nomDomaine}
+option forwardfor header X-Real-IP
+server ${site.nomDomaine} 127.0.0.1:8081 cookie
+timeout server  100000
+option  httpchk
+
+#end
+

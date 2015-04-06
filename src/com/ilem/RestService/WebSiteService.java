@@ -6,7 +6,6 @@ import javax.ws.rs.core.Response;
 
 import com.ilem.DBAccess.MongoConnection;
 import com.ilem.Models.Site;
-import com.ilem.Models.SiteList;
 
 import java.util.Collection;
 

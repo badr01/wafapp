@@ -8,3 +8,6 @@
 .modal-backdrop {
   bottom:0;
 }
+textarea {
+  resize: vertical;
+}

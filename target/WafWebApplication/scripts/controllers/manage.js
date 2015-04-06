@@ -1,44 +1,94 @@
 'use strict';
-angular.module('mgcrea.WafApp');
+var myApp =angular.module('mgcrea.WafApp');
 
+myApp.factory("Site",function($resource){
 
-myApp.controller('ListCtrl', function($scope, $modal,$log) {
+  return $resource("/rest/site/:domain");
+});
 
-    $scope.sites=[{"https":true,"ip":"0.0.0.0","mode":true,"wlList":null,"msgError":"error nigga","nomDomaine":"fdzeefe","port":8945},{"https":true,"ip":"0.0.0.0","mode":false,"wlList":null,"msgError":"error ","nomDomaine":"kali.com","port":8945},{"https":true,"ip":"0.0.0.0","mode":false,"wlList":null,"msgError":"error ","nomDomaine":"reddit.com","port":8945},{"https":true,"ip":"0.0.0.0","mode":false,"wlList":["sfdfdfsdf","sdfsfdfsf","sdfsdfds","sdfsdfsdf","sfsdfsdffsd"],"msgError":"error","nomDomaine":"ilem.com","port":8945}];
-    // Modal: called by edit(site) and Add new user
-    $scope.open = function() {
-      $log.info("running");
+myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
+  $scope.update=function(){
+    Site.query(function(data){
+      $scope.sites=data;
+    });
+  };
+  $scope.update();
+
+  $scope.removeRecord=function(nomDomaine){
+   $scope.openDialog(nomDomaine);
+
+  };
+    // Modal: called by removeRecord
+  $scope.openDialog = function(domain) {
+
+    var modalInstance = $modal.open({
+      templateUrl: 'myModalDialog',
+      controller: 'ModalDialogCtrl'
+
+    });
+    modalInstance.result.then(function(){
+      Site.delete({domain:domain});
+      $timeout(function(){
+        $scope.update();
+      },200);
+    });
+  };
+    // Modal: called by edit(site) and Add new site
+    $scope.open = function(domain) {
+
       var modalInstance = $modal.open({
         templateUrl: 'add_site_modal',
         controller: 'ModalCtrl',
         resolve: {
-          items: function () {
-            return $scope.sites;
+          domain: function () {
+            return domain;
+          },
+          modif: function () {
+            return true;
           }
         }
+      });
+      modalInstance.result.then(function(){
+        $timeout(function(){
+          $scope.update();
+        },1000);
       });
     };
 
 
 });
-
-myApp.controller('ModalCtrl', function($scope, $modalInstance, items) {
-
-$scope.items=items;
-$scope.isSelected=false;
+myApp.controller('ModalDialogCtrl', function($scope, $modalInstance, Site) {
+  $scope.cancel = function() {
+    $modalInstance.dismiss('cancel');
+  };
+  $scope.ok = function() {
+    $modalInstance.close();
+  };
+});
+myApp.controller('ModalCtrl', function($scope, $modalInstance, domain,Site,modif) {
+  if(typeof domain !== 'undefined') {
+    Site.get({domain: domain}, function (data) {
+      $scope.site = data;
+    });
+    $scope.modif = modif;
+  }else{
+    $scope.modif =false;
+  }
+  //cancel and quit the modal dialog;
   $scope.cancel = function() {
     $modalInstance.dismiss('cancel');
   };
 
-  // Add new user
+  // Add new site
   $scope.add = function() {
+    Site.save($scope.site);
+    $modalInstance.close();
+     };
 
-    $modalInstance.dismiss('cancel');
-  };
-
-  // Save edited user.
+  // Save edited site.
   $scope.save = function() {
-    $modalInstance.dismiss('cancel');
+    Site.save($scope.site);
+    $modalInstance.close();
 
   };
 });

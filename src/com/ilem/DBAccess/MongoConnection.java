@@ -57,7 +57,7 @@ public class MongoConnection {
         return sites.findOne("{nomDomaine: '"+site+"'}").as(Site.class);
     }
     public String saveSite(Site site){
-        return sites.insert(site).toString();
+        return sites.save(site).toString();
     }
     public String removeSite(String site){
        return sites.remove("{nomDomaine: '"+site+"'}").toString();

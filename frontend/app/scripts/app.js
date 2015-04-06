@@ -28,6 +28,12 @@ angular.module('mgcrea.WafApp', ['ngResource','ui.bootstrap','smart-table', 'ngR
       .when('/journalisation', {
         templateUrl: '../views/journalisation.html'
       })
+      .when('/journalisationb', {
+        templateUrl: '../views/journalisationb.html'
+      })
+      .when('/update', {
+        templateUrl: '../views/update.html'
+      })
       .otherwise({
         redirectTo: '/'
       });

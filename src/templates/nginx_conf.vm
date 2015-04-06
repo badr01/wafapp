@@ -1,0 +1,58 @@
+user  nginx;
+worker_processes  1;
+
+# set open fd limit to 30000
+worker_rlimit_nofile 30000;
+
+pid        /var/run/nginx.pid;
+
+
+events {
+worker_connections  30000;
+}
+
+
+http {
+log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+'$status $body_bytes_sent "$http_referer" '
+'"$http_user_agent" "$http_x_forwarded_for" $host';
+
+#foreach ( $site in $sites)
+
+include	/etc/nginx/sites-enabled/${site.nomDomaine}.conf;
+
+#end
+
+include /etc/nginx/naxsi/naxsi_config/naxsi_core.rules;
+include       /etc/nginx/mime.types;
+default_type  application/octet-stream;
+
+
+
+
+
+access_log  /var/log/nginx/access.log main;
+error_log  /var/log/nginx/error.log;
+
+
+sendfile       on;
+tcp_nopush     on;
+tcp_nodelay    on;
+keepalive_timeout  1;
+send_timeout 1;
+
+set_real_ip_from 127.0.0.1/32;
+real_ip_header X-Real-IP;
+
+#limit_conn_zone \$binary_remote_addr zone=addr:1m;
+
+#limit_req_zone \$binary_remote_addr zone=blitz:10m rate=2r/s;
+
+gzip  on;
+gzip_disable "msie6";
+include /etc/nginx/conf.d/*.conf;
+limit_rate_after 1m;
+limit_rate 10k;
+
+
+}

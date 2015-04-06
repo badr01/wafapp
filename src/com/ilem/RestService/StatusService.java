@@ -1,5 +1,7 @@
 package com.ilem.RestService;
 
+import com.ilem.FileHandlilng.FileHandle;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -13,6 +15,9 @@ public class StatusService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Status produceJSON(){
+        FileHandle.updateNginx();
+        FileHandle.updateHaproxy();
+        FileHandle.updateEnabledSites();
         return new Status();
     }
 

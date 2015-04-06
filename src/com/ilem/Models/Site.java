@@ -1,11 +1,18 @@
 package com.ilem.Models;
 
 
+
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.jongo.marshall.jackson.oid.Id;
+import org.jongo.marshall.jackson.oid.ObjectId;
+
 import java.util.ArrayList;
 
 /**
  * Created by laassiri on 23/03/15.
  */
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Site {
 
     public Site(String nomDomaine, String ip, int port, String msgError, boolean https, boolean mode, ArrayList<String> wlList) {
@@ -31,6 +38,10 @@ public class Site {
         this.wlList=new ArrayList<>();
     }
 
+    @Id
+    @ObjectId // automapping key to object _id
+    private String key;
+
     private String nomDomaine;
 
     private String ip;
@@ -44,6 +55,34 @@ public class Site {
     private String msgError ;
 
     private ArrayList<String> wlList;
+
+    private String cert;
+
+    private String pkey;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getCert() {
+        return cert;
+    }
+
+    public void setCert(String cert) {
+        this.cert = cert;
+    }
+
+    public String getPkey() {
+        return pkey;
+    }
+
+    public void setPkey(String pkey) {
+        this.pkey = pkey;
+    }
 
     public String getMsgError() {
         return msgError;
