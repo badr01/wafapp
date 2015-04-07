@@ -5,30 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe24c54c-97ec-497e-9e89-9792f92af6b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/ilem/RestService/LogOutService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/login-error.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/app/views/update.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/WEB-INF/classes/com/ilem/DBAccess/MongoConnection.class" afterPath="$PROJECT_DIR$/target/WafWebApplication/WEB-INF/classes/com/ilem/DBAccess/MongoConnection.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ilem/DBAccess/MongoConnection.class" afterPath="$PROJECT_DIR$/target/classes/com/ilem/DBAccess/MongoConnection.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/WafWebApplication/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ilem/DBAccess/MongoConnection.java" afterPath="$PROJECT_DIR$/src/com/ilem/DBAccess/MongoConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/data.json" afterPath="$PROJECT_DIR$/frontend/app/data.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/data.json" afterPath="$PROJECT_DIR$/target/WafWebApplication/data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/partials/header.html" afterPath="$PROJECT_DIR$/frontend/app/views/partials/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/views/partials/header.html" afterPath="$PROJECT_DIR$/target/WafWebApplication/views/partials/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/journalisation.html" afterPath="$PROJECT_DIR$/frontend/app/views/journalisation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/views/journalisation.html" afterPath="$PROJECT_DIR$/target/WafWebApplication/views/journalisation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/journalisation.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/journalisation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/scripts/controllers/journalisation.js" afterPath="$PROJECT_DIR$/target/WafWebApplication/scripts/controllers/journalisation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/login.html" afterPath="$PROJECT_DIR$/frontend/app/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/login.html" afterPath="$PROJECT_DIR$/target/WafWebApplication/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/views/manage.html" afterPath="$PROJECT_DIR$/frontend/app/views/manage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/views/manage.html" afterPath="$PROJECT_DIR$/target/WafWebApplication/views/manage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/manage.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/manage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/scripts/controllers/manage.js" afterPath="$PROJECT_DIR$/target/WafWebApplication/scripts/controllers/manage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/WafWebApplication/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WAFApp.iws" />
@@ -1024,7 +1012,7 @@
       <workItem from="1427960738770" duration="18748000" />
       <workItem from="1428315313963" duration="18358000" />
       <workItem from="1428392164769" duration="3000" />
-      <workItem from="1428392728901" duration="23475000" />
+      <workItem from="1428392728901" duration="23496000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1426676170024</created>
@@ -1086,11 +1074,17 @@
       <option name="project" value="LOCAL" />
       <updated>1428341174972</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update&#10;">
+      <created>1428426343970</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1428426343970</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231656000" />
+    <option name="totallyTimeSpent" value="231677000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
