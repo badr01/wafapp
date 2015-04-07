@@ -26,8 +26,8 @@
       <span >{{site.port}}</span>
     </td>
     <td data-title="'HTTPS'">
-      <span ng-if="site.https">Oui</span>
-      <span ng-if="!site.https">Non</span>
+      <span ng-if="site.https" class="label label-warning">Oui</span>
+      <span ng-if="!site.https" class="label label-default">Non</span>
     </td>
     <td data-title="'mode'">
       <span ng-if="site.mode" class="label label-success">Learning</span>

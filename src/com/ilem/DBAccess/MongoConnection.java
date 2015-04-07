@@ -63,11 +63,29 @@ public class MongoConnection {
        return sites.remove("{nomDomaine: '"+site+"'}").toString();
     }
     public JSONArray getExtLogs(){
-        BasicDBObject query = new BasicDBObject("log_type","NAXSI_EXLOG");
-        JSON json =new JSON();
-        DBCursor cursor = errorLogs.find(query);
+        BasicDBObject addToset = new BasicDBObject("rule_id","$rule_id");
+        addToset.put("zone","$zone");
+        addToset.put("var_name","$var_name");
+        addToset.put("content","$content");
+        BasicDBObject rules = new BasicDBObject("$addToSet",addToset);
+        BasicDBObject _id = new BasicDBObject("worker_id","$worker_id");
+        _id.put("host","$host");
+        _id.put("path","$path");
+        _id.put("time","$time");
+        BasicDBObject group = new BasicDBObject("_id",_id);
+        BasicDBObject grp =new BasicDBObject("$group",group);
+        group.put("rules",rules);
+        BasicDBObject log_type = new BasicDBObject("log_type","NAXSI_EXLOG");
+        BasicDBObject match =new BasicDBObject("$match",log_type);
+        List<DBObject> pipeline=new ArrayList<>();
+        pipeline.add(match);
+        pipeline.add(grp);
+
+      JSON json =new JSON();
+
+        AggregationOutput cursor = errorLogs.aggregate(pipeline);
         JSONArray AllJson=null;
-        String serialize = json.serialize(cursor);
+        String serialize = json.serialize(cursor.results());
         try {
             AllJson = new JSONArray(serialize);
         } catch (JSONException e) {
@@ -76,7 +94,6 @@ public class MongoConnection {
         return AllJson;
     }
     public JSONArray getAccessLogs(){
-       // BasicDBObject query = new BasicDBObject("log_type","NAXSI_EXLOG");
         JSON json =new JSON();
         DBCursor cursor = accessLogs.find();
         JSONArray AllJson=null;

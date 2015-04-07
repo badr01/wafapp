@@ -33,7 +33,7 @@
         </web-resource-collection>
 
         <auth-constraint>
-            <role-name>tomcat</role-name>
+            <role-name>admin</role-name>
         </auth-constraint>
 
         <user-data-constraint>
@@ -42,11 +42,19 @@
         </user-data-constraint>
     </security-constraint>
 
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Public resources</web-resource-name>
+            <description>Matches a few special pages.</description>
+            <url-pattern>/bower_components/bootstrap/dist/*</url-pattern>
+        </web-resource-collection>
+    </security-constraint>
+
     <login-config>
         <auth-method>FORM</auth-method>
         <form-login-config>
             <form-login-page>/login.html</form-login-page>
-            <form-error-page>/login-failed.html</form-error-page>
+            <form-error-page>/login-error.html</form-error-page>
         </form-login-config>
     </login-config>
 </web-app>

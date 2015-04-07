@@ -1,1 +1,24 @@
-{"etat":true}
+[{
+$match:{
+log_type :"NAXSI_EXLOG"
+
+},
+{
+$group:{
+_id:{
+worker_id:"$worker_id",
+host:"$host",
+path:"$path",
+time:"$time"
+},
+rules:{
+$addToSet:{
+rule_id:"$rule_id",
+zone:"$zone",
+var_name:"$var_name",
+content:"$content"
+}
+}
+}
+}
+]

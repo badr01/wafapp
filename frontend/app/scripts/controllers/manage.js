@@ -18,7 +18,7 @@ myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
    $scope.openDialog(nomDomaine);
 
   };
-    // Modal: called by removeRecord
+    // Modal: called by "supprimer site"
   $scope.openDialog = function(domain) {
 
     var modalInstance = $modal.open({
@@ -33,7 +33,7 @@ myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
       },200);
     });
   };
-    // Modal: called by edit(site) and Add new site
+    // Modal: called by "modifier site " and Add new site
     $scope.open = function(domain) {
 
       var modalInstance = $modal.open({
@@ -57,7 +57,7 @@ myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
 
 
 });
-myApp.controller('ModalDialogCtrl', function($scope, $modalInstance, Site) {
+myApp.controller('ModalDialogCtrl', function($scope, $modalInstance) {
   $scope.cancel = function() {
     $modalInstance.dismiss('cancel');
   };
@@ -65,6 +65,7 @@ myApp.controller('ModalDialogCtrl', function($scope, $modalInstance, Site) {
     $modalInstance.close();
   };
 });
+  // modal that controls "Ajouter site" and "enregistrer site"
 myApp.controller('ModalCtrl', function($scope, $modalInstance, domain,Site,modif) {
   if(typeof domain !== 'undefined') {
     Site.get({domain: domain}, function (data) {
@@ -79,13 +80,13 @@ myApp.controller('ModalCtrl', function($scope, $modalInstance, domain,Site,modif
     $modalInstance.dismiss('cancel');
   };
 
-  // Add new site
+  // Add new domain
   $scope.add = function() {
     Site.save($scope.site);
     $modalInstance.close();
      };
 
-  // Save edited site.
+  // Save edited domain.
   $scope.save = function() {
     Site.save($scope.site);
     $modalInstance.close();
