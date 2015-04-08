@@ -10,10 +10,13 @@ import org.jongo.MongoCollection;
 import org.jongo.MongoCursor;
 
 import java.net.UnknownHostException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
+import java.util.Date;
 import java.util.List;
-import java.util.Properties;
+import java.util.Map;
 
 /**
  * Created by laassiri on 25/03/15.
@@ -45,6 +48,8 @@ public class MongoConnection {
 
     private MongoConnection() {}
 
+
+    //get sites from db
     public List<Site> getSites(){
         MongoCursor<Site> cursor = sites.find().as(Site.class);
         List<Site> allSites=new ArrayList<>();
@@ -53,16 +58,28 @@ public class MongoConnection {
         }
         return allSites;
     }
+
+
+    //get a specific site from db
     public Site getSite(String site){
         return sites.findOne("{nomDomaine: '"+site+"'}").as(Site.class);
     }
+
+
+    //create a new site or modify a new one from db
     public String saveSite(Site site){
         return sites.save(site).toString();
     }
+
+
+    //delete site from db
     public String removeSite(String site){
        return sites.remove("{nomDomaine: '"+site+"'}").toString();
     }
-    public JSONArray getExtLogs(){
+
+
+    //get the error logs from db
+    public JSONArray getExtLogs(String from,String to){
         BasicDBObject addToset = new BasicDBObject("rule_id","$rule_id");
         addToset.put("zone","$zone");
         addToset.put("var_name","$var_name");
@@ -72,10 +89,12 @@ public class MongoConnection {
         _id.put("host","$host");
         _id.put("path","$path");
         _id.put("time","$time");
+        _id.put("client_ip","$client_ip");
         BasicDBObject group = new BasicDBObject("_id",_id);
         BasicDBObject grp =new BasicDBObject("$group",group);
         group.put("rules",rules);
         BasicDBObject log_type = new BasicDBObject("log_type","NAXSI_EXLOG");
+        if(from!=null||to!=null)log_type.putAll((Map) dateQueryBuild(from,to));
         BasicDBObject match =new BasicDBObject("$match",log_type);
         List<DBObject> pipeline=new ArrayList<>();
         pipeline.add(match);
@@ -93,9 +112,15 @@ public class MongoConnection {
         }
         return AllJson;
     }
-    public JSONArray getAccessLogs(){
+
+
+    //get the access logs from db
+    public JSONArray getAccessLogs(String from,String to){
+
+        BasicDBObject query=dateQueryBuild(from,to);
+
         JSON json =new JSON();
-        DBCursor cursor = accessLogs.find();
+        DBCursor cursor = accessLogs.find(query);
         JSONArray AllJson=null;
         String serialize = json.serialize(cursor);
         try {
@@ -105,4 +130,29 @@ public class MongoConnection {
         }
         return AllJson;
     }
+
+    //convert iso date to java Date object
+    public static Date isoDate(String time){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        Date date=null;
+        try {
+            date = sdf.parse(time);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
+
+    //building the query to adapt to dates from and to
+    public static BasicDBObject dateQueryBuild(String from,String to ){
+        if(from!=null||to!=null){
+            BasicDBObject match = new BasicDBObject();
+            if(from!=null){match.append("$gte", isoDate(from));}
+            if(to!=null){match.append("$lt",isoDate(to));}
+            return new BasicDBObject("time",match);
+        }
+        return null;
+    }
 }
+

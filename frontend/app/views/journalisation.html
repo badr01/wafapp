@@ -21,16 +21,22 @@
         </p>
       </div>
       <div class="col-md-2">
-        <a class="btn btn-primary btn-sm" ng-click="getLog()" role="button">Get logs</a>
+        <a class="btn btn-primary btn-sm" ng-click="getLog()" role="button"><span class="glyphicon glyphicon-download"></span> Get logs</a>
         </p>
       </div>
     </div>
     <table style=" border:2px solid #ddd;" st-table="displayCollection" st-safe-src="rowCollection" class="table table-striped">
       <thead>
       <tr>
+        <th colspan="2"><select class="form-control" id="predicate" ng-model="selectedPredicate" ng-options="predicate.value as predicate.key for predicate in predicates"></select></th>
+
+        <th colspan="9"><input  class="form-control" placeholder="Filter..." st-search="{{selectedPredicate}}"/></th>
+
+      </tr>
+      <tr>
         <th class="sortable" st-sort="time">Request_time</th>
         <th class="sortable" st-sort="host">Host</th>
-        <th class="sortable" st-sort="client-ip">User_IP</th>
+        <th class="sortable" st-sort="client_ip">User_IP</th>
         <th class="sortable" st-sort="client">User</th>
         <th class="sortable" st-sort="path">URI_Path</th>
         <th class="sortable" st-sort="method">Method</th>
@@ -40,24 +46,11 @@
         <th class="sortable" st-sort="x_forwarded_for">X_Forwarded_For</th>
         <th class="sortable" st-sort="user_agent">User_Agent</th>
       </tr>
-      <tr>
-        <th><input  class="form-control" placeholder="Search..." st-search="time"/></th>
-        <th><input  class="form-control"  st-search="host"/></th>
-        <th><input  class="form-control"  st-search="client_ip"/></th>
-        <th><input  class="form-control"  st-search="client"/></th>
-        <th><input  class="form-control"  st-search="path"/></th>
-        <th><input  class="form-control"  st-search="method"/></th>
-        <th><input  class="form-control"  st-search="code"/></th>
-        <th><input  class="form-control"  st-search="referer"/></th>
-        <th><input  class="form-control"  st-search="size"/></th>
-        <th><input  class="form-control"  st-search="x_forwarded_for"/></th>
-        <th><input  class="form-control"  st-search="user_agent"/></th>
-      </tr>
-      </tr>
+
       </thead>
       <tbody>
       <tr ng-repeat="row in displayCollection">
-        <td class="tdflow">{{row.time| date : 'dd.MM.yyyy HH:mm:ss'}}</td>
+        <td class="tdflow">{{row.time| date : 'yyyy-MM-dd HH:mm:ss'}}</td>
         <td class="tdflow">{{row.host }}</td>
         <td class="tdflow">{{row.client_ip }}</td>
         <td class="tdflow">{{row.client}}</td>

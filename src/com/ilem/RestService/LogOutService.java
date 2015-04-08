@@ -22,6 +22,7 @@ import java.net.URISyntaxException;
 public class LogOutService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    //method handling GET requests to /api/logout which deauthenticate the user
     public Response produceJSON(@Context HttpServletRequest request) throws URISyntaxException {
         HttpSession session = request.getSession();
         session.invalidate();

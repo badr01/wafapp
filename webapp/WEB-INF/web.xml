@@ -23,7 +23,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>site-serlvet</servlet-name>
-        <url-pattern>/rest/*</url-pattern>
+        <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
     <security-constraint>
         <web-resource-collection>

@@ -1,1 +1,85 @@
 <h1 class="cover-heading ng-scope" >Journalisation blockage</h1>
+<div  ng-controller="paginationBCtrl" >
+  <div >
+    <div class="row" ng-controller="DatepickerBCtrl">
+      <div class="col-md-3">
+
+        <p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtFrom" is-open="opened1" placeholder="Logs from date"  datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event,'opened1')"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+      </div>
+      <div class="col-md-3">
+
+        <p class="input-group">
+          <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtTo" is-open="opened2" placeholder="Logs to date" datepicker-options="dateOptions"  ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event,'opened2')"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+      </div>
+      <div class="col-md-2">
+        <a class="btn btn-primary btn-sm" ng-click="getLog()" role="button"><span class="glyphicon glyphicon-download"></span> Get logs</a>
+        </p>
+      </div>
+    </div>
+    <table style=" border:2px solid #ddd;" st-table="displayCollection" st-safe-src="rowCollection" class="table table-striped">
+      <thead>
+      <tr>
+        <th colspan="2"><select class="form-control" id="predicate" ng-model="selectedPredicate" ng-options="predicate.value as predicate.key for predicate in predicates"></select></th>
+
+        <th colspan="9"><input  class="form-control" placeholder="Filter..." st-search="{{selectedPredicate}}"/></th>
+
+      </tr>
+      <tr>
+        <th class="sortable" st-sort="time">Request_time</th>
+        <th class="sortable" st-sort="host">Host</th>
+        <th class="sortable" st-sort="client_ip">User_IP</th>
+        <th class="sortable" st-sort="path">URI_Path</th>
+        <th >Rules_applied</th>
+      </tr>
+
+      </thead>
+      <tbody>
+      <tr ng-repeat="row in displayCollection">
+        <td class="tdflow">{{row.time| date : 'yyyy-MM-dd HH:mm:ss'}}</td>
+        <td class="tdflow">{{row.host }}</td>
+        <td class="tdflow">{{row.client_ip }}</td>
+        <td class="tdflow">{{row.path}}</td>
+        <td class="tdflow">
+          <button class="btn btn-primary btn-xs " ng-click="isCollapsed = !isCollapsed"><span ng-class="{'glyphicon glyphicon-zoom-in':isCollapsed,'glyphicon glyphicon-zoom-out':!isCollapsed}"></span> Show rules</button>
+          <div collapse="isCollapsed">
+          <table  class="table table-striped">
+            <thead>
+            <tr>
+              <th>Rule_ID</th>
+              <th>Zone</th>
+              <th>var_name</th>
+              <th>content</th>
+            </tr>
+            </thead>
+            <tbody>
+           <tr ng-repeat="rule in row.rules">
+            <td class="tdflow">{{rule.rule_id}}</td>
+            <td class="tdflow">{{rule.zone}}</td>
+            <td class="tdflow">{{rule.var_name}}</td>
+            <td class="tdflow">{{rule.content}}</td>
+           </tr>
+            </tbody>
+          </table>
+            </div>
+        </td>
+      </tr>
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="10"></div>
+        </td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

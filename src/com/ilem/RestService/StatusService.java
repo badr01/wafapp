@@ -14,6 +14,7 @@ import javax.ws.rs.core.Response;
 public class StatusService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    //method handling GET requests to /api/status
     public Status produceJSON(){
         FileHandle.updateNginx();
         FileHandle.updateHaproxy();
@@ -50,6 +51,7 @@ public class StatusService {
     }
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
+    //method handling POST requests to /api/status
     public Response consumeJSON(Status status){
        System.out.println(status.toString());
         return Response.status(200).entity(status.toString()).build();

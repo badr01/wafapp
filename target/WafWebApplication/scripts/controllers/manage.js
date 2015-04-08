@@ -3,7 +3,7 @@ var myApp =angular.module('mgcrea.WafApp');
 
 myApp.factory("Site",function($resource){
 
-  return $resource("/rest/site/:domain");
+  return $resource("/api/site/:domain");
 });
 
 myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
