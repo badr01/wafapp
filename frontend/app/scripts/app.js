@@ -22,9 +22,6 @@ angular.module('mgcrea.WafApp', ['ngResource','ui.bootstrap','smart-table', 'ngR
       .when('/manage', {
         templateUrl: '../views/manage.html'
       })
-      .when('/whitelists', {
-        templateUrl: '../views/whitelists.html'
-      })
       .when('/journalisation', {
         templateUrl: '../views/journalisation.html'
       })

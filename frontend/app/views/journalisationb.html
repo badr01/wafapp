@@ -49,27 +49,7 @@
         <td class="tdflow">{{row.client_ip }}</td>
         <td class="tdflow">{{row.path}}</td>
         <td class="tdflow">
-          <button class="btn btn-primary btn-xs " ng-click="isCollapsed = !isCollapsed"><span ng-class="{'glyphicon glyphicon-zoom-in':isCollapsed,'glyphicon glyphicon-zoom-out':!isCollapsed}"></span> Show rules</button>
-          <div collapse="isCollapsed">
-          <table  class="table table-striped">
-            <thead>
-            <tr>
-              <th>Rule_ID</th>
-              <th>Zone</th>
-              <th>var_name</th>
-              <th>content</th>
-            </tr>
-            </thead>
-            <tbody>
-           <tr ng-repeat="rule in row.rules">
-            <td class="tdflow">{{rule.rule_id}}</td>
-            <td class="tdflow">{{rule.zone}}</td>
-            <td class="tdflow">{{rule.var_name}}</td>
-            <td class="tdflow">{{rule.content}}</td>
-           </tr>
-            </tbody>
-          </table>
-            </div>
+          <button class="btn btn-primary btn-xs" ng-click="openDialog(row.rules,'lg')"><span class="glyphicon glyphicon-search"></span> Show rules</button>
         </td>
       </tr>
       </tbody>
@@ -82,4 +62,32 @@
       </tfoot>
     </table>
   </div>
+  <script type="text/ng-template" id="rulesModalDialog">
+    <div class="modal-header ">
+      <h4 class="modal-title"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Rules applied to request</h4>
+    </div>
+    <div class="modal-body" style="overflow: scroll;">
+      <table  class="table table-striped" style=" border:2px solid #ddd;">
+        <thead>
+        <tr>
+          <th>Rule_ID</th>
+          <th>Zone</th>
+          <th>var_name</th>
+          <th>content</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="rule in rules">
+          <td class="tdflow"><a popover-placement="right" popover="I appeared on mouse enter!" popover-trigger="mouseenter" >{{rule.rule_id}}</a></td>
+          <td class="tdflow">{{rule.zone}}</td>
+          <td class="tdflow">{{rule.var_name}}</td>
+          <td class="tdflow"  ng-bind-html="rule.content | highlight:rule.var_name"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-success" ng-click="cancel()"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Retour</button>
+    </div>
+  </script>
 </div>

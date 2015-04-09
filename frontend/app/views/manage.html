@@ -11,6 +11,7 @@
     <th>port</th>
     <th>HTTPS</th>
     <th>Mode</th>
+    <th>White lists</th>
     <th>Action</th>
   </tr>
   </thead>
@@ -32,6 +33,9 @@
     <td data-title="'mode'">
       <span ng-if="site.mode" class="label label-success">Learning</span>
       <span ng-if="!site.mode" class="label label-danger">Blocking</span>
+    </td>
+    <td data-title="'Whitelists'" width="200">
+      <a  ng-click="openWL(site)" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-search"></span> Afficher</a>
     </td>
     <td data-title="'Actions'" width="200">
       <a class="btn btn-primary btn-xs" ng-click="open(site.nomDomaine)"><span class="glyphicon glyphicon-pencil"></span> Modifier</a>
@@ -130,4 +134,24 @@
   <section>
     <button ng-click="open()" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> Ajouter un nouveau site</button>
   </section>
+
+  <script type="text/ng-template" id="wl_modal">
+    <div class="modal-header ">
+      <h4 class="modal-title"><span class="glyphicon glyphicon-menu" aria-hidden="true"></span> White lists</h4>
+    </div>
+    <div class="modal-body">
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="wl in wls track by $index"><span>{{wl}}</span><a  ng-click="modifyWL(wl)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-pencil"></span> Modifier</a>
+        </li>
+      </ul>
+      <div class="form-group">
+        <label for="wl">White list</label>
+        <input type="text" class="form-control" id="wl" ng-model="current" placeholder="Entrer white list rule ..." />
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter</button>
+      <button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Annuller</button>
+    </div>
+  </script>
 </div>

@@ -7,10 +7,10 @@ myApp.factory("Error", function($resource) {
 
 /*Pagination controller*/
 
-myApp.controller('paginationBCtrl',['$scope','Error', function ($scope,Error) {
+myApp.controller('paginationBCtrl',['$scope','Error','$modal', function ($scope,Error,$modal) {
   Error.query(function(data) {
     data.forEach(function(elt,ix,arr){
-      arr[ix].time=elt._id.time.$date
+      arr[ix].time=elt._id.time.$date;
       arr[ix].host=elt._id.host;
       arr[ix].client_ip=elt._id.client_ip;
       arr[ix].path=elt._id.path;
@@ -24,7 +24,39 @@ myApp.controller('paginationBCtrl',['$scope','Error', function ($scope,Error) {
   $scope.predicates = [{key:"Filter by Host","value":"host"},{key:"Filter by User IP","value":"client ip"},{key:"Filter by URI Path","value":"path"}];
   $scope.selectedPredicate = $scope.predicates[0].value;
   $scope.isCollapsed=true;
-}]);
+  // Modal: called by "supprimer site"
+  $scope.openDialog = function(rules,size) {
+
+    var $modalInstance = $modal.open({
+      templateUrl: 'rulesModalDialog',
+      controller: 'ShowDialogCtrl',
+      size: size,
+      resolve:{rules:function(){
+        return rules;
+      }}
+
+    });
+}}]);
+
+//show rules modal controller
+  myApp.controller('ShowDialogCtrl',function($scope,$modalInstance,rules){
+  $scope.rules=rules;
+
+  //dismiss and quit the modal dialog;
+  $scope.cancel = function() {
+    $modalInstance.dismiss('cancel');
+  };
+  });
+
+//experimental feature : filter highlighting match zone in requests
+  myApp.filter('highlight', function($sce) {
+  return function(text, phrase) {
+    if (phrase) text = text.replace(new RegExp('('+phrase+'=[^ ]*,)', 'gi'),
+      '<span class="badge bg-primary">$1</span>')
+
+    return $sce.trustAsHtml(text)
+  }
+})
 
 /*date picker controller logic*/
 
@@ -41,7 +73,7 @@ myApp.controller('DatepickerBCtrl', function ($scope,Error) {
   $scope.getLog=function(){
     Error.query({from: $scope.dtFrom,to:$scope.dtTo},function(data) {
       data.forEach(function(elt,ix,arr){
-        arr[ix].time=elt._id.time.$date
+        arr[ix].time=elt._id.time.$date;
         arr[ix].host=elt._id.host;
         arr[ix].client_ip=elt._id.client_ip;
         arr[ix].path=elt._id.path;

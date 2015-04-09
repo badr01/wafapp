@@ -18,6 +18,8 @@ myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
    $scope.openDialog(nomDomaine);
 
   };
+
+
     // Modal: called by "supprimer site"
   $scope.openDialog = function(domain) {
 
@@ -33,6 +35,24 @@ myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
       },200);
     });
   };
+
+
+    // Modal: called by "Afficher"
+  $scope.openWL = function(site) {
+
+    var modalInstance = $modal.open({
+      templateUrl: 'wl_modal',
+      controller: 'WlModalCtrl',
+      size:'lg',
+      resolve: {
+        site: function () {
+          return site;
+        }
+      }
+    });
+  };
+
+
     // Modal: called by "modifier site " and Add new site
     $scope.open = function(domain) {
 
@@ -48,6 +68,7 @@ myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
           }
         }
       });
+      //saving modifications after dialog dismissal
       modalInstance.result.then(function(){
         $timeout(function(){
           $scope.update();
@@ -57,6 +78,9 @@ myApp.controller('ListCtrl', function($scope, $modal,Site,$timeout) {
 
 
 });
+
+
+  //controls the removal confirmation modal dialog
 myApp.controller('ModalDialogCtrl', function($scope, $modalInstance) {
   $scope.cancel = function() {
     $modalInstance.dismiss('cancel');
@@ -65,6 +89,8 @@ myApp.controller('ModalDialogCtrl', function($scope, $modalInstance) {
     $modalInstance.close();
   };
 });
+
+
   // modal that controls "Ajouter site" and "enregistrer site"
 myApp.controller('ModalCtrl', function($scope, $modalInstance, domain,Site,modif) {
   if(typeof domain !== 'undefined') {
@@ -92,4 +118,27 @@ myApp.controller('ModalCtrl', function($scope, $modalInstance, domain,Site,modif
     $modalInstance.close();
 
   };
+});
+
+
+//whitelidst modal controller
+
+myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site){
+  //dismiss and quit the modal dialog;
+  $scope.cancel = function() {
+    $modalInstance.dismiss('cancel');
+  };
+  $scope.wls=site.wlList;
+
+  $scope.site=site;
+  $scope.modifyWL= function (wl) {
+    $scope.current=wl;
+  }
+  $scope.ok=function(){
+    if($scope.site.wlList==null)$scope.site.wlList=[];
+    if($scope.current!=null) {
+      $scope.site.wlList.push($scope.current);
+      Site.save($scope.site);
+    }
+  }
 });

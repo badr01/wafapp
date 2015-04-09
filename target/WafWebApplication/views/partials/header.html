@@ -14,18 +14,12 @@
     <div collapse="navCollapsed" class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
         <li ng-class="{active: $path() == '/etat'}"><a href="#/etat"><span class="glyphicon glyphicon-flash"/> Etat du WAF</a></li>
-        <li class="dropdown" dropdown>
-          <a href="#" dropdown-toggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-edit"/> Gestion <span class="caret"></span></a>
+        <li ng-class="{active: $path() == '/manage'}"><a href="#/manage"><span class="glyphicon glyphicon-edit"/> Gestion des sites</a></li>
+        <li ng-class="{'active': $path() =='/journalisation'||$path() =='/journalisationb'}" class="dropdown" dropdown>
+          <a  href="#" dropdown-toggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"/> Journalisation <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li ng-class="{active: $path() == '/manage'}"><a href="#/manage"><span class="glyphicon glyphicon-edit"/> Gestion des sites</a></li>
-            <li ng-class="{active: $path() == '/whitelists'}"><a href="#/whitelists"><span class="glyphicon glyphicon-edit"/> Gestion des white lists</a></li>
-          </ul>
-        </li>
-        <li class="dropdown" dropdown>
-          <a href="#" dropdown-toggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"/> Journalisation <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a ng-class="{active: $path() == '/journalisation'}" href="#/journalisation"><span class="glyphicon glyphicon-ok-circle"/> Journalisation accès</a></li>
-            <li><a ng-class="{active: $path() == '/journalisationb'}" href="#/journalisationb"><span class="glyphicon glyphicon-ban-circle"/> Journalisation blockage</a></li>
+            <li><a  href="#/journalisation"><span class="glyphicon glyphicon-ok-circle"/> Journalisation accès</a></li>
+            <li><a  href="#/journalisationb"><span class="glyphicon glyphicon-ban-circle"/> Journalisation blockage</a></li>
             <li><a  href="#/"><span class="glyphicon glyphicon-stats"/> Statistiques</a></li>
           </ul>
         </li>
