@@ -7,7 +7,10 @@
 }
 .modal-backdrop {
   bottom:0;
-}
+ }
 textarea {
-  resize: vertical;
+ /* resize: vertical;*/
+}
+.badge{
+  background-color: lightcoral;
 }

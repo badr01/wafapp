@@ -148,6 +148,12 @@
         <label for="wl">White list</label>
         <input type="text" class="form-control" id="wl" ng-model="current" placeholder="Entrer white list rule ..." />
       </div>
+      <div >
+        <button type="button" class="btn btn-primary" ng-model="advanced" btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false">Mode avancé</button>
+        <div style="margin-top: 15px" collapse="!advanced">
+        <textarea style="width:868px;height: 300px" fb-highlight fb-option="option" ></textarea>
+        </div>
+      </div>
     </div>
     <div class="modal-footer">
       <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter</button>

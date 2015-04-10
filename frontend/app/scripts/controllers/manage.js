@@ -141,4 +141,13 @@ myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site){
       Site.save($scope.site);
     }
   }
+  $scope.option={
+    words: [{
+      color: '#00A000',
+      words: ['^BasicRule wl:([0-9]{0,4},?)*\\s"mz:(\\$?URL(_X)?(:[^|;]*)?)?(\\|?\\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL_X:[^|;]*)(\\|NAME)?)?";$']
+    }, {
+      color: '#74736d',
+      words: ['^#.*$']
+    }]
+  };
 });

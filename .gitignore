@@ -1,2 +1,2 @@
-out/
-frontend/dist
+target/
+.idea/

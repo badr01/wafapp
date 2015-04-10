@@ -51,7 +51,7 @@ myApp.controller('paginationBCtrl',['$scope','Error','$modal', function ($scope,
 //experimental feature : filter highlighting match zone in requests
   myApp.filter('highlight', function($sce) {
   return function(text, phrase) {
-    if (phrase) text = text.replace(new RegExp('('+phrase+'=[^ ]*,)', 'gi'),
+    if (phrase) text = text.replace(new RegExp('('+phrase+'=[^ ]*)', 'gi'),
       '<span class="badge bg-primary">$1</span>')
 
     return $sce.trustAsHtml(text)
