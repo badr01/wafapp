@@ -1,24 +1,50 @@
-[{
-$match:{
-log_type :"NAXSI_EXLOG"
-
-},
-{
-$group:{
-_id:{
-worker_id:"$worker_id",
-host:"$host",
-path:"$path",
-time:"$time"
-},
-rules:{
-$addToSet:{
-rule_id:"$rule_id",
-zone:"$zone",
-var_name:"$var_name",
-content:"$content"
-}
-}
-}
-}
+[
+  {"id":"1","desc":"weird request, unable to parse"},
+  {"id":"2","desc":"request too big, stored on disk and not parsed"},
+  {"id":"10","desc":"invalid hex encoding, null bytes"},
+  {"id":"11","desc":"unknown content-type"},
+  {"id":"12","desc":"invalid formatted url"},
+  {"id":"13","desc":"invalid POST format"},
+  {"id":"14","desc":"invalid POST boundary"},
+  {"id":"1000","desc":"sql keywords"},
+  {"id":"1001","desc":"double quote"},
+  {"id":"1002","desc":"0x, possible hex encoding"},
+  {"id":"1003","desc":"mysql comment (/*)"},
+  {"id":"1004","desc":"mysql comment (*/)"},
+  {"id":"1005","desc":"mysql keyword (|)"},
+  {"id":"1006","desc":"mysql keyword (&&)"},
+  {"id":"1007","desc":"mysql comment (--)"},
+  {"id":"1008","desc":"semicolon"},
+  {"id":"1009","desc":"equal in var, probable sql/xss"},
+  {"id":"1010","desc":"parenthesis, probable sql/xss"},
+  {"id":"1011","desc":"parenthesis, probable sql/xss"},
+  {"id":"1013","desc":"simple quote"},
+  {"id":"1015","desc":"comma"},
+  {"id":"1016","desc":"mysql comment (#)"},
+  {"id":"1100","desc":"http:// in var"},
+  {"id":"1101","desc":"https:// in var"},
+  {"id":"1102","desc":"ftp:// in var"},
+  {"id":"1103","desc":"php:// in var"},
+  {"id":"1104","desc":"sftp:// in var"},
+  {"id":"1105","desc":"zlib:// in var"},
+  {"id":"1106","desc":"data:// in var"},
+  {"id":"1107","desc":"glob:// in var"},
+  {"id":"1108","desc":"phar:// in var"},
+  {"id":"1109","desc":"file:// in var"},
+  {"id":"1200","desc":"double dot"},
+  {"id":"1202","desc":"obvious probe"},
+  {"id":"1203","desc":"obvious windows path"},
+  {"id":"1204","desc":"obvious probe"},
+  {"id":"1205","desc":"backslash"},
+  {"id":"1302","desc":"html open tag"},
+  {"id":"1303","desc":"html close tag"},
+  {"id":"1310","desc":"[, possible js"},
+  {"id":"1311","desc":"], possible js"},
+  {"id":"1312","desc":"~ character"},
+  {"id":"1314","desc":"grave accent !"},
+  {"id":"1315","desc":"double encoding !"},
+  {"id":"1400","desc":"utf7/8 encoding"},
+  {"id":"1401","desc":"M$ encoding"},
+  {"id":"1402","desc":"Content is neither mulipart/x-www-form.."},
+  {"id":"1500","desc":"asp/php file upload!"}
 ]

@@ -123,7 +123,7 @@ myApp.controller('ModalCtrl', function($scope, $modalInstance, domain,Site,modif
 
 //whitelidst modal controller
 
-myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site){
+myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site,$http){
   //dismiss and quit the modal dialog;
   $scope.cancel = function() {
     $modalInstance.dismiss('cancel');
@@ -141,13 +141,63 @@ myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site){
       Site.save($scope.site);
     }
   }
+  $scope.ids = [];
+  $scope.zones=[
+    {value:"all",key:"Toute les zones"},
+    {value:"ARGS",key:"Args"},
+    {value:"$ARGS_VAR",key:"Variables args"},
+    {value:"$ARGS_VAR_X",key:"Variables args regex"},
+    {value:"HEADERS",key:"Headers"},
+    {value:"$HEADERS_VAR",key:"Variables header"},
+    {value:"$HEADERS_VAR_X",key:"Variables header regexp"},
+    {value:"BODY",key:"Body"},
+    {value:"$BODY_VAR",key:"Variables body"},
+    {value:"$BODY_VAR_X",key:"Variables body regexp"},
+    {value:"$URL",key:"URL"},
+    {value:"$URL_X",key:"URL regexp"},
+    {value:"FILE_EXT",key:"Extension du fichier "}
+  ];
+  $scope.urls=[
+    {value:"all",key:"Tout les URLs"},
+    {value:"$URL",key:"URL"},
+    {value:"$URL_X",key:"URL regexp"}
+    ];
+  $scope.urlFltr= $scope.urls[0];
+  $scope.zone= $scope.zones[0];
+  $scope.dsblurl= true;
+  $scope.dsblzone= true;
+
+  $scope.isDsbl=function(){
+    if( $scope.dsblurl.value=="all") {
+      $scope.dsblurl =true;
+      $scope.urlContent="";
+    }else {$scope.dsblurl =false;}
+    if($scope.zone.value=="all"||$scope.zone.value=="BODY"||$scope.zone.value=="HEADERS"||$scope.zone.value=="ARGS"||$scope.zone.value=="FILE_EXT") {
+      $scope.dsblzone = true;
+      $scope.zoneContent = "";
+    }else{ $scope.dsblzone=false;}
+  }
+  ;
+  window.ab={"dsbl":$scope.dsblzone,"zone": $scope.zone};
+  window.ac={"dsbl":$scope.dsblurl,"zone": $scope.urlFltr};
+
+  window.aa=$scope.ids;
+
+  $scope.loadRules = function($query) {
+    return $http.get('data.json', { cache: true}).then(function(response) {
+      var rules = response.data.filter(function(country) {
+        return country.id.indexOf($query) != -1;
+      });
+      return rules;
+    });
+  };
   $scope.option={
     words: [{
-      color: '#00A000',
-      words: ['^BasicRule wl:([0-9]{0,4},?)*\\s"mz:(\\$?URL(_X)?(:[^|;]*)?)?(\\|?\\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL_X:[^|;]*)(\\|NAME)?)?";$']
+      color: '#37F230',
+      words: ['^BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\\s"mz:(\\$?URL(_X)?(:[^|;]*)?)?(\\|?\\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\\|NAME)?)?";$']
     }, {
-      color: '#74736d',
-      words: ['^#.*$']
+      color: '#FF534F',
+      words: ['^.*$']
     }]
   };
 });
