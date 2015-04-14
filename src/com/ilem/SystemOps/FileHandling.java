@@ -1,4 +1,4 @@
-package com.ilem.FileHandlilng;
+package com.ilem.SystemOps;
 
 import com.ilem.DBAccess.MongoConnection;
 import com.ilem.Models.Site;
@@ -7,7 +7,6 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -15,7 +14,7 @@ import java.util.Properties;
 /**
  * Created by laassiri on 06/04/15.
  */
-public class FileHandle {
+public class FileHandling {
     static {
         Properties p = new Properties();
         p.setProperty("resource.loader", "class");

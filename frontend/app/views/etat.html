@@ -1,20 +1,30 @@
 <h1 class="cover-heading ng-scope">Etat du WAF</h1>
 <div class="panel panel-default " ng-controller="EtatCtrl">
   <div class=" panel-body ">
-  <h3>Nginx : </h3>
-    <input
+    <div class="row">
+      <h4 class="col-md-2">Nginx <span ng-if="status.nginxStatus" class="label label-success ">Allumé</span><span ng-if="!status.nginxStatus" class="label label-danger ">Eteint</span></h4>
+      <button ng-click="execute('NGINX_START')" class="btn btn-primary"><span class="glyphicon glyphicon-play"></span> Démarrer</button>
+      <button ng-click="execute('NGINX_STOP')" class="btn btn-primary"><span class="glyphicon glyphicon-stop"></span> Eteindre</button>
+      <button ng-click="execute('NGINX_RESTART')" class="btn btn-primary"><span class="glyphicon glyphicon-repeat"></span> Redémarrer</button>
+
+    </div>
+    <!--<input
       bs-switch
       ng-model="isSelected"
       type="checkbox"
-      bootstrapSwitch>
+      bootstrapSwitch>-->
+    <div class="row">
+  <h4 class="col-md-2">Haproxy <span ng-if="status.haproxyStatus" class="label label-success ">Allumé</span><span ng-if="!status.haproxyStatus" class="label label-danger ">Eteint</span></h4>
+      <button ng-click="execute('HAPROXY_START')" class="btn btn-primary"><span class="glyphicon glyphicon-play"></span> Démarrer</button>
+      <button ng-click="execute('HAPROXY_STOP')" class="btn btn-primary"><span class="glyphicon glyphicon-stop"></span> Eteindre</button>
+      <button ng-click="execute('HAPROXY_RESTART')" class="btn btn-primary"><span class="glyphicon glyphicon-repeat"></span> Redémarrer</button>
 
-  <h3>Haproxy :</h3>
-      <input
-        bs-switch
-        ng-model="isSelected1"
-        type="checkbox"
-        bootstrapSwitch>
+      <!-- <input
+         bs-switch
+         ng-model="isSelected1"
+         type="checkbox"
+         bootstrapSwitch>-->
+    </div>
 
-
-  </div>
+ </div>
 </div>

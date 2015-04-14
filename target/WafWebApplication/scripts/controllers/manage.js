@@ -128,12 +128,17 @@ myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site,$http){
   $scope.cancel = function() {
     $modalInstance.dismiss('cancel');
   };
-  $scope.wls=site.wlList;
 
-  $scope.site=site;
-  $scope.modifyWL= function (wl) {
-    $scope.current=wl;
+
+  $scope.site=angular.copy(site);
+  $scope.wls=$scope.site["wlList"];
+  $scope.modifyWL= function (ix) {
+    $scope.current=$scope.wls[ix];
   }
+  $scope.removeWL= function (ix) {
+    $scope.wls.splice(ix,1);
+    }
+
   $scope.ok=function(){
     if($scope.site.wlList==null)$scope.site.wlList=[];
     if($scope.current!=null) {
@@ -142,6 +147,7 @@ myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site,$http){
     }
   }
   $scope.ids = [];
+
   $scope.zones=[
     {value:"all",key:"Toute les zones"},
     {value:"ARGS",key:"Args"},
@@ -157,31 +163,34 @@ myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site,$http){
     {value:"$URL_X",key:"URL regexp"},
     {value:"FILE_EXT",key:"Extension du fichier "}
   ];
+
   $scope.urls=[
     {value:"all",key:"Tout les URLs"},
     {value:"$URL",key:"URL"},
     {value:"$URL_X",key:"URL regexp"}
     ];
+
   $scope.urlFltr= $scope.urls[0];
   $scope.zone= $scope.zones[0];
   $scope.dsblurl= true;
   $scope.dsblzone= true;
 
+
   $scope.isDsbl=function(){
-    if( $scope.dsblurl.value=="all") {
+    if( $scope.urlFltr.value=="all") {
       $scope.dsblurl =true;
       $scope.urlContent="";
     }else {$scope.dsblurl =false;}
+    if($scope.zone.value=="$URL"||$scope.zone.value=="$URL_X"){
+      $scope.urlFltr= $scope.urls[0];
+      $scope.dsblurl =true;
+      $scope.urlContent="";
+    }
     if($scope.zone.value=="all"||$scope.zone.value=="BODY"||$scope.zone.value=="HEADERS"||$scope.zone.value=="ARGS"||$scope.zone.value=="FILE_EXT") {
       $scope.dsblzone = true;
-      $scope.urlContent = "";
+      $scope.zoneContent = "";
     }else{ $scope.dsblzone=false;}
-  }
-  ;
-  window.ab={"dsbl":$scope.dsblzone,"zone": $scope.zone};
-  window.ac={"dsbl":$scope.dsblurl,"zone": $scope.urlFltr};
-
-  window.aa=$scope.ids;
+  };
 
   $scope.loadRules = function($query) {
     return $http.get('data.json', { cache: true}).then(function(response) {
@@ -191,6 +200,8 @@ myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site,$http){
       return rules;
     });
   };
+
+
   $scope.option={
     words: [{
       color: '#37F230',

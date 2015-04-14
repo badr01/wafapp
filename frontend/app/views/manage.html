@@ -102,11 +102,11 @@
       <div collapse="!site.https">
         <div class="form-group">
           <label for="cert">Certificat ssl</label>
-          <textarea type="textarea" class="form-control" id="cert" ng-model="site.cert" placeholder="Entrer certificat ssl ..." ng-required="site.https"/>
+          <textarea type="textarea" class="form-control" id="cert" ng-model="site.cert" placeholder="Entrer certificat ssl ..." ng-required="site.https"></textarea>
         </div>
         <div class="form-group">
           <label for="pKey">Clé certificat ssl</label>
-          <textarea type="textarea" class="form-control" id="pkey" ng-model="site.pkey" placeholder="Entrer clé certificat ssl ..." ng-required="site.https"/>
+          <textarea type="textarea" class="form-control" id="pkey" ng-model="site.pkey" placeholder="Entrer clé certificat ssl ..." ng-required="site.https"></textarea>
         </div>
       </div>
 
@@ -135,17 +135,21 @@
     <button ng-click="open()" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> Ajouter un nouveau site</button>
   </section>
 
+
+
   <script type="text/ng-template" id="wl_modal">
     <div class="modal-header ">
       <h3 class="modal-title"><span class="glyphicon glyphicon-menu" aria-hidden="true"></span>{{site.nomDomaine}} whitelist</h3>
     </div>
     <div class="modal-body">
+      <h4>Aperçu:</h4>
       <div style="overflow: scroll;height: 180px;">
       <ul class="list-group">
-        <li class="list-group-item" ng-repeat="wl in wls track by $index"><span>{{wl}}</span><a  ng-click="modifyWL(wl)" class="btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-trash"></span></a><a  ng-click="modifyWL(wl)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
+        <li class="list-group-item" ng-repeat="wl in wls track by $index"><span>{{wl}}</span><a  ng-click="removeWL($index)" class="btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-trash"></span></a><a  ng-click="modifyWL($index)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-pencil"></span></a>
         </li>
       </ul>
     </div>
+      <div style="margin-top: 15px" collapse="advanced">
       <hr/>
       <div class="form-group">
         <label>Id règle</label>
@@ -176,26 +180,37 @@
         <select class="form-control col-md-6" ng-model="zone" ng-change="isDsbl()" ng-options="a.key for a in zones"></select>
             </div>
 
-            <div class="col-md-9">
+            <div class="col-md-7">
               <input type="text" class="form-control" ng-model="zoneContent" ng-disabled="dsblzone" placeholder="Entrer le contenu" >
             </div>
+          <div class="col-md-2">
+            <input  type="checkbox"  id="nm" >
+            <label for="nm">NAME?</label>
+          </div>
 
       </div>
       </div>
       <div class="form-group">
         <input type="text" class="form-control" id="wl" ng-model="current" placeholder="Entrer white list rule ..." />
       </div>
-      <hr/>
+        <hr/>
+        <div class="form-group">
+          <button class="btn btn-success pull-right" ng-click="okCurrent()"><span class="glyphicon glyphicon-ok" aria-hidden="true"> Valider</span></button>
+        </div>
+        </div>
       <div >
         <button type="button" class="btn btn-primary" ng-model="advanced" btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false">Mode avancé</button>
         <div style="margin-top: 15px" collapse="!advanced">
+          <hr/>
           <div class="alert alert-warning" role="alert"><strong>Attention!</strong> Utilisez ce mode...</div>
         <textarea style="width:868px;height: 300px" fb-highlight fb-option="option" ></textarea>
+          <hr/>
         </div>
       </div>
     </div>
+
     <div class="modal-footer">
-      <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter</button>
+      <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Enregistrer les modifications</button>
       <button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Annuller</button>
     </div>
   </script>

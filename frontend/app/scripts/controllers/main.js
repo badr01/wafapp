@@ -1,17 +1,19 @@
 'use strict';
 
 var myApp = angular.module('mgcrea.WafApp');
+myApp.factory("Status", function($resource) {
+  return $resource("/api/terminal",{cmd:'@cmd'},{query: { method: "GET", isArray: false }});
+});
 
-
-  myApp.controller('MainCtrl', function($scope, $location, version) {
+myApp.controller('MainCtrl', function($scope, $location, version) {
 
     $scope.$path = $location.path.bind($location);
     $scope.version = version;
 
   })
-myApp.controller('EtatCtrl', function ($scope,$http,$log,alertService) {
-  $scope.isSelected = '';
-  $scope.onText = 'ON';
+myApp.controller('EtatCtrl', function ($scope,Status,alertService) {
+  $scope.status={output:"",nginxStatus:false,haproxyStatus:false};
+ /* $scope.onText = 'ON';
 
   $scope.offText = 'OFF';
   $scope.isActive = true;
@@ -20,24 +22,26 @@ myApp.controller('EtatCtrl', function ($scope,$http,$log,alertService) {
   $scope.radioOff = true;
   $scope.handleWidth = "auto";
   $scope.labelWidth = "auto";
-  $scope.inverse = true;
+  $scope.inverse = true;*/
+  $scope.execute=function(cmd){
+    Status.query({cmd: cmd},function(data) {
+      $scope.status=data;
+      alertService.addAlert('success',data.output);
+    },function(data) {
+      alertService.addAlert('danger',data.output);
+    });
+  };
 
-  $scope.$watch('isSelected', function() {
-    $log.info("selected");
-    var res = $http({method: 'GET', url: "https://localhost:8080/api/status"})
-    res.success(function(data) {
-      //alert( "failure message: " + JSON.stringify({data: data}));
-      alertService.addAlert('success',data);
+    var res = Status.query({cmd: 'NGINX_STATUS'},function(data) {
+      $scope.status=data;
+      alertService.addAlert('success',data.output);
+    },function(data) {
+      alertService.addAlert('danger',data.output);
     });
 
-    res.error(function(data) {
-      //alert( "failure message: " + JSON.stringify({data: data}));
-      alertService.addAlert('danger',data);
     });
 
-    });
-  });
-myApp.directive('bootstrapSwitch', [
+/*myApp.directive('bootstrapSwitch', [
   function() {
     return {
       restrict: 'A',
@@ -63,7 +67,7 @@ myApp.directive('bootstrapSwitch', [
       }
     };
   }
-]);
+]);*/
 myApp.service('alertService', function ($timeout) {
   var data = [];
 
