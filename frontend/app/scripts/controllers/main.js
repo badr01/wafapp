@@ -13,16 +13,6 @@ myApp.controller('MainCtrl', function($scope, $location, version) {
   })
 myApp.controller('EtatCtrl', function ($scope,Status,alertService) {
   $scope.status={output:"",nginxStatus:false,haproxyStatus:false};
- /* $scope.onText = 'ON';
-
-  $scope.offText = 'OFF';
-  $scope.isActive = true;
-  $scope.size = 'large';
-  $scope.animate = true;
-  $scope.radioOff = true;
-  $scope.handleWidth = "auto";
-  $scope.labelWidth = "auto";
-  $scope.inverse = true;*/
   $scope.execute=function(cmd){
     Status.query({cmd: cmd},function(data) {
       $scope.status=data;
@@ -41,33 +31,6 @@ myApp.controller('EtatCtrl', function ($scope,Status,alertService) {
 
     });
 
-/*myApp.directive('bootstrapSwitch', [
-  function() {
-    return {
-      restrict: 'A',
-      require: '?ngModel',
-      link: function(scope, element, attrs, ngModel) {
-        element.bootstrapSwitch();
-
-        element.on('switchChange.bootstrapSwitch', function(event, state) {
-          if (ngModel) {
-            scope.$apply(function() {
-              ngModel.$setViewValue(state);
-            });
-          }
-        });
-
-        scope.$watch(attrs.ngModel, function(newValue, oldValue) {
-          if (newValue) {
-            element.bootstrapSwitch('state', true, true);
-          } else {
-            element.bootstrapSwitch('state', false, true);
-          }
-        });
-      }
-    };
-  }
-]);*/
 myApp.service('alertService', function ($timeout) {
   var data = [];
 

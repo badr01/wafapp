@@ -1,5 +1,6 @@
 package com.ilem.DBAccess;
 
+import com.ilem.Models.Settings;
 import com.ilem.Models.Site;
 import com.mongodb.*;
 import com.mongodb.util.JSON;
@@ -25,6 +26,7 @@ public class MongoConnection {
     private DB db =null;
     private Jongo jongo = null;
     private MongoCollection sites = null;
+    private MongoCollection settings = null;
     private DBCollection errorLogs = null;
     private DBCollection accessLogs = null;
     {
@@ -35,6 +37,7 @@ public class MongoConnection {
     }
         this.jongo = new Jongo(db);
         this.sites = jongo.getCollection("sites");
+        this.settings = jongo.getCollection("settings");
         this.errorLogs = db.getCollection("naxsi_error");
         this.accessLogs = db.getCollection("naxsi_access");
 
@@ -60,16 +63,26 @@ public class MongoConnection {
     }
 
 
+
+    //get a settings from db
+    public Settings getSettings(){
+        return settings.findOne().as(Settings.class);
+    }
+    //create a new settings or modify a new ones from db
+    public String saveSettings(Settings settings){
+        return sites.save(settings).toString();
+    }
+
+
     //get a specific site from db
     public Site getSite(String site){
         return sites.findOne("{nomDomaine: '"+site+"'}").as(Site.class);
     }
-
-
     //create a new site or modify a new one from db
     public String saveSite(Site site){
         return sites.save(site).toString();
     }
+
 
 
     //delete site from db

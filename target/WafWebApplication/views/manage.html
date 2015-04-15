@@ -55,7 +55,6 @@
   </div>
   <div class="modal-body">
     <div>
-    <!--<alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>-->
     <form name="SiteForm">
       <div class="form-group has-feedback" ng-class="{'has-error':SiteForm.Domaine.$error.pattern&&SiteForm.Domaine.$dirty,'has-success':!SiteForm.Domaine.$error.pattern&&SiteForm.Domaine.$dirty}">
         <label for="nomDomaine">Nom de domaine</label>
@@ -118,6 +117,9 @@
     <button ng-click="add()"  ng-if="!modif" type="submit" ng-disabled="SiteForm.$invalid||SiteForm.$error.required" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
     <button ng-click="cancel()" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span> Annuler</button>
   </div>
+
+  <!--remove site modal template-->
+
 </script>
   <script type="text/ng-template" id="myModalDialog">
     <div class="modal-header ">
@@ -136,7 +138,7 @@
   </section>
 
 
-
+  <!--whitelists management modal template-->
   <script type="text/ng-template" id="wl_modal">
     <div class="modal-header ">
       <h3 class="modal-title"><span class="glyphicon glyphicon-menu" aria-hidden="true"></span>{{site.nomDomaine}} whitelist</h3>
@@ -149,8 +151,10 @@
         </li>
       </ul>
     </div>
-      <div style="margin-top: 15px" collapse="advanced">
       <hr/>
+      <!--normal input mode-->
+      <div style="margin-top: 15px" collapse="advanced">
+
       <div class="form-group">
         <label>Id règle</label>
         <tags-input class="bootstrap" ng-model="ids" display-property="id" placeholder="Ajouter une règle" replace-spaces-with-dashes="false">
@@ -184,36 +188,42 @@
               <input type="text" class="form-control" ng-model="zoneContent" ng-disabled="dsblzone" placeholder="Entrer le contenu" >
             </div>
           <div class="col-md-2">
-            <input  type="checkbox"  id="nm" >
+            <input  type="checkbox" ng-model="chkName" id="nm" >
             <label for="nm">NAME?</label>
           </div>
 
       </div>
       </div>
-      <div class="form-group">
-        <input type="text" class="form-control" id="wl" ng-model="current" placeholder="Entrer white list rule ..." />
+       <form name="wlForm">
+        <div class="form-group has-feedback"  ng-class="{'has-error':wlForm.current.$error.pattern,'has-success':!wlForm.current.$error.pattern}">
+          <input type="text" class="form-control" name="current" id="current" ng-model="current" ng-pattern='/BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?;/' placeholder="Entrer une règle" required>
+          <span ng-show="!wlForm.current.$error.pattern" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+          <span ng-show="!wlForm.current.$error.pattern" class="sr-only">(success)</span>
+          <span ng-show="wlForm.current.$error.pattern" class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+          <span ng-show="wlForm.current.$error.pattern" class="sr-only">(error)</span>
+        </div>
+          </form>
+        </div>
+      <!--advanced input mode-->
+      <div style="margin-top: 15px" collapse="!advanced">
+        <div class="panel panel-default">
+          <div class="panel panel-body">
+            <div class="alert alert-warning" role="alert"><strong>Attention!</strong> Utilisez ce mode...</div>
+            <textarea style="width:100%;height: 300px" fb-highlight fb-option="option" ></textarea>
+          </div>
+        </div>
       </div>
-        <hr/>
-        <div class="form-group">
-          <button class="btn btn-success pull-right" ng-click="okCurrent()"><span class="glyphicon glyphicon-ok" aria-hidden="true"> Valider</span></button>
-        </div>
-        </div>
-      <div >
         <button type="button" class="btn btn-primary" ng-model="advanced" btn-checkbox btn-checkbox-true="true" btn-checkbox-false="false">Mode avancé</button>
-        <div style="margin-top: 15px" collapse="!advanced">
-          <hr/>
-          <div class="alert alert-warning" role="alert"><strong>Attention!</strong> Utilisez ce mode...</div>
-        <textarea style="width:868px;height: 300px" fb-highlight fb-option="option" ></textarea>
-          <hr/>
-        </div>
+        <button class="btn btn-success pull-right" ng-click="validate()"><span class="glyphicon glyphicon-ok" aria-hidden="true"> Valider</span></button>
       </div>
-    </div>
 
     <div class="modal-footer">
       <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Enregistrer les modifications</button>
       <button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Annuller</button>
     </div>
   </script>
+
+  <!--jquery highlight template-->
   <script type="text/ng-template" id="my-tag-template">
     <div class="right-panel">
       <span ng-bind-html="$highlight($getDisplayText())"></span>

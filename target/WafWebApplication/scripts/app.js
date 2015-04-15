@@ -28,6 +28,9 @@ angular.module('mgcrea.WafApp', ['ngResource','ngTagsInput','ui.bootstrap','smar
       .when('/journalisationb', {
         templateUrl: '../views/journalisationb.html'
       })
+      .when('/settings', {
+        templateUrl: '../views/settings.html'
+      })
       .when('/update', {
         templateUrl: '../views/update.html'
       })

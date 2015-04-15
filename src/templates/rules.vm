@@ -1,0 +1,19 @@
+#if($isLearning)
+LearningMode;
+#else
+#LearningMode;
+#end
+SecRulesEnabled;
+#SecRulesDisabled;
+DeniedUrl "/RequestDenied";
+#CheckRules
+CheckRule "$SQL >= 8" BLOCK;
+CheckRule "$RFI >= 8" BLOCK;
+CheckRule "$TRAVERSAL >= 4" BLOCK;
+CheckRule "$EVADE >= 4" BLOCK;
+CheckRule "$XSS >= 8" BLOCK;
+CheckRule "$UPLOAD >= 8" BLOCK;
+#BasicRules
+#foreach($wl in $wls)
+$wl
+#end

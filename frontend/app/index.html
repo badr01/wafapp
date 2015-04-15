@@ -54,9 +54,7 @@
           <div class="inner" ng-include="'views/partials/header.html'"></div>
         </div>
         <div class="inner cover" style="padding-top: 60px">
-          <div ng-controller="alertCtrl"style="position: fixed;right: 15px;opacity: 0.95">
-            <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
-          </div>
+
           <div class="inner" ng-view></div>
         </div>
         <div class="mastfoot">

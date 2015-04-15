@@ -201,14 +201,59 @@ myApp.controller('WlModalCtrl',function($scope,$modalInstance,site,Site,$http){
     });
   };
 
+  //watch changes in inputs and reflect them in main input
+  $scope.$watch('[urlFltr,zone,urlContent,zoneContent,chkName,ids]',function(){
 
+    $scope.current=buildStrIds($scope.ids)+buildStrMz($scope.urlFltr,$scope.urlContent,$scope.zone,$scope.zoneContent,$scope.chkName)+";";
+
+  },true);
+
+
+  //useful functions
+  var buildStrIds=function(ids){
+    if(ids.length!=0) {
+      var str = "BasicRule wl:"
+      ids.forEach(function (elt, ix, arr) {
+        str += elt.id + ","
+      });
+      return str.substring(0, str.lastIndexOf(','));
+    }else return "";
+  };
+
+  var buildStrMz=function(fltr,fltrc,zone,zonec,nm){
+    var str="";
+    if(fltr['value']!="all" && zone['value']!="$URL" && zone['value']!="$URL_X"){
+      str=" \"mz:"+fltr['value']+(fltrc!=undefined&&fltrc!=""?":"+fltrc:"");
+    }else if(fltr['value']=="all" && zone['value']!="$URL" && zone['value']!="$URL_X"){
+      str=" \"mz:";
+    }else{
+      str=" \"mz:URL|";
+    }
+    if(zone['value']!="all"&& zone['value']!="$URL" && zone['value']!="$URL_X"&&fltr['value']!="all"){
+      str+="|"+zone['value']+(zonec!=undefined&&zonec!=""?":"+zonec:"");
+    }else if(zone['value']!="all"&&fltr['value']=="all"){
+      str+=zone['value']+(zonec!=undefined&&zonec!=""?":"+zonec:"");
+    }else{
+      str="";
+      }
+    if(nm){
+      str+="|NAME";
+    }
+    return str!=""?str+="\"":str;
+  };
+
+
+
+
+  //rules highlighter options
   $scope.option={
     words: [{
       color: '#37F230',
-      words: ['^BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\\s"mz:(\\$?URL(_X)?(:[^|;]*)?)?(\\|?\\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\\|NAME)?)?";$']
+      words: ['^BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\\s*("mz:(\\$?URL(_X)?(:[^|;]*)?)?(\\|?\\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\\|NAME)?)?")?;$']
     }, {
       color: '#FF534F',
       words: ['^.*$']
     }]
   };
 });
+
