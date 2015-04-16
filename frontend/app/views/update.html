@@ -1,1 +1,19 @@
-<h1 class="cover-heading ng-scope" >Mise à jour des configs</h1>
+<h1 class="cover-heading ng-scope" >Mise à jour des fichiers de configuration</h1>
+<div ng-controller="UpdateCntrl">
+<div ><!--ng-if="ops.length>0"-->
+  <hr>
+  <label>
+    Dernières mises à jour éffectuées:
+  </label>
+  <div  >
+    <p class="list-group-item" ng-if="ops.length==0"><span>Aucune mise à jour n'a été éffectuée.</span>
+    </p>
+    <ul class="list-group" ng-if="ops.length>0">
+      <li class="list-group-item" ng-repeat="op in ops track by $index"><span>Mise à jour du: {{toDate(op.date)}}</span><a  ng-click="restore($index)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-repeat"></span> Restorer</a>
+      </li>
+    </ul>
+    <hr>
+    <a class="btn btn-primary btn-success" ng-click="update()" role="button"><span class="glyphicon glyphicon-retweet"></span> Mettre à jour les configurations</a>
+  </div>
+</div>
+</div>

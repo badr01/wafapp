@@ -21,7 +21,8 @@ public class Settings {
     private ArrayList<Wl> whitelistRules;
 
     public Settings() {
-            }
+    }
+
     public ArrayList<Wl> getWhitelistRules() {
         return whitelistRules;
     }

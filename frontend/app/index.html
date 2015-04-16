@@ -45,7 +45,7 @@
 
 </head>
 
-<body ontouchstart ng-controller="MainCtrl" class="container-fluid">
+<body ontouchstart ng-controller="MainCtrl">
 
   <div class="site-wrapper">
     <div class="site-wrapper-inner">
@@ -53,8 +53,7 @@
         <div class="masthead clearfix">
           <div class="inner" ng-include="'views/partials/header.html'"></div>
         </div>
-        <div class="inner cover" style="padding-top: 60px">
-
+        <div class="inner cover" class="container-fluid">
           <div class="inner" ng-view></div>
         </div>
         <div class="mastfoot">
@@ -88,6 +87,8 @@
   <script src="scripts/controllers/journalisation.js"></script>
   <script src="scripts/controllers/journalisationb.js"></script>
   <script src="scripts/controllers/manage.js"></script>
+  <script src="scripts/controllers/update.js"></script>
+  <script src="scripts/controllers/settings.js"></script>
   <!-- endbuild -->
 
 </body>

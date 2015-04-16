@@ -19,12 +19,12 @@ log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
 
 #foreach ( $site in $sites)
 
-include	/etc/nginx/sites-enabled/${site.nomDomaine}.conf;
+include	${settings.sitesEnabledDir}${site.nomDomaine}.conf;
 
 #end
 
-include /etc/nginx/naxsi/naxsi_config/naxsi_core.rules;
-include       /etc/nginx/mime.types;
+include ${settings.naxsiConfDir}naxsi_core.rules;
+include       ${settings.nginxConfDir}mime.types;
 default_type  application/octet-stream;
 
 
@@ -50,7 +50,7 @@ real_ip_header X-Real-IP;
 
 gzip  on;
 gzip_disable "msie6";
-include /etc/nginx/conf.d/*.conf;
+include ${settings.nginxConfDir}conf.d/*.conf;
 limit_rate_after 1m;
 limit_rate 10k;
 

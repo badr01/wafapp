@@ -21,6 +21,8 @@ public class ShellOps {
         ops.put("HAPROXY_STOP","service haproxy stop");
         ops.put("NGINX_RESTART","service nginx restart");
         ops.put("HAPROXY_RESTART","service haproxy restart");
+        ops.put("NGINX_TEST","service nginx configtest");
+        ops.put("HAPROXY_TEST","service haproxy checkconf");
     }
     //execute command and get output
     public static String Execute(String Commande){

@@ -87,4 +87,12 @@ textarea {
 .highlightTextarea > .container{
   width: 100% !important;
 }
-
+.relpos{
+  position: relative;
+}
+.inplacepre{
+  position: absolute;right: 4px;top:4px
+}
+.inplaceinput{
+  position: absolute;right: 4px;top:2px
+}
