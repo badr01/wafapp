@@ -96,3 +96,12 @@ textarea {
 .inplaceinput{
   position: absolute;right: 4px;top:2px
 }
+.modifypre{
+  position: absolute;left: 4px;bottom:2px
+
+}
+.specialtable{
+  table-layout:fixed;
+  overflow:hidden;
+  white-space: nowrap;
+}

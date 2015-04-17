@@ -35,14 +35,13 @@
         <span ng-if="!site.mode" class="label label-danger">Blocking</span>
       </td>
       <td data-title="'Whitelists'" width="200">
-        <a ng-click="openWL(site)" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-search"></span>
-          Afficher</a>
+        <a ng-click="openWL(site)" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-search"></span>Afficher</a>
       </td>
       <td data-title="'Actions'" width="200">
         <a class="btn btn-primary btn-xs" ng-click="open(site.nomDomaine)"><span
-          class="glyphicon glyphicon-pencil"></span> Modifier</a>
+          class="glyphicon glyphicon-pencil"></span>Modifier</a>
         <a ng-click="removeRecord(site.nomDomaine)" class="btn btn-default btn-xs"><span
-          class="glyphicon glyphicon-trash"></span> Supprimer</a>
+          class="glyphicon glyphicon-trash"></span>Supprimer</a>
       </td>
     </tr>
     </tbody>
@@ -131,12 +130,12 @@
     </div>
     <div class="modal-footer">
       <button ng-click="save()" ng-if="modif" ng-disabled="SiteForm.$invalid||SiteForm.$error.required"
-              class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Enregistrer
+              class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>Enregistrer
       </button>
       <button ng-click="add()" ng-if="!modif" type="submit" ng-disabled="SiteForm.$invalid||SiteForm.$error.required"
-              class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Ajouter
+              class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>Ajouter
       </button>
-      <button ng-click="cancel()" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span> Annuler
+      <button ng-click="cancel()" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span>Annuler
       </button>
     </div>
 
@@ -145,23 +144,22 @@
   </script>
   <script type="text/ng-template" id="myModalDialog">
     <div class="modal-header ">
-      <h4 class="modal-title"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Confirmer la
+      <h4 class="modal-title"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span>Confirmer la
         suppression</h4>
     </div>
     <div class="modal-body">
       <p>Êtes-vous sûr de vouloir supprimer définitivement ce site?</p>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-        Oui
+      <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Oui
       </button>
       <button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove"
-                                                                aria-hidden="true"></span> Annuller
+                                                                aria-hidden="true"></span>Annuller
       </button>
     </div>
   </script>
   <section>
-    <button ng-click="open()" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> Ajouter
+    <button ng-click="open()" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span>Ajouter
       un nouveau site
     </button>
   </section>
@@ -262,15 +260,15 @@
               btn-checkbox-false="false">Mode avancé
       </button>
       <button class="btn btn-success pull-right" ng-click="validate()"><span class="glyphicon glyphicon-ok"
-                                                                             aria-hidden="true"> Valider</span></button>
+                                                                             aria-hidden="true">Valider</span></button>
     </div>
 
     <div class="modal-footer">
       <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-floppy-disk"
-                                                            aria-hidden="true"></span> Enregistrer les modifications
+                                                            aria-hidden="true"></span>Enregistrer les modifications
       </button>
       <button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove"
-                                                                aria-hidden="true"></span> Annuller
+                                                                aria-hidden="true"></span>Annuller
       </button>
     </div>
   </script>

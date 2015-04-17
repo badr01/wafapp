@@ -1,6 +1,6 @@
 'use strict';
-
-angular.module('mgcrea.WafApp', ['ngResource','ngTagsInput','ui.bootstrap','smart-table', 'ngRoute', 'frapontillo.bootstrap-switch','angularHighlightTextarea'])
+var loading=false;
+var myApp=angular.module('mgcrea.WafApp', ['ngResource','ngTagsInput','ui.bootstrap','smart-table', 'ngRoute', 'frapontillo.bootstrap-switch','angularHighlightTextarea'])
 
   .constant('version', 'v0.1.0')
 
@@ -38,5 +38,11 @@ angular.module('mgcrea.WafApp', ['ngResource','ngTagsInput','ui.bootstrap','smar
         redirectTo: '/'
       });
 
-  });
+  }).config([
+    "$httpProvider",
+    function ($httpProvider) {
+      $httpProvider
+        .interceptors.push("httpInterceptor");
+    }
+  ]);
 

@@ -27,12 +27,12 @@
       </div>
       <div class="col-md-2">
         <a class="btn btn-primary btn-sm" ng-click="getLog()" role="button"><span
-          class="glyphicon glyphicon-download"></span> Get logs</a>
+          class="glyphicon glyphicon-download"></span>Get logs</a>
         </p>
       </div>
     </div>
-    <table style=" border:2px solid #ddd;" st-table="displayCollection" st-safe-src="rowCollection"
-           class="table table-striped">
+    <table  style=" border:2px solid #ddd;" st-table="displayCollection" st-safe-src="rowCollection"
+           class="table table-striped ">
       <thead>
       <tr>
         <th colspan="2"><select class="form-control" id="predicate" ng-model="selectedPredicate"
@@ -42,23 +42,23 @@
 
       </tr>
       <tr>
-        <th class="sortable" st-sort="time">Request_time</th>
+        <th class="sortable" st-sort="time">Request time</th>
         <th class="sortable" st-sort="host">Host</th>
-        <th class="sortable" st-sort="client_ip">User_IP</th>
+        <th class="sortable" st-sort="client_ip">User IP</th>
         <th class="sortable" st-sort="client">User</th>
-        <th class="sortable" st-sort="path">URI_Path</th>
+        <th class="sortable" st-sort="path">URI Path</th>
         <th class="sortable" st-sort="method">Method</th>
-        <th class="sortable" st-sort="code">HTTP_Status</th>
+        <th class="sortable" st-sort="code">HTTP Status</th>
         <th class="sortable" st-sort="referer">Referer</th>
         <th class="sortable" st-sort="size">Bytes</th>
-        <th class="sortable" st-sort="x_forwarded_for">X_Forwarded_For</th>
-        <th class="sortable" st-sort="user_agent">User_Agent</th>
+        <th class="sortable" st-sort="x_forwarded_for">X Forwarded For</th>
+        <th class="sortable" st-sort="user_agent">User Agent</th>
       </tr>
 
       </thead>
       <tbody>
       <tr ng-repeat="row in displayCollection">
-        <td class="tdflow">{{row.time| date : 'yyyy-MM-dd HH:mm:ss'}}</td>
+        <td class="tdflow" >{{row.time| date : 'yyyy-MM-dd HH:mm:ss'}}</td>
         <td class="tdflow">{{row.host }}</td>
         <td class="tdflow">{{row.client_ip }}</td>
         <td class="tdflow">{{row.client}}</td>
@@ -68,7 +68,7 @@
         <td class="tdflow">{{row.referer }}</td>
         <td class="tdflow">{{row.size}}</td>
         <td class="tdflow">{{row.x_forwarded_for}}</td>
-        <td class="tdflow">{{row.user_agent}}</td>
+        <td class="tdflow" data-toggle="tooltip" data-placement="top" title="{{row.user_agent}}"><span class="glyphicon glyphicon-search"></span></td>
       </tr>
       </tbody>
       <tfoot>

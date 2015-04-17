@@ -1,17 +1,15 @@
 'use strict';
-
-var myApp = angular.module('mgcrea.WafApp');
-myApp.factory("Status", function($resource) {
-  return $resource("/api/terminal",{cmd:'@cmd'},{query: { method: "GET", isArray: false }});
-});
-
-myApp.controller('MainCtrl', function($scope, $location, version) {
+//header page controlller
+myApp
+  .controller('MainCtrl', function($scope, $location, version) {
 
     $scope.$path = $location.path.bind($location);
     $scope.version = version;
 
   })
-myApp.controller('EtatCtrl', function ($scope,Status,alertService) {
+//Status controller
+myApp
+  .controller('EtatCtrl', function ($scope,Status,alertService) {
   $scope.status={output:"",nginxStatus:false,haproxyStatus:false};
   $scope.execute=function(cmd){
     Status.query({cmd: cmd},function(data) {

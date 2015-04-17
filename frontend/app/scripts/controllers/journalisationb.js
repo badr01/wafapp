@@ -1,10 +1,4 @@
 'use strict';
-var myApp = angular.module('mgcrea.WafApp');
-
-myApp.factory("Error", function($resource) {
-  return $resource("/api/logs/error",{from:'@from',to:'@to'});
-});
-
 /*Pagination controller*/
 
 myApp.controller('paginationBCtrl',['$scope','Error','$modal', function ($scope,Error,$modal) {

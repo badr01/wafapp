@@ -1,11 +1,5 @@
 'use strict';
-var myApp = angular.module('mgcrea.WafApp');
-
-myApp.factory("Site", function ($resource) {
-
-  return $resource("/api/site/:domain");
-});
-
+//site list controller
 myApp.controller('ListCtrl', function ($scope, $modal, Site, $timeout) {
   $scope.update = function () {
     Site.query(function (data) {
@@ -78,7 +72,6 @@ myApp.controller('ListCtrl', function ($scope, $modal, Site, $timeout) {
 
 });
 
-
 //controls the removal confirmation modal dialog
 myApp.controller('ModalDialogCtrl', function ($scope, $modalInstance) {
   $scope.cancel = function () {
@@ -88,7 +81,6 @@ myApp.controller('ModalDialogCtrl', function ($scope, $modalInstance) {
     $modalInstance.close();
   };
 });
-
 
 // modal that controls "Ajouter site" and "enregistrer site"
 myApp.controller('ModalCtrl', function ($scope, $modalInstance, domain, Site, modif) {
@@ -206,7 +198,7 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
   };
 
   $scope.loadRules = function ($query) {
-    return $http.get('data.json', {cache: true}).then(function (response) {
+    return $http.get('/api/settings', {cache: true}).then(function (response) {
       var rules = response.data.whitelistRules.filter(function (ruules) {
         return ruules.id.indexOf($query) != -1;
       });

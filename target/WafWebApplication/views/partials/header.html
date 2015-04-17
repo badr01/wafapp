@@ -1,6 +1,6 @@
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle btn navbar-btn" ng-init="navCollapsed = true"
               ng-click="navCollapsed = !navCollapsed">
@@ -13,23 +13,23 @@
     </div>
     <div collapse="navCollapsed" class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
-        <li ng-class="{active: $path() == '/etat'}"><a href="#/etat"><span class="glyphicon glyphicon-flash"/> Etat du WAF</a></li>
-        <li ng-class="{active: $path() == '/manage'}"><a href="#/manage"><span class="glyphicon glyphicon-edit"/> Gestion des sites</a></li>
+        <li ng-class="{active: $path() == '/etat'}"><a href="#/etat"><span class="glyphicon glyphicon-signal"></span>Etat du WAF</a></li>
+        <li ng-class="{active: $path() == '/manage'}"><a href="#/manage"><span class="glyphicon glyphicon-edit"></span>Gestion des sites</a></li>
         <li ng-class="{'active': $path() =='/journalisation'||$path() =='/journalisationb'}" class="dropdown" dropdown>
-          <a  href="#" dropdown-toggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"/> Journalisation <span class="caret"></span></a>
+          <a  href="#" dropdown-toggle class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span>Journalisation <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a  href="#/journalisation"><span class="glyphicon glyphicon-ok-circle"/> Journalisation accès</a></li>
-            <li><a  href="#/journalisationb"><span class="glyphicon glyphicon-ban-circle"/> Journalisation blockage</a></li>
-            <li><a  href="#/"><span class="glyphicon glyphicon-stats"/> Statistiques</a></li>
+            <li><a  href="#/journalisation"><span class="glyphicon glyphicon-ok-circle"></span>Journalisation accès</a></li>
+            <li><a  href="#/journalisationb"><span class="glyphicon glyphicon-ban-circle"></span>Journalisation blockage</a></li>
+            <li><a  href="#/"><span class="glyphicon glyphicon-stats"></span>Statistiques</a></li>
           </ul>
         </li>
 
-        <li ng-class="{active: $path() == '/update'}"><a href="#/update"><span class="glyphicon glyphicon-refresh"/> Mise à jour des configs</a></li>
-        <li ng-class="{active: $path() == '/settings'}"><a href="#/settings"><span class="glyphicon glyphicon-cog"/> Règlages</a></li>
+        <li ng-class="{active: $path() == '/update'}"><a href="#/update"><span class="glyphicon glyphicon-refresh"></span>Mise à jour des configs</a></li>
+        <li ng-class="{active: $path() == '/settings'}"><a href="#/settings"><span class="glyphicon glyphicon-cog"></span>Règlages</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li ><a href="/api/logout"><span class="glyphicon glyphicon-log-out"/> Se déconnecter</a></li>
+        <li ><a href="/api/logout"><span class="glyphicon glyphicon-log-out"></span>Se déconnecter</a></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->

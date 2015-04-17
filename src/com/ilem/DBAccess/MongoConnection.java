@@ -97,8 +97,8 @@ public class MongoConnection {
     }
 
     //create a new settings or modify a new ones from db
-    public String saveSettings(Settings settings) {
-        return sites.save(settings).toString();
+    public String saveSettings(Settings setting) {
+        return settings.save(settings).toString();
     }
 
     //get a specific site from db

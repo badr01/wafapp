@@ -1,7 +1,6 @@
 'use strict';
 
-angular.module('mgcrea.WafApp')
-
+myApp
   .filter('time', function() {
     return function(obj) {
       return +new Date(obj);

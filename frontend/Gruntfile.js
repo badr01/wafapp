@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     yo: {
       // Configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: '../webapp'
+      dist: 'dist'
     },
 
     // Watches files for changes and runs tasks based on the changed files

@@ -108,7 +108,41 @@
     </div>
   </div>
   <div>
+    <label>Règles de white list:</label>
 
+    <div  class="relpos">
+      <pre class="pre-scrollable" style="height: 150px">
+
+        <div ng-repeat="wl in options.whitelistRules track by $index"><span><label>ID:</label>{{wl.id}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span><label>Description:</label>{{wl.desc}}</span><a
+          ng-click="removeWL($index)" class="btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-trash"></span></a>
+             </div>
+
+      </pre>
+      <div >
+        <a ng-hide="editorEnabled.whitelistRules" class="btn btn-primary btn-sm" ng-click="enableEditor('whitelistRules')"><span
+          class="glyphicon glyphicon-plus"></span> Ajouter une règle</a>
+        <div ng-show="editorEnabled.whitelistRules" class="relpos">
+          <div class="row">
+          <div class="col-md-3">
+          <input class="form-control" type="text" placeholder="Saisir l'identifiant de la règle" ng-model="reg.id">
+          </div>
+          <div class="col-md-8">
+            <input class="form-control" type="text" placeholder="Saisir la description de la règle" ng-model="reg.desc">
+          </div>
+          </div>
+          <div class="inplaceinput">
+            <a class="btn btn-primary btn-sm" ng-click="savewl()"><span
+              class="glyphicon glyphicon-floppy-disk"></span></a>
+            <a class="btn btn-default btn-sm" ng-click="disableEditor('whitelistRules')"><span
+              class="glyphicon glyphicon-remove"></span></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+  <hr>
+  <button type="button" class="btn btn-success btn-lg" ng-click="saveconf()" ng-disabled="isdsbl" ><span
+    class="glyphicon glyphicon-floppy-disk"></span>Enregistrer les modifications</button>
   <hr>
 </div>

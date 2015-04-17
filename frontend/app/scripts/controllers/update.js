@@ -1,13 +1,6 @@
 'use strict';
 
 var myApp = angular.module('mgcrea.WafApp');
-myApp.factory("Update", function ($resource) {
-
-  return $resource("/api/update");
-});
-myApp.factory("Backups", function ($resource) {
-  return $resource("/api/backups");
-});
 myApp.controller('UpdateCntrl',function($scope,Backups,Update,$timeout){
   Backups.query(function (data) {
     $scope.ops = data;

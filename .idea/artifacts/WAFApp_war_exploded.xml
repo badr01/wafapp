@@ -34,6 +34,7 @@
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-xc:1.8.3" />
         </element>
         <element id="file-copy" path="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
+        <element id="file-copy" path="$PROJECT_DIR$/webapp/WEB-INF/data.json" />
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/MANIFEST.MF" />

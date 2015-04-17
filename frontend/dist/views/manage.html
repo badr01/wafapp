@@ -1,1 +1,210 @@
-<h1 class="cover-heading ng-scope">Gestion des sites</h1>
+<div ng-controller="ListCtrl"><h1 class="cover-heading ng-scope">Gestion des sites</h1><alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert><br><table ng-table="tableParams" class="table"><thead><tr><th>Nom de domaine<th>Ip<th>port<th>HTTPS<th>Mode<th>White lists<th>Action<tbody><tr ng-repeat="site in sites "><td data-title="'Nom de domaine'"><span>{{site.nomDomaine}}</span><td data-title="'Ip'"><span>{{site.ip}}</span><td data-title="'Port'"><span>{{site.port}}</span><td data-title="'HTTPS'"><span ng-if="site.https" class="label label-warning">Oui</span> <span ng-if="!site.https" class="label label-default">Non</span><td data-title="'mode'"><span ng-if="site.mode" class="label label-success">Learning</span> <span ng-if="!site.mode" class="label label-danger">Blocking</span><td data-title="'Whitelists'" width="200"><a ng-click="openWL(site)" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-search"></span> Afficher</a><td data-title="'Actions'" width="200"><a class="btn btn-primary btn-xs" ng-click="open(site.nomDomaine)"><span class="glyphicon glyphicon-pencil"></span> Modifier</a> <a ng-click="removeRecord(site.nomDomaine)" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span> Supprimer</a></table><!--Modal form template for "Ajouter site"--><script type="text/ng-template" id="add_site_modal"><div class="modal-header">
+      <h4>Formulaire site</h4>
+    </div>
+    <div class="modal-body">
+      <div>
+        <form name="SiteForm">
+          <div class="form-group has-feedback"
+               ng-class="{'has-error':SiteForm.Domaine.$error.pattern&&SiteForm.Domaine.$dirty,'has-success':!SiteForm.Domaine.$error.pattern&&SiteForm.Domaine.$dirty}">
+            <label for="nomDomaine">Nom de domaine</label>
+            <input type="text" class="form-control" ng-model="site.nomDomaine" name="Domaine" id="nomDomaine"
+                   ng-pattern="/^([A-Za-z0-9-]{1,63}\.)+[A-Za-z]{2,6}$/" placeholder="Entrer nom de domaine" required>
+
+            <span ng-show="!SiteForm.Domaine.$error.pattern&&SiteForm.Domaine.$dirty"
+                  class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span ng-show="!SiteForm.Domaine.$error.pattern&&SiteForm.Domaine.$dirty" class="sr-only">(success)</span>
+            <span ng-show="SiteForm.Domaine.$error.pattern&&SiteForm.Domaine.$dirty"
+                  class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+            <span ng-show="SiteForm.Domaine.$error.pattern&&SiteForm.Domaine.$dirty" class="sr-only">(error)</span>
+
+          </div>
+          <div class="form-group has-feedback"
+               ng-class="{'has-error':SiteForm.ip.$error.pattern&&SiteForm.ip.$dirty,'has-success':!SiteForm.ip.$error.pattern&&SiteForm.ip.$dirty}">
+            <label for="ip">IP</label>
+            <input type="text" class="form-control" name="ip" id="ip" ng-model="site.ip"
+                   ng-pattern="/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/"
+                   placeholder="Entrer IP" required>
+
+            <span ng-show="!SiteForm.ip.$error.pattern&&SiteForm.ip.$dirty"
+                  class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span ng-show="!SiteForm.ip.$error.pattern&&SiteForm.ip.$dirty" class="sr-only">(success)</span>
+            <span ng-show="SiteForm.ip.$error.pattern&&SiteForm.ip.$dirty"
+                  class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+            <span ng-show="SiteForm.ip.$error.pattern&&SiteForm.ip.$dirty" class="sr-only">(error)</span>
+          </div>
+          <div class="form-group has-feedback"
+               ng-class="{'has-error':SiteForm.port.$error.pattern&&SiteForm.port.$dirty,'has-success':!SiteForm.port.$error.pattern&&SiteForm.port.$dirty}">
+            <label for="port">Port</label>
+            <input type="text" class="form-control" name="port" id="port" ng-model="site.port" ng-pattern="/^\d*$/"
+                   placeholder="Entrer port" required>
+
+            <span ng-show="!SiteForm.port.$error.pattern&&SiteForm.port.$dirty"
+                  class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            <span ng-show="!SiteForm.port.$error.pattern&&SiteForm.port.$dirty" class="sr-only">(success)</span>
+            <span ng-show="SiteForm.port.$error.pattern&&SiteForm.port.$dirty"
+                  class="glyphicon glyphicon-remove  form-control-feedback" aria-hidden="true"></span>
+            <span ng-show="SiteForm.port.$error.pattern&&SiteForm.port.$dirty" class="sr-only">(error)</span>
+          </div>
+          <div class="form-group">
+            <label for="msgError">Message d'erreur</label>
+            <textarea type="textarea" class="form-control" id="msgError" ng-model="site.msgError"
+                      placeholder="Entrer message d'erreur ..." required/>
+          </div>
+          <div class="form-group">
+            <label for="mode">Mode</label>
+            <input type="checkbox" id="mode" ng-model="site.mode">
+            <span ng-if="site.mode" class="label label-success">Learning</span>
+            <span ng-if="!site.mode" class="label label-danger">Blocking</span>
+          </div>
+          <div class="form-group">
+            <label for="https">HTTPS</label>
+            <input id="https" type="checkbox" ng-model="site.https">
+          </div>
+          <div collapse="!site.https">
+            <div class="form-group">
+              <label for="cert">Certificat ssl</label>
+              <textarea type="textarea" class="form-control" id="cert" ng-model="site.cert"
+                        placeholder="Entrer certificat ssl ..." ng-required="site.https"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="pKey">Clé certificat ssl</label>
+              <textarea type="textarea" class="form-control" id="pkey" ng-model="site.pkey"
+                        placeholder="Entrer clé certificat ssl ..." ng-required="site.https"></textarea>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button ng-click="save()" ng-if="modif" ng-disabled="SiteForm.$invalid||SiteForm.$error.required"
+              class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Enregistrer
+      </button>
+      <button ng-click="add()" ng-if="!modif" type="submit" ng-disabled="SiteForm.$invalid||SiteForm.$error.required"
+              class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Ajouter
+      </button>
+      <button ng-click="cancel()" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span> Annuler
+      </button>
+    </div>
+
+    <!--remove site modal template</script><script type="text/ng-template" id="myModalDialog"><div class="modal-header ">
+      <h4 class="modal-title"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Confirmer la
+        suppression</h4>
+    </div>
+    <div class="modal-body">
+      <p>Êtes-vous sûr de vouloir supprimer définitivement ce site?</p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Oui
+      </button>
+      <button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove"
+                                                                aria-hidden="true"></span> Annuller
+      </button>
+    </div></script><section><button ng-click="open()" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> Ajouter un nouveau site</button></section><!--whitelists management modal template--><script type="text/ng-template" id="wl_modal"><div class="modal-header ">
+      <h3 class="modal-title"><span class="glyphicon glyphicon-menu" aria-hidden="true"></span>{{site.nomDomaine}}
+        whitelist</h3>
+    </div>
+    <div class="modal-body">
+      <h4>Aperçu:</h4>
+
+      <div style="overflow: scroll;height: 180px;">
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="wl in wls track by $index"><span>{{wl}}</span><a
+            ng-click="removeWL($index)" class="btn btn-default btn-xs pull-right"><span
+            class="glyphicon glyphicon-trash"></span></a><!-- EXPERIMENTAL FEATURE <a  ng-click="modifyWL($index)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-pencil"></span></a>-->
+          </li>
+        </ul>
+      </div>
+      <hr/>
+      <!--normal input mode-->
+      <div style="margin-top: 15px" collapse="advanced">
+
+        <div class="form-group">
+          <label>Id règle</label>
+          <tags-input class="bootstrap" ng-model="ids" display-property="id" placeholder="Ajouter une règle"
+                      replace-spaces-with-dashes="false">
+            <auto-complete source="loadRules($query)"
+                           min-length="0"
+                           load-on-focus="true"
+                           load-on-empty="true"
+                           max-results-to-show="400"
+                           template="my-tag-template"></auto-complete>
+          </tags-input>
+        </div>
+        <div class="form-group">
+          <label>Filtre URL</label>
+
+          <div class="row">
+            <div class="col-md-3">
+              <select class="form-control " ng-model="urlFltr" ng-change="isDsbl()"
+                      ng-options="a.key for a in urls"></select>
+            </div>
+            <div class="col-md-9">
+              <input type="text" class="form-control" ng-model="urlContent" ng-disabled="dsblurl"
+                     placeholder="Entrer le contenu">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Zone</label>
+
+          <div class="row">
+            <div class="col-md-3">
+              <select class="form-control col-md-6" ng-model="zone" ng-change="isDsbl()"
+                      ng-options="a.key for a in zones"></select>
+            </div>
+
+            <div class="col-md-7">
+              <input type="text" class="form-control" ng-model="zoneContent" ng-disabled="dsblzone"
+                     placeholder="Entrer le contenu">
+            </div>
+            <div class="col-md-2">
+              <input type="checkbox" ng-model="chkName" id="nm">
+              <label for="nm">NAME?</label>
+            </div>
+
+          </div>
+        </div>
+        <form name="wlForm">
+          <div class="form-group has-feedback"
+               ng-class="{'has-error':wlForm.current.$error.pattern,'has-success':!wlForm.current.$error.pattern}">
+            <input type="text" class="form-control" name="current" id="current" ng-model="current"
+                   ng-pattern='/BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?;/'
+                   placeholder="Entrer une règle" required>
+            <span ng-show="!wlForm.current.$error.pattern" class="glyphicon glyphicon-ok form-control-feedback"
+                  aria-hidden="true"></span>
+            <span ng-show="!wlForm.current.$error.pattern" class="sr-only">(success)</span>
+            <span ng-show="wlForm.current.$error.pattern" class="glyphicon glyphicon-remove  form-control-feedback"
+                  aria-hidden="true"></span>
+            <span ng-show="wlForm.current.$error.pattern" class="sr-only">(error)</span>
+          </div>
+        </form>
+      </div>
+      <!--advanced input mode-->
+      <div style="margin-top: 15px" collapse="!advanced">
+        <div class="panel panel-default">
+          <div class="panel panel-body">
+            <div class="alert alert-warning" role="alert"><strong>Attention!</strong> Utilisez ce mode...</div>
+            <textarea style="width:100%;height: 300px" fb-highlight fb-option="option" ng-model="textarea"></textarea>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" ng-model="advanced" btn-checkbox btn-checkbox-true="true"
+              btn-checkbox-false="false">Mode avancé
+      </button>
+      <button class="btn btn-success pull-right" ng-click="validate()"><span class="glyphicon glyphicon-ok"
+                                                                             aria-hidden="true"> Valider</span></button>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-floppy-disk"
+                                                            aria-hidden="true"></span> Enregistrer les modifications
+      </button>
+      <button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove"
+                                                                aria-hidden="true"></span> Annuller
+      </button>
+    </div></script><!--jquery highlight template--><script type="text/ng-template" id="my-tag-template"><div class="right-panel">
+      <span ng-bind-html="$highlight($getDisplayText())"></span>
+      <span>{{data.desc}}</span>
+    </div></script></div>

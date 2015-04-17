@@ -9,11 +9,11 @@
     <p class="list-group-item" ng-if="ops.length==0"><span>Aucune mise à jour n'a été éffectuée.</span>
     </p>
     <ul class="list-group" ng-if="ops.length>0">
-      <li class="list-group-item" ng-repeat="op in ops track by $index"><span>Mise à jour du: {{toDate(op.date)}}</span><a  ng-click="restore($index)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-repeat"></span> Restorer</a>
+      <li class="list-group-item" ng-repeat="op in ops track by $index"><span>Mise à jour du: {{toDate(op.date)}}</span><a  ng-click="restore($index)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-repeat"></span>Restorer</a>
       </li>
     </ul>
     <hr>
-    <a class="btn btn-primary btn-success" ng-click="update()" role="button"><span class="glyphicon glyphicon-retweet"></span> Mettre à jour les configurations</a>
+    <a class="btn btn-primary btn-success" ng-click="update()" role="button"><span class="glyphicon glyphicon-retweet"></span>Mettre à jour les configurations</a>
   </div>
 </div>
 </div>
