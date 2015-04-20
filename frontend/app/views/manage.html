@@ -38,9 +38,9 @@
         <a ng-click="openWL(site)" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-search"></span>Afficher</a>
       </td>
       <td data-title="'Actions'" width="200">
-        <a class="btn btn-primary btn-xs" ng-click="open(site.nomDomaine)"><span
+        <a class="btn btn-primary btn-xs" ng-click="open(site.key)"><span
           class="glyphicon glyphicon-pencil"></span>Modifier</a>
-        <a ng-click="removeRecord(site.nomDomaine)" class="btn btn-default btn-xs"><span
+        <a ng-click="removeRecord(site.key)" class="btn btn-default btn-xs"><span
           class="glyphicon glyphicon-trash"></span>Supprimer</a>
       </td>
     </tr>
@@ -260,7 +260,7 @@
               btn-checkbox-false="false">Mode avancé
       </button>
       <button class="btn btn-success pull-right" ng-click="validate()"><span class="glyphicon glyphicon-ok"
-                                                                             aria-hidden="true">Valider</span></button>
+                                                                             aria-hidden="true"></span>Valider</button>
     </div>
 
     <div class="modal-footer">

@@ -2,6 +2,8 @@ package com.ilem.RestService;
 
 
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.ws.rs.Path;
@@ -20,6 +22,7 @@ import java.net.URISyntaxException;
  */
 @Path("/logout")
 public class LogOutService {
+    public static Logger log = Logger.getLogger(LogOutService.class.getName());
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     //method handling GET requests to /api/logout which deauthenticate the user

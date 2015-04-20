@@ -32,14 +32,15 @@
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.8.3" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.8.3" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-xc:1.8.3" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
         </element>
+        <element id="file-copy" path="$PROJECT_DIR$/webapp/WEB-INF/initialSettings.json" />
         <element id="file-copy" path="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
-        <element id="file-copy" path="$PROJECT_DIR$/webapp/WEB-INF/data.json" />
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/MANIFEST.MF" />
       </element>
-      <element id="dir-copy" path="$PROJECT_DIR$/frontend/app" />
+      <element id="dir-copy" path="$PROJECT_DIR$/frontend/dist" />
     </root>
   </artifact>
 </component>

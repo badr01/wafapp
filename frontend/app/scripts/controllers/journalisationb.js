@@ -1,51 +1,57 @@
 'use strict';
 /*Pagination controller*/
 
-myApp.controller('paginationBCtrl',['$scope','Error','$modal', function ($scope,Error,$modal) {
-  Error.query(function(data) {
-    data.forEach(function(elt,ix,arr){
-      arr[ix].time=elt._id.time.$date;
-      arr[ix].host=elt._id.host;
-      arr[ix].client_ip=elt._id.client_ip;
-      arr[ix].path=elt._id.path;
+myApp.controller('paginationBCtrl', ['$scope', 'Error', '$modal', function ($scope, Error, $modal) {
+  Error.query(function (data) {
+    data.forEach(function (elt, ix, arr) {
+      arr[ix].time = elt._id.time.$date;
+      arr[ix].host = elt._id.host;
+      arr[ix].client_ip = elt._id.client_ip;
+      arr[ix].path = elt._id.path;
     });
-    $scope.rowCollection=angular.fromJson(data);
-    window.aa=angular.fromJson(data);
+    $scope.rowCollection = angular.fromJson(data);
+    window.aa = angular.fromJson(data);
 
   });
-  $scope.displayCollection=[].concat($scope.rowCollection);
-  $scope.itemsByPage=15;
-  $scope.predicates = [{key:"Filter by Host","value":"host"},{key:"Filter by User IP","value":"client ip"},{key:"Filter by URI Path","value":"path"}];
+  $scope.displayCollection = [].concat($scope.rowCollection);
+  $scope.itemsByPage = 15;
+  $scope.predicates = [{key: "Filter by Host", "value": "host"}, {
+    key: "Filter by User IP",
+    "value": "client ip"
+  }, {key: "Filter by URI Path", "value": "path"}];
   $scope.selectedPredicate = $scope.predicates[0].value;
-  $scope.isCollapsed=true;
+  $scope.isCollapsed = true;
   // Modal: called by "supprimer site"
-  $scope.openDialog = function(rules,size) {
+  $scope.openDialog = function (rules, size) {
 
     var $modalInstance = $modal.open({
       templateUrl: 'rulesModalDialog',
       controller: 'ShowDialogCtrl',
       size: size,
-      resolve:{rules:function(){
-        return rules;
-      }}
+      resolve: {
+        rules: function () {
+          return rules;
+        }
+      }
 
     });
-}}]);
+  }
+}]);
 
 //show rules modal controller
-  myApp.controller('ShowDialogCtrl',function($scope,$modalInstance,rules){
-  $scope.rules=rules;
+myApp.controller('ShowDialogCtrl', function ($scope, $modalInstance, rules) {
+  $scope.rules = rules;
 
   //dismiss and quit the modal dialog;
-  $scope.cancel = function() {
+  $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
-  });
+});
 
 //experimental feature : filter highlighting match zone in requests
-  myApp.filter('highlight', function($sce) {
-  return function(text, phrase) {
-    if (phrase) text = text.replace(new RegExp('('+phrase+'=[^ ]*)', 'gi'),
+myApp.filter('highlight', function ($sce) {
+  return function (text, phrase) {
+    if (phrase) text = text.replace(new RegExp('(' + phrase + '=[^ ]*)', 'gi'),
       '<span class="badge bg-primary">$1</span>')
 
     return $sce.trustAsHtml(text)
@@ -54,8 +60,8 @@ myApp.controller('paginationBCtrl',['$scope','Error','$modal', function ($scope,
 
 /*date picker controller logic*/
 
-myApp.controller('DatepickerBCtrl', function ($scope,Error) {
-  $scope.today = function(dt) {
+myApp.controller('DatepickerBCtrl', function ($scope, Error) {
+  $scope.today = function (dt) {
     $scope[dt] = new Date();
   };
   $scope.today();
@@ -64,19 +70,19 @@ myApp.controller('DatepickerBCtrl', function ($scope,Error) {
     $scope[dt] = null;
   };
 
-  $scope.getLog=function(){
-    Error.query({from: $scope.dtFrom,to:$scope.dtTo},function(data) {
-      data.forEach(function(elt,ix,arr){
-        arr[ix].time=elt._id.time.$date;
-        arr[ix].host=elt._id.host;
-        arr[ix].client_ip=elt._id.client_ip;
-        arr[ix].path=elt._id.path;
+  $scope.getLog = function () {
+    Error.query({from: $scope.dtFrom, to: $scope.dtTo}, function (data) {
+      data.forEach(function (elt, ix, arr) {
+        arr[ix].time = elt._id.time.$date;
+        arr[ix].host = elt._id.host;
+        arr[ix].client_ip = elt._id.client_ip;
+        arr[ix].path = elt._id.path;
       });
-      $scope.$parent.rowCollection=angular.fromJson(data);
+      $scope.$parent.rowCollection = angular.fromJson(data);
     });
   };
 
-  $scope.open = function($event,opened) {
+  $scope.open = function ($event, opened) {
     $event.preventDefault();
     $event.stopPropagation();
 
@@ -89,5 +95,5 @@ myApp.controller('DatepickerBCtrl', function ($scope,Error) {
   };
 
 
-  $scope.format ='dd.MM.yyyy HH:mm:ss';
+  $scope.format = 'dd.MM.yyyy HH:mm:ss';
 });

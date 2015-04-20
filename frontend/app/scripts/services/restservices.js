@@ -24,6 +24,9 @@ myApp
   .factory("Backups", function ($resource) {
   return $resource("/api/backups");
 })
+  .factory("Restore", function ($resource) {
+  return $resource("/api/backups/restore/:key");
+})
   .factory("Settings", function ($resource) {
   return $resource("/api/settings");
 });

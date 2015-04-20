@@ -14,6 +14,15 @@ public class Backups {
     @ObjectId // automapping key to object _id
     private String key;
     private Date date;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
     private List<Site> sites;
 
     public Backups() {

@@ -3,11 +3,11 @@ package com.ilem.RestService;
 import com.ilem.DBAccess.MongoConnection;
 import com.ilem.Models.Backups;
 import com.ilem.Models.Settings;
+import org.apache.log4j.Logger;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 
 /**
@@ -15,11 +15,24 @@ import java.util.List;
  */
 @Path("/backups")
 public class BackupsService {
+    public static Logger log = Logger.getLogger(BackupsService.class.getName());
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    //method handling GET requests to /api/settings and returns a JSON array of Site object
+    //method handling GET requests to /api/backups and returns a JSON array of Backups object
     public List<Backups> getBackupsJSON(){
 
         return MongoConnection.getInstance().getBackups(false);
     }
+
+    @GET
+    @Path("/restore/{key}")
+    @Produces(MediaType.APPLICATION_JSON)
+    //method handling GET requests to /api/Backups/restore/{key} and returns a success Response status
+    public Response getJSON( @PathParam("key") String key){
+        Backups backup= MongoConnection.getInstance().getSetting(key);
+        MongoConnection.getInstance().removeAllSites();
+        return Response.status(200).entity(MongoConnection.getInstance().saveSites(backup.getSites())).build();
+    }
+
+
 }

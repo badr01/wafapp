@@ -3,6 +3,7 @@ package com.ilem.SystemOps;
 import com.ilem.DBAccess.MongoConnection;
 import com.ilem.Models.Settings;
 import com.ilem.Models.Site;
+import org.apache.log4j.Logger;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
@@ -18,6 +19,7 @@ import java.util.Properties;
 
 //class for updating or creating files from database
 public class FileHandling {
+    public static Logger log = Logger.getLogger(FileHandling.class.getName());
     static {
         Properties p = new Properties();
         p.setProperty("resource.loader", "class");

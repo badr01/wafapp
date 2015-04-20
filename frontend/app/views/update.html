@@ -9,11 +9,46 @@
     <p class="list-group-item" ng-if="ops.length==0"><span>Aucune mise à jour n'a été éffectuée.</span>
     </p>
     <ul class="list-group" ng-if="ops.length>0">
-      <li class="list-group-item" ng-repeat="op in ops track by $index"><span>Mise à jour du: {{toDate(op.date)}}</span><a  ng-click="restore($index)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-repeat"></span>Restorer</a>
+      <li class="list-group-item" ng-repeat="op in ops track by $index"><span>Mise à jour du: {{toDate(op.date)}}</span><a  ng-click="openr(op.key)" class="btn btn-primary btn-xs pull-right"><span class="glyphicon glyphicon-repeat"></span>Restorer</a>
       </li>
     </ul>
     <hr>
-    <a class="btn btn-primary btn-success" ng-click="update()" role="button"><span class="glyphicon glyphicon-retweet"></span>Mettre à jour les configurations</a>
+    <a class="btn btn-primary btn-success" ng-click="openu()" role="button"><span class="glyphicon glyphicon-retweet"></span>Mettre à jour les configurations</a>
   </div>
 </div>
 </div>
+
+<!--Restore action confiramtion modal template-->
+
+<script type="text/ng-template" id="restoreModalDialog">
+<div class="modal-header ">
+<h4 class="modal-title"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span>Confirmer l'action de restoration</h4>
+</div>
+<div class="modal-body">
+<p>Êtes-vous sûr de vouloir restorer les données?</p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Oui
+</button>
+<button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove"
+aria-hidden="true"></span>Annuller
+</button>
+</div>
+  </script>
+<!--update action confiramtion modal template-->
+
+<script type="text/ng-template" id="updateModalDialog">
+<div class="modal-header ">
+<h4 class="modal-title"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span>Confirmer la mise à jour</h4>
+</div>
+<div class="modal-body">
+<p>Êtes-vous sûr de vouloir mettre à jour les fichiers de configuration?</p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Oui
+</button>
+<button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove"
+aria-hidden="true"></span>Annuller
+</button>
+</div>
+  </script>

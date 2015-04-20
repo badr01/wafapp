@@ -1,14 +1,10 @@
 'use strict';
 var loading=false;
-var myApp=angular.module('mgcrea.WafApp', ['ngResource','ngTagsInput','ui.bootstrap','smart-table', 'ngRoute', 'frapontillo.bootstrap-switch','angularHighlightTextarea'])
+var myApp=angular.module('mgcrea.WafApp', ['angular-growl',,'ngResource','ngTagsInput','ui.bootstrap','smart-table', 'ngRoute', 'angularHighlightTextarea'])
 
   .constant('version', 'v0.1.0')
 
-  .config(function($locationProvider, $routeProvider,$httpProvider) {
-
-      //Enable cross domain calls
-      $httpProvider.defaults.useXDomain = true;
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  .config(function($locationProvider, $routeProvider) {
 
     $locationProvider.html5Mode(false);
 
@@ -44,5 +40,7 @@ var myApp=angular.module('mgcrea.WafApp', ['ngResource','ngTagsInput','ui.bootst
       $httpProvider
         .interceptors.push("httpInterceptor");
     }
-  ]);
-
+  ]).config(['growlProvider', function(growlProvider) {
+    growlProvider.globalReversedOrder(true);
+    growlProvider.globalTimeToLive(3000);
+  }]);

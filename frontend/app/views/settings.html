@@ -142,7 +142,25 @@
     </div>
   </div>
   <hr>
-  <button type="button" class="btn btn-success btn-lg" ng-click="saveconf()" ng-disabled="isdsbl" ><span
+  <button type="button" class="btn btn-success btn-lg" ng-click="open()"  ><span
     class="glyphicon glyphicon-floppy-disk"></span>Enregistrer les modifications</button>
   <hr>
 </div>
+<!--save settings action confiramtion modal template-->
+
+<script type="text/ng-template" id="saveModalDialog">
+  <div class="modal-header ">
+    <h4 class="modal-title"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span>Confirmer la mise à jour des préférences</h4>
+  </div>
+  <div class="modal-body">
+    <p>Êtes-vous sûr de vouloir mettre à jour les préférences?</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Oui
+    </button>
+    <button class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove"
+                                                              aria-hidden="true"></span>Annuller
+    </button>
+  </div>
+</script>
+

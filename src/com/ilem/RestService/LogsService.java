@@ -1,6 +1,7 @@
 package com.ilem.RestService;
 
 import com.ilem.DBAccess.MongoConnection;
+import org.apache.log4j.Logger;
 import org.codehaus.jettison.json.JSONArray;
 
 import javax.ws.rs.*;
@@ -14,6 +15,7 @@ import javax.ws.rs.core.Response;
 @Path("/logs")
 @Produces(MediaType.APPLICATION_JSON)
 public class LogsService {
+    public static Logger log = Logger.getLogger(LogsService.class.getName());
     @GET
     @Path("/error")
     @Produces(MediaType.APPLICATION_JSON)

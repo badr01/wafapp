@@ -1,15 +1,18 @@
 package com.ilem.SystemOps;
 
 
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
-import java.util.logging.Logger;
+
 
 /**
  * Created by laassiri on 14/04/15.
  */
 public class ShellOps {
+    public static Logger log = Logger.getLogger(ShellOps.class.getName());
     //list of permitted shell commands
     public static final HashMap<String,String> ops=new HashMap<>();
     static{
@@ -28,7 +31,7 @@ public class ShellOps {
     public static String Execute(String Commande){
 
     StringBuffer output = new StringBuffer();
-    Logger log = Logger.getLogger(ShellOps.class.getName());
+
 
     log.info("La commande lancée est : " + Commande);
 

@@ -61,6 +61,7 @@ myApp.controller('ListCtrl', function ($scope, $modal, Site, $timeout) {
         }
       }
     });
+
     //saving modifications after dialog dismissal
     modalInstance.result.then(function () {
       $timeout(function () {
@@ -112,26 +113,29 @@ myApp.controller('ModalCtrl', function ($scope, $modalInstance, domain, Site, mo
 });
 
 
-//whitelidst modal controller
+//whitelist modal controller
 
-myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $http) {
+myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $http, growl) {
   //dismiss and quit the modal dialog;
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
 
-  $scope.validate=function(){
-    var rx=/BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?;/;
-    var wl=$scope.current==undefined?"":$scope.current;
-    var wls=$scope.textarea==undefined?[""]:$scope.textarea.split('\n');
-    if(rx.test(wl)&&$scope.site["wlList"].indexOf(wl)==-1) {
+  $scope.validate = function () {
+    var rx = /BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?;/;
+    var wl = $scope.current == undefined ? "" : $scope.current;
+    var wls = $scope.textarea == undefined ? [""] : $scope.textarea.split('\n');
+    if (rx.test(wl) && $scope.site["wlList"].indexOf(wl) == -1) {
       $scope.site["wlList"].push(wl);
-    };
-    wls.forEach(function(elt,ix,array){
-      if(rx.test(elt)&&$scope.site["wlList"].indexOf(elt)==-1) {
+    }
+    ;
+    wls.forEach(function (elt, ix, array) {
+
+      if ($scope.site["wlList"] == null)$scope.site["wlList"] = [];
+      if (rx.test(elt) && $scope.site["wlList"].indexOf(elt) == -1) {
         $scope.site["wlList"].push(elt);
-      }});
-    window.tt=wls;
+      }
+    });
   };
   $scope.site = angular.copy(site);
   $scope.wls = $scope.site["wlList"];
@@ -142,11 +146,16 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
 
   $scope.removeWL = function (ix) {
     $scope.wls.splice(ix, 1);
-  }
+  };
 
   $scope.ok = function () {
-    Site.save($scope.site);
-  }
+    Site.save($scope.site, function () {
+      growl.success("Opération réussie");
+    }, function () {
+      growl.success("Opération échouée");
+    });
+    $modalInstance.close();
+  };
   $scope.ids = [];
 
   $scope.zones = [
