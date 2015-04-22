@@ -122,6 +122,7 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
   };
 
   $scope.validate = function () {
+    if ($scope.site["wlList"] == null)$scope.site["wlList"] = [];
     var rx = /BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?;/;
     var wl = $scope.current == undefined ? "" : $scope.current;
     var wls = $scope.textarea == undefined ? [""] : $scope.textarea.split('\n');
@@ -130,9 +131,7 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
     }
     ;
     wls.forEach(function (elt, ix, array) {
-
-      if ($scope.site["wlList"] == null)$scope.site["wlList"] = [];
-      if (rx.test(elt) && $scope.site["wlList"].indexOf(elt) == -1) {
+       if (rx.test(elt) && $scope.site["wlList"].indexOf(elt) == -1) {
         $scope.site["wlList"].push(elt);
       }
     });

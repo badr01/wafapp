@@ -17,9 +17,9 @@ myApp
       });
       saveModalInstance.result.then(function () {
         Settings.save($scope.options, function () {
-          growl.success("Enregistrement réussi!");
+          growl.success("Enregistré!");
         }, function () {
-          growl.error("Enregistrement échoué!");
+          growl.error("Echec d'enregistrement!");
         });
         $timeout(function () {
           Settings.get(function (data) {

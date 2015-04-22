@@ -75,7 +75,7 @@ tcp-request content reject if abuse flag_abuser
 #foreach($site in $sites)
 acl host_www_${site.nomDomaine} hdr(host) -i www.${site.nomDomaine}
 acl host_${site.nomDomaine} hdr(host) -i ${site.nomDomaine}
-acl host_${site.nomDomaine}_ip dst ${site.nomDomaine}
+acl host_${site.nomDomaine}_ip dst ${site.ip}
 use_backend ${site.nomDomaine} if host_www_${site.nomDomaine} or host_${site.nomDomaine}  or host_${site.nomDomaine}_ip
 
 #end
@@ -84,7 +84,7 @@ use_backend ${site.nomDomaine} if host_www_${site.nomDomaine} or host_${site.nom
 #foreach($site in $sites)
 backend ${site.nomDomaine}
 option forwardfor header X-Real-IP
-server ${site.nomDomaine} 127.0.0.1:8081 cookie
+server ${site.nomDomaine} 127.0.0.1:${site.port} cookie
 timeout server  100000
 option  httpchk
 

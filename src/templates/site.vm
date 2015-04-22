@@ -2,12 +2,12 @@ server {
 #if($ishttps)
 listen $port ssl;
 #else
-listen $port
+listen $port;
 #end
 server_name $server_name;
 set $naxsi_extensive_log 1;
 proxy_intercept_errors on;
-access_log  /var/log/nginx/access_naxsi.log;
+access_log  /var/log/nginx/access_naxsi.log main;
 error_log  /var/log/nginx/error_naxsi.log;
 #if($ishttps)
 ssl_certificate      ${settings.siteCertDir}cert_${server_name}.pem;

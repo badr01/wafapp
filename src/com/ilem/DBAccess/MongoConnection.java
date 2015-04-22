@@ -5,13 +5,13 @@ import com.ilem.Models.Settings;
 import com.ilem.Models.Site;
 import com.mongodb.*;
 import com.mongodb.util.JSON;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.jongo.Jongo;
 import org.jongo.MongoCollection;
 import org.jongo.MongoCursor;
-
 
 import java.net.UnknownHostException;
 import java.text.ParseException;
@@ -27,7 +27,7 @@ import static org.jongo.Oid.withOid;
  * Created by laassiri on 25/03/15.
  */
 public class MongoConnection {
-    public static Logger log = Logger.getLogger(MongoConnection.class.getName());
+    public static Logger log = LogManager.getLogger(MongoConnection.class.getName());
     private static MongoConnection ourInstance = new MongoConnection();
     private DB db = null;
     private Jongo jongo = null;
@@ -36,11 +36,12 @@ public class MongoConnection {
     private MongoCollection settings = null;
     private DBCollection errorLogs = null;
     private DBCollection accessLogs = null;
+
     {
         try {
             this.db = new MongoClient("localhost", 27017).getDB("WAF");
         } catch (UnknownHostException e) {
-            e.printStackTrace();
+            log.error("Database connection error", e);
         }
         this.jongo = new Jongo(db);
         this.sites = jongo.getCollection("sites");
@@ -58,7 +59,7 @@ public class MongoConnection {
         return ourInstance;
     }
 
-//-------------------------Helper methods------------------------------------------
+    //-------------------------Helper methods------------------------------------------
     //convert iso date to java Date object
     public static Date isoDate(String time) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -66,7 +67,7 @@ public class MongoConnection {
         try {
             date = sdf.parse(time);
         } catch (ParseException e) {
-            e.printStackTrace();
+            log.error("Error while parsing date", e);
         }
         return date;
 
@@ -87,7 +88,7 @@ public class MongoConnection {
         return null;
     }
 
-     //building the agregation query to adapt to dates from and to
+    //building the agregation query to adapt to dates from and to
     public static List<DBObject> dateAggBuild(String from, String to) {
 
         BasicDBObject addToset = new BasicDBObject("rule_id", "$rule_id");
@@ -113,81 +114,117 @@ public class MongoConnection {
     }
 //-----------------------------------------------------------------------
 
-//------------------------Websites db operations--------------------
+    //------------------------Websites db operations--------------------
     //get sites from db
     public List<Site> getSites() {
+        log.debug("Entering getSites()");
         MongoCursor<Site> cursor = sites.find().as(Site.class);
         List<Site> allSites = new ArrayList<>();
         while (cursor.hasNext()) {
             allSites.add(cursor.next());
         }
+        log.debug("Leaving getSites(): returned {}",allSites);
         return allSites;
     }
+
     //get a specific site from db
-    public Site getSite(String site) {
-        return sites.findOne(withOid(site)).as(Site.class);
+    public Site getSite(String id) {
+        log.debug("Entering getSites(id={})",id);
+        Site site=sites.findOne(withOid(id)).as(Site.class);
+        log.debug("Leaving getSites(id):returned {}", site);
+        return site;
     }
 
     //create a new site or modify a new one from db
     public String saveSite(Site site) {
-        return sites.save(site).toString();
+        log.debug("Entering saveSite(site={})",site);
+        String result=sites.save(site).toString();
+        log.debug("Leaving saveSite(site): returned {}",result);
+        return result;
     }
+
     //insert an array of sites to db
     public String saveSites(List<Site> sitesList) {
-        return sites.insert(sitesList.toArray()).toString();
+        log.debug("Entering saveSites(sitesList={})",sitesList);
+        String result=sites.insert(sitesList.toArray()).toString();
+        log.debug("Leaving saveSites(sitesList):returned {}",result);
+        return result;
     }
 
     //delete site from db
-    public String removeSite(String site) {
-        return sites.remove(withOid(site)).toString();
+    public String removeSite(String id) {
+        log.debug("Entering removeSite(id={})",id);
+        String result = sites.remove(withOid(id)).toString();
+        log.debug("Leaving removeSite(id): returned {}",result);
+        return result;
     }
 
     //remove allsites from db
     public void removeAllSites() {
+        log.debug("Entering removeAllSites()");
         sites.drop();
+        log.debug("Leaving removeAllSites()");
     }
 //--------------------------------------------------------------------------------------------------
 
-//------------------------------settings db operations--------------------------------------
+    //------------------------------settings db operations--------------------------------------
     //get a settings from db
     public Settings getSettings() {
-        return settings.findOne().as(Settings.class);
+        log.debug("Entering getSettings()");
+        Settings setting=settings.findOne().as(Settings.class);
+        log.debug("Leaving getSettings():returned {}",setting);
+        return setting ;
     }
 
     //create a new settings or modify a new ones from db
     public String saveSettings(Settings setting) {
-        return settings.save(setting).toString();
+        log.debug("Entering saveSettings(settings={})", setting);
+        String result=settings.save(setting).toString();
+        log.debug("Leaving saveSettings(settings): returned {}",result);
+        return result;
     }
 
     //drop setting collection from db
     public void dropSettings() {
-         settings.drop();
+        log.debug("Entering dropSettings()");
+        settings.drop();
+        log.debug("Leaving dropSettings()");
+
     }
 
-    //drop setting collection from db
+    //count setting collection records in db
     public long countSettings() {
-         return settings.count();
+        log.debug("Entering countSettings()");
+        long l =settings.count();
+        log.debug("Entering countSettings(): returned {}",l);
+        return l;
+
+
+
     }
 
 //-------------------------------------------------------------------------------------------------------
 
-//------------------------------------Logs db operations--------------------------------------------------
+    //------------------------------------Logs db operations--------------------------------------------------
     //get the error logs from db
     public JSONArray getExtLogs(String from, String to) {
+        log.debug("Entering getExtLogs(from={},to={})", from, to);
         JSON json = new JSON();
-        AggregationOutput cursor = errorLogs.aggregate(dateAggBuild(from,to));
+        AggregationOutput cursor = errorLogs.aggregate(dateAggBuild(from, to));
         JSONArray AllJson = null;
         String serialize = json.serialize(cursor.results());
         try {
             AllJson = new JSONArray(serialize);
         } catch (JSONException e) {
-            e.printStackTrace();
+            log.error("error while serializing JSON array", e);
         }
+        log.debug("Leaving getExtLogs(from,to):returned {} ", AllJson);
         return AllJson;
     }
 
     //get the access logs from db
     public JSONArray getAccessLogs(String from, String to) {
+        log.debug("Entering getAccessLogs(from={},to={})", from, to);
 
         BasicDBObject query = dateQueryBuild(from, to);
 
@@ -200,33 +237,45 @@ public class MongoConnection {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        log.debug("Leaving getAccessLogs(from,to):returned {} ", AllJson);
+
         return AllJson;
     }
 //--------------------------------------------------------------------------------------------------
 
-//-----------------------------------------------------Backups db operations------------------------
+    //-----------------------------------------------------Backups db operations------------------------
     //get backups list from db
-    public List<Backups> getBackups(boolean b) {
+    public List<Backups> getBackups(boolean isProjected) {
+        log.debug("Entering getBackups(isProjected={})",isProjected);
         MongoCursor<Backups> cursor;
-        if(b){
+        if (isProjected) {
             cursor = backups.find().limit(10).sort("{date:-1}").as(Backups.class);
-        }else {
+        } else {
             cursor = backups.find().projection("{date:1}").limit(10).sort("{date:-1}").as(Backups.class);
         }
         List<Backups> allBackups = new ArrayList<>();
         while (cursor.hasNext()) {
             allBackups.add(cursor.next());
         }
+        log.debug("Leaving getBackups(isProjected): returned {}",allBackups);
+
         return allBackups;
     }
+
     //save backups to db
     public String saveBackups(Backups backup) {
-        return backups.save(backup).toString();
+        log.debug("Entering saveBackups(backup={})",backup);
+        String result=backups.save(backup).toString();
+        log.debug("Leaving saveBackups(backup): returned {}",result);
+        return result;
     }
 
     //get backup by key
-    public Backups getSetting(String key) {
-        return backups.findOne(withOid(key)).as(Backups.class);
+    public Backups getbackup(String key) {
+        log.debug("Entering getbackup(key={})",key);
+        Backups backup=backups.findOne(withOid(key)).as(Backups.class);
+        log.debug("Leaving getbackup(key): returned {}",backup);
+        return backup;
     }
 }
 //-------------------------------------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 package com.ilem.SystemOps;
 
-
-import org.apache.log4j.Logger;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
@@ -12,7 +12,7 @@ import java.util.HashMap;
  * Created by laassiri on 14/04/15.
  */
 public class ShellOps {
-    public static Logger log = Logger.getLogger(ShellOps.class.getName());
+    public static Logger log = LogManager.getLogger(ShellOps.class.getName());
     //list of permitted shell commands
     public static final HashMap<String,String> ops=new HashMap<>();
     static{
@@ -33,7 +33,7 @@ public class ShellOps {
     StringBuffer output = new StringBuffer();
 
 
-    log.info("La commande lancée est : " + Commande);
+    log.debug("Entering Execute(commande={})", Commande);
 
     Process p;
     try {
@@ -51,13 +51,14 @@ public class ShellOps {
 
         }
         reader.close();
-        log.info("Le retour de la commande lancée est : "
-                + output.toString());
 
-    } catch (Exception e) {
-        e.printStackTrace();
+    }catch (IOException e) {
+        log.error("Unexpected IO error while reading shell command output",e);
     }
-
-    return output.toString();
+    catch (InterruptedException e) {
+        log.error("error while waiting for process to terminate",e);
+    }
+        log.debug("Leaving Execute: returned {}", output.toString());
+        return output.toString();
     }
 }

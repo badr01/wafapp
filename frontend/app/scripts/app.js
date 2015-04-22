@@ -1,6 +1,6 @@
 'use strict';
 var loading=false;
-var myApp=angular.module('mgcrea.WafApp', ['angular-growl',,'ngResource','ngTagsInput','ui.bootstrap','smart-table', 'ngRoute', 'angularHighlightTextarea'])
+var myApp=angular.module('mgcrea.WafApp', ['angular-growl','ngResource','ngTagsInput','ui.bootstrap','smart-table', 'ngRoute', 'angularHighlightTextarea'])
 
   .constant('version', 'v0.1.0')
 
@@ -10,28 +10,28 @@ var myApp=angular.module('mgcrea.WafApp', ['angular-growl',,'ngResource','ngTags
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html'
+        templateUrl: './views/etat.html'
       })
       .when('/etat', {
-        templateUrl: '../views/etat.html'
+        templateUrl: './views/etat.html'
       })
       .when('/manage', {
-        templateUrl: '../views/manage.html'
+        templateUrl: './views/manage.html'
       })
       .when('/journalisation', {
-        templateUrl: '../views/journalisation.html'
+        templateUrl: './views/journalisation.html'
       })
       .when('/journalisationb', {
-        templateUrl: '../views/journalisationb.html'
+        templateUrl: './views/journalisationb.html'
       })
       .when('/settings', {
-        templateUrl: '../views/settings.html'
+        templateUrl: './views/settings.html'
       })
       .when('/update', {
-        templateUrl: '../views/update.html'
+        templateUrl: './views/update.html'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: './'
       });
 
   }).config([

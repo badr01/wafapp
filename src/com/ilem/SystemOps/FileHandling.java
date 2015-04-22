@@ -3,7 +3,8 @@ package com.ilem.SystemOps;
 import com.ilem.DBAccess.MongoConnection;
 import com.ilem.Models.Settings;
 import com.ilem.Models.Site;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
@@ -19,18 +20,21 @@ import java.util.Properties;
 
 //class for updating or creating files from database
 public class FileHandling {
-    public static Logger log = Logger.getLogger(FileHandling.class.getName());
+    public static Logger log = LogManager.getLogger(FileHandling.class.getName());
+
     static {
         Properties p = new Properties();
         p.setProperty("resource.loader", "class");
         p.setProperty("class.resource.loader.class",
                 "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
+        p.setProperty("runtime.log.logsystem.class", "org.apache.velocity.runtime.log.NullLogChute");
         Velocity.init(p);
     }
 
     public static Settings settings;
 
     public static void updateNginx() {
+        log.debug("Entering updateNginx()");
         settings = MongoConnection.getInstance().getSettings();
         List<Site> list = MongoConnection.getInstance().getSites();
         Template t = Velocity.getTemplate("templates/nginx_conf.vm");
@@ -40,20 +44,27 @@ public class FileHandling {
         StringWriter writer = new StringWriter();
         t.merge(context, writer);
 
-        File sortie = new File(settings.getNginxConfDir() + "nginx.conf");
         BufferedWriter bw = null;
         try {
+            File NginxConfDir = new File(settings.getNginxConfDir());
+            if (!NginxConfDir.exists()) {
+                NginxConfDir.mkdirs();
+            }
+            File sortie = new File(NginxConfDir, "nginx.conf");
+
             bw = new BufferedWriter(new FileWriter(sortie));
 
             bw.write(writer.toString());
 
             bw.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("IO error while writing to file", e);
         }
+        log.debug("Leaving updateNginx()");
     }
 
     public static void updateHaproxy() {
+        log.debug("Entering updateHaproxy()");
         settings = MongoConnection.getInstance().getSettings();
         List<Site> list = MongoConnection.getInstance().getSites();
         Template t = Velocity.getTemplate("templates/haproxy_conf.vm");
@@ -63,21 +74,27 @@ public class FileHandling {
         StringWriter writer = new StringWriter();
         t.merge(context, writer);
 
-        File sortie = new File(settings.getHaproxyConfDir() + "haproxy.conf");
         BufferedWriter bw = null;
         try {
+            File HaproxyConfDir = new File(settings.getHaproxyConfDir());
+            if (!HaproxyConfDir.exists()) {
+                HaproxyConfDir.mkdirs();
+            }
+            File sortie = new File(HaproxyConfDir, "haproxy.cfg");
+
             bw = new BufferedWriter(new FileWriter(sortie));
 
             bw.write(writer.toString());
 
             bw.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("IO error while writing to file", e);
         }
-
+        log.debug("Leaving updateHaproxy()");
     }
 
     public static void updateEnabledSites() {
+        log.debug("Entering updateEnabledSites()");
         settings = MongoConnection.getInstance().getSettings();
         List<Site> list = MongoConnection.getInstance().getSites();
         Template t = Velocity.getTemplate("templates/site.vm");
@@ -91,19 +108,29 @@ public class FileHandling {
             context.put("server_name", site.getNomDomaine());
             context.put("ip_address", site.getIp());
             context.put("ishttps", site.isHttps());
+            context.put("settings", settings);
             context1.put("message", site.getMsgError());
             context1.put("server_name", site.getNomDomaine());
-            context1.put("settings", settings);
             StringWriter writer = new StringWriter();
             StringWriter writer1 = new StringWriter();
             t.merge(context, writer);
             t1.merge(context1, writer1);
 
-            File sortie = new File(settings.getSitesEnabledDir() + site.getNomDomaine() + ".conf");
-            File sortie1 = new File("/etc/nginx/html/" + site.getNomDomaine() + "_erreur.html");
+
             BufferedWriter bw = null;
             BufferedWriter bw1 = null;
             try {
+                File sitesEnabledDir = new File(settings.getSitesEnabledDir());
+                if (!sitesEnabledDir.exists()) {
+                    sitesEnabledDir.mkdirs();
+                }
+                File errorHtmlDir = new File(settings.getNginxConfDir(), "html");
+                if (!errorHtmlDir.exists()) {
+                    errorHtmlDir.mkdirs();
+                }
+
+                File sortie = new File(sitesEnabledDir, site.getNomDomaine() + ".conf");
+                File sortie1 = new File(errorHtmlDir, site.getNomDomaine() + "_erreur.html");
                 bw = new BufferedWriter(new FileWriter(sortie));
                 bw1 = new BufferedWriter(new FileWriter(sortie1));
 
@@ -113,11 +140,15 @@ public class FileHandling {
                 bw.close();
                 bw1.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                log.error("IO error while writing to file", e);
             }
             if (site.isHttps()) {
-                File cert = new File(settings.getSiteCertDir() + "cert_" + site.getNomDomaine() + ".pem");
-                File pkey = new File(settings.getSiteCertDir() + "key_" + site.getNomDomaine() + ".key");
+                File SiteCertDir = new File(settings.getSiteCertDir());
+                if (!SiteCertDir.exists()) {
+                    SiteCertDir.mkdirs();
+                }
+                File cert = new File(SiteCertDir, "cert_" + site.getNomDomaine() + ".pem");
+                File pkey = new File(SiteCertDir, "key_" + site.getNomDomaine() + ".key");
                 BufferedWriter bwcert = null;
                 BufferedWriter bwkey = null;
                 try {
@@ -130,13 +161,17 @@ public class FileHandling {
                     bwkey.close();
                     bwcert.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    log.error("IO error while writing to file", e);
                 }
             }
         }
+        log.debug("Leaving updateEnabledSites()");
+
     }
 
     public static void updateNaxsiRules() {
+        log.debug("Entering updateNaxsiRules()");
+
         settings = MongoConnection.getInstance().getSettings();
         List<Site> list = MongoConnection.getInstance().getSites();
         Template t = Velocity.getTemplate("templates/rules.vm");
@@ -149,17 +184,24 @@ public class FileHandling {
             StringWriter writer = new StringWriter();
             t.merge(context, writer);
 
-            File sortie = new File(settings.getNaxsiConfDir() + "naxsi_" + site.getNomDomaine() + ".rules");
             BufferedWriter bw = null;
             try {
+                File NaxsiConfDir = new File(settings.getNaxsiConfDir());
+                if (!NaxsiConfDir.exists()) {
+                    NaxsiConfDir.mkdirs();
+                }
+                File sortie = new File(NaxsiConfDir, "naxsi_" + site.getNomDomaine() + ".rules");
+
                 bw = new BufferedWriter(new FileWriter(sortie));
 
                 bw.write(writer.toString());
 
                 bw.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                log.error("IO error while writing to file", e);
             }
         }
+        log.debug("Leaving updateNaxsiRules()");
+
     }
 }
