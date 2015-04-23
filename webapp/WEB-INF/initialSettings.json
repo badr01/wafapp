@@ -1,6 +1,9 @@
 {
   "naxsiConfDir": "/etc/nginx/naxsi/naxsi_config/",
   "haproxyConfDir": "/etc/haproxy/",
+  "siteCertDir": "/etc/nginx/certificate/",
+  "nginxConfDir": "/etc/nginx/",
+  "sitesEnabledDir": "/etc/nginx/sites-enabled/",
   "whitelistRules": [
     {
       "desc": "weird request, unable to parse",
@@ -194,8 +197,5 @@
       "desc": "asp/php file upload!",
       "id": "1500"
     }
-  ],
-  "siteCertDir": "/etc/nginx/certificate/",
-  "nginxConfDir": "/etc/nginx/",
-  "sitesEnabledDir": "/etc/nginx/sites-enabled/"
+  ]
 }

@@ -7,7 +7,7 @@
 
         <p class="input-group">
           <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtFrom" is-open="opened1"
-                 placeholder="Logs from date" datepicker-options="dateOptions" ng-required="true" close-text="Close"/>
+                 placeholder="Logs from date" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event,'opened1')"><i
                   class="glyphicon glyphicon-calendar"></i></button>
@@ -18,7 +18,7 @@
 
         <p class="input-group">
           <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtTo" is-open="opened2"
-                 placeholder="Logs to date" datepicker-options="dateOptions" ng-required="true" close-text="Close"/>
+                 placeholder="Logs to date" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event,'opened2')"><i
                   class="glyphicon glyphicon-calendar"></i></button>
@@ -58,7 +58,7 @@
       </thead>
       <tbody>
       <tr ng-repeat="row in displayCollection">
-        <td class="tdflow" >{{row.time| date : 'yyyy-MM-dd HH:mm:ss'}}</td>
+        <td class="tdflow" >{{row.time}}</td>
         <td class="tdflow">{{row.host }}</td>
         <td class="tdflow">{{row.client_ip }}</td>
         <td class="tdflow">{{row.client}}</td>

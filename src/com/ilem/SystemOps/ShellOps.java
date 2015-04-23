@@ -51,6 +51,7 @@ public class ShellOps {
 
         }
         reader.close();
+        p.destroy();
 
     }catch (IOException e) {
         log.error("Unexpected IO error while reading shell command output",e);

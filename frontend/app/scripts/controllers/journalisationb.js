@@ -4,7 +4,7 @@
 myApp.controller('paginationBCtrl', ['$scope', 'Error', '$modal', function ($scope, Error, $modal) {
   Error.query(function (data) {
     data.forEach(function (elt, ix, arr) {
-      arr[ix].time = elt._id.time.$date;
+      arr[ix].time = new Date(Date.parse(elt._id.time.$date)).toLocaleString();
       arr[ix].host = elt._id.host;
       arr[ix].client_ip = elt._id.client_ip;
       arr[ix].path = elt._id.path;
@@ -73,7 +73,7 @@ myApp.controller('DatepickerBCtrl', function ($scope, Error) {
   $scope.getLog = function () {
     Error.query({from: $scope.dtFrom, to: $scope.dtTo}, function (data) {
       data.forEach(function (elt, ix, arr) {
-        arr[ix].time = elt._id.time.$date;
+        arr[ix].time = new Date(Date.parse(elt._id.time.$date)).toLocaleString();
         arr[ix].host = elt._id.host;
         arr[ix].client_ip = elt._id.client_ip;
         arr[ix].path = elt._id.path;

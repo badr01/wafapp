@@ -16,10 +16,7 @@ import org.jongo.MongoCursor;
 import java.net.UnknownHostException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.jongo.Oid.withOid;
 
@@ -108,11 +105,15 @@ public class MongoConnection {
         if (from != null || to != null) log_type.putAll((Map) dateQueryBuild(from, to));
         BasicDBObject match = new BasicDBObject("$match", log_type);
         List<DBObject> pipeline = new ArrayList<>();
+        BasicDBObject sort = new BasicDBObject("$sort", new BasicDBObject("time", -1));
+        BasicDBObject limit = new BasicDBObject("$limit",300);
         pipeline.add(match);
         pipeline.add(grp);
+        pipeline.add(sort);
+        pipeline.add(limit);
         return pipeline;
     }
-//-----------------------------------------------------------------------
+    //-----------------------------------------------------------------------
 
     //------------------------Websites db operations--------------------
     //get sites from db
@@ -129,9 +130,9 @@ public class MongoConnection {
 
     //get a specific site from db
     public Site getSite(String id) {
-        log.debug("Entering getSites(id={})",id);
+        log.debug("Entering getSite(id={})",id);
         Site site=sites.findOne(withOid(id)).as(Site.class);
-        log.debug("Leaving getSites(id):returned {}", site);
+        log.debug("Leaving getSite(id):returned {}", site);
         return site;
     }
 
@@ -165,7 +166,7 @@ public class MongoConnection {
         sites.drop();
         log.debug("Leaving removeAllSites()");
     }
-//--------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------
 
     //------------------------------settings db operations--------------------------------------
     //get a settings from db
@@ -196,14 +197,14 @@ public class MongoConnection {
     public long countSettings() {
         log.debug("Entering countSettings()");
         long l =settings.count();
-        log.debug("Entering countSettings(): returned {}",l);
+        log.debug("Leaving countSettings(): returned {}",l);
         return l;
 
 
 
     }
 
-//-------------------------------------------------------------------------------------------------------
+    //-------------------------------------------------------------------------------------------------------
 
     //------------------------------------Logs db operations--------------------------------------------------
     //get the error logs from db
@@ -227,9 +228,9 @@ public class MongoConnection {
         log.debug("Entering getAccessLogs(from={},to={})", from, to);
 
         BasicDBObject query = dateQueryBuild(from, to);
-
+        BasicDBObject sort = new BasicDBObject("time", -1);
         JSON json = new JSON();
-        DBCursor cursor = accessLogs.find(query);
+        DBCursor cursor = accessLogs.find(query).sort(sort).limit(300);
         JSONArray AllJson = null;
         String serialize = json.serialize(cursor);
         try {
@@ -241,7 +242,7 @@ public class MongoConnection {
 
         return AllJson;
     }
-//--------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------
 
     //-----------------------------------------------------Backups db operations------------------------
     //get backups list from db

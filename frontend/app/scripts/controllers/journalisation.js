@@ -5,7 +5,8 @@ myApp
   .controller('paginationCtrl', ['$scope', 'Access', function ($scope, Access) {
     Access.query(function (data) {
       data.forEach(function (elt, ix, arr) {
-        arr[ix].time = elt.time.$date
+
+        arr[ix].time = new Date(Date.parse(elt.time.$date)).toLocaleString();
       });
       $scope.rowCollection = angular.fromJson(data);
       window.aa = angular.fromJson(data);
@@ -48,7 +49,7 @@ myApp.controller('DatepickerCtrl', function ($scope, Access) {
   $scope.getLog = function () {
     Access.query({from: $scope.dtFrom, to: $scope.dtTo}, function (data) {
       data.forEach(function (elt, ix, arr) {
-        arr[ix].time = elt.time.$date
+        arr[ix].time = new Date(Date.parse(elt.time.$date)).toLocaleString();
       });
       $scope.$parent.rowCollection = angular.fromJson(data);
     });
@@ -68,4 +69,6 @@ myApp.controller('DatepickerCtrl', function ($scope, Access) {
 
 
   $scope.format = 'dd.MM.yyyy HH:mm:ss';
+
 });
+
