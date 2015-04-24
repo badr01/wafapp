@@ -6,7 +6,7 @@ myApp
     Access.query(function (data) {
       data.forEach(function (elt, ix, arr) {
 
-        arr[ix].time = new Date(Date.parse(elt.time.$date)).toLocaleString();
+        arr[ix].time = new Date(Date.parse(elt.time.$date)).toLocaleString('en-US', { hour12: false });
       });
       $scope.rowCollection = angular.fromJson(data);
       window.aa = angular.fromJson(data);
@@ -37,7 +37,7 @@ myApp
 /*date picker controller logic*/
 
 myApp.controller('DatepickerCtrl', function ($scope, Access) {
-  $scope.today = function (dt) {
+   $scope.today = function (dt) {
     $scope[dt] = new Date();
   };
   $scope.today();
@@ -49,7 +49,7 @@ myApp.controller('DatepickerCtrl', function ($scope, Access) {
   $scope.getLog = function () {
     Access.query({from: $scope.dtFrom, to: $scope.dtTo}, function (data) {
       data.forEach(function (elt, ix, arr) {
-        arr[ix].time = new Date(Date.parse(elt.time.$date)).toLocaleString();
+        arr[ix].time = new Date(Date.parse(elt.time.$date)).toLocaleString('en-US', { hour12: false });
       });
       $scope.$parent.rowCollection = angular.fromJson(data);
     });
@@ -68,7 +68,7 @@ myApp.controller('DatepickerCtrl', function ($scope, Access) {
   };
 
 
-  $scope.format = 'dd.MM.yyyy HH:mm:ss';
+  $scope.format = 'MM/dd/yyyy, HH:mm:ss';
 
 });
 

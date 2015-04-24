@@ -32,7 +32,7 @@ myApp.controller('UpdateCntrl', function ($scope, Backups, Update, Restore, $tim
       update();
       $timeout(function () {
         refresh();
-      }, 200);
+      }, 1000);
     });
   };
 
@@ -62,7 +62,7 @@ myApp.controller('UpdateCntrl', function ($scope, Backups, Update, Restore, $tim
   };
 
   $scope.toDate = function (ts) {
-    return new Date(ts).toLocaleString();
+    return new Date(ts).toLocaleString('en-US', { hour12: false });
   };
 })
 

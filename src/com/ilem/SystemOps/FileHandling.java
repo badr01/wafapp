@@ -155,7 +155,7 @@ public class FileHandling {
                     bwkey = new BufferedWriter(new FileWriter(pkey));
                     bwcert = new BufferedWriter(new FileWriter(cert));
 
-                    bwkey.write(site.getKey());
+                    bwkey.write(site.getPkey());
                     bwcert.write(site.getCert());
 
                     bwkey.close();

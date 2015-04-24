@@ -60,6 +60,7 @@ public class MongoConnection {
     //convert iso date to java Date object
     public static Date isoDate(String time) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
         Date date = null;
         try {
             date = sdf.parse(time);

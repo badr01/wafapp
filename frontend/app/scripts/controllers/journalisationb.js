@@ -4,7 +4,7 @@
 myApp.controller('paginationBCtrl', ['$scope', 'Error', '$modal', function ($scope, Error, $modal) {
   Error.query(function (data) {
     data.forEach(function (elt, ix, arr) {
-      arr[ix].time = new Date(Date.parse(elt._id.time.$date)).toLocaleString();
+      arr[ix].time = new Date(Date.parse(elt._id.time.$date)).toLocaleString('en-US', { hour12: false });
       arr[ix].host = elt._id.host;
       arr[ix].client_ip = elt._id.client_ip;
       arr[ix].path = elt._id.path;
@@ -13,11 +13,13 @@ myApp.controller('paginationBCtrl', ['$scope', 'Error', '$modal', function ($sco
     window.aa = angular.fromJson(data);
 
   });
+
+
   $scope.displayCollection = [].concat($scope.rowCollection);
   $scope.itemsByPage = 15;
   $scope.predicates = [{key: "Filter by Host", "value": "host"}, {
     key: "Filter by User IP",
-    "value": "client ip"
+    "value": "client_ip"
   }, {key: "Filter by URI Path", "value": "path"}];
   $scope.selectedPredicate = $scope.predicates[0].value;
   $scope.isCollapsed = true;
@@ -39,9 +41,14 @@ myApp.controller('paginationBCtrl', ['$scope', 'Error', '$modal', function ($sco
 }]);
 
 //show rules modal controller
-myApp.controller('ShowDialogCtrl', function ($scope, $modalInstance, rules) {
+myApp.controller('ShowDialogCtrl', function ($scope, $modalInstance, rules,Settings) {
   $scope.rules = rules;
-
+  Settings.get(function (data) {
+    $scope.descs={};
+    data.whitelistRules.forEach(function (elt, ix, arr) {
+      $scope.descs[elt.id]=elt.desc;
+    });
+  });
   //dismiss and quit the modal dialog;
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
@@ -51,7 +58,7 @@ myApp.controller('ShowDialogCtrl', function ($scope, $modalInstance, rules) {
 //experimental feature : filter highlighting match zone in requests
 myApp.filter('highlight', function ($sce) {
   return function (text, phrase) {
-    if (phrase) text = text.replace(new RegExp('(' + phrase + '=[^ ]*)', 'gi'),
+    if (phrase) text = text.replace(new RegExp('(' + phrase + '=[^& ]*)', 'gi'),
       '<span class="badge bg-primary">$1</span>')
 
     return $sce.trustAsHtml(text)
@@ -73,7 +80,7 @@ myApp.controller('DatepickerBCtrl', function ($scope, Error) {
   $scope.getLog = function () {
     Error.query({from: $scope.dtFrom, to: $scope.dtTo}, function (data) {
       data.forEach(function (elt, ix, arr) {
-        arr[ix].time = new Date(Date.parse(elt._id.time.$date)).toLocaleString();
+        arr[ix].time = new Date(Date.parse(elt._id.time.$date)).toLocaleString('en-US', { hour12: false });
         arr[ix].host = elt._id.host;
         arr[ix].client_ip = elt._id.client_ip;
         arr[ix].path = elt._id.path;
@@ -95,5 +102,5 @@ myApp.controller('DatepickerBCtrl', function ($scope, Error) {
   };
 
 
-  $scope.format = 'dd.MM.yyyy HH:mm:ss';
+  $scope.format = 'MM/dd/yyyy, HH:mm:ss';
 });

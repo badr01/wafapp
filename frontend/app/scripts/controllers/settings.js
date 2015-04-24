@@ -25,7 +25,7 @@ myApp
           Settings.get(function (data) {
             $scope.options = data;
           });
-        }, 200);
+        }, 1000);
       });
     };
 

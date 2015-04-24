@@ -25,12 +25,12 @@ myApp.controller('ListCtrl', function ($scope, $modal, Site, $timeout) {
       Site.delete({domain: domain});
       $timeout(function () {
         $scope.update();
-      }, 200);
+      }, 1000);
     });
   };
 
 
-  // Modal: called by "Afficher"
+  // Modal: called by "Afficher whitelist"
   $scope.openWL = function (site) {
 
     var modalInstance = $modal.open({
@@ -217,8 +217,8 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
   //watch changes in inputs and reflect them in main input
   $scope.$watch('[urlFltr,zone,urlContent,zoneContent,chkName,ids]', function () {
 
-    $scope.current = buildStrIds($scope.ids) + buildStrMz($scope.urlFltr, $scope.urlContent, $scope.zone, $scope.zoneContent, $scope.chkName) + ";";
-
+    $scope.current = buildStrIds($scope.ids) + buildStrMz($scope.urlFltr, $scope.urlContent, $scope.zone, $scope.zoneContent, $scope.chkName) ;
+    $scope.current ==""?$scope.current +="":$scope.current +=";";
   }, true);
 
 
