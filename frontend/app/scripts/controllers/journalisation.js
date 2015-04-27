@@ -14,20 +14,20 @@ myApp
     });
     $scope.displayCollection = [].concat($scope.rowCollection);
     $scope.itemsByPage = 15;
-    $scope.predicates = [{key: "Filter by Host", "value": "host"}, {
-      key: "Filter by User_IP",
+    $scope.predicates = [{key: "Filtrer par Host", "value": "host"}, {
+      key: "Filtrer par User_IP",
       "value": "client_ip"
-    }, {key: "Filter by User", "value": "client"}, {
-      key: "Filter by URI_Path",
+    }, {key: "Filtrer par User", "value": "client"}, {
+      key: "Filtrer par URI_Path",
       "value": "path"
-    }, {key: "Filter by Method", "value": "method"}, {
-      key: "Filter by HTTP_Status",
+    }, {key: "Filtrer par Method", "value": "method"}, {
+      key: "Filtrer par HTTP_Status",
       "value": "code"
-    }, {key: "Filter by Referer", "value": "referer"}, {
-      key: "Filter by Bytes",
+    }, {key: "Filtrer par Referer", "value": "referer"}, {
+      key: "Filtrer par Bytes",
       "value": "size"
-    }, {key: "Filter by X_Forwarded_For", "value": "x_forwarded_for"}, {
-      key: "Filter by User_Agent",
+    }, {key: "Filtrer par X_Forwarded_For", "value": "x_forwarded_for"}, {
+      key: "Filtrer par User_Agent",
       "value": "user_agent"
     }];
     $scope.selectedPredicate = $scope.predicates[0].value;

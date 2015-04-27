@@ -17,10 +17,10 @@ myApp.controller('paginationBCtrl', ['$scope', 'Error', '$modal', function ($sco
 
   $scope.displayCollection = [].concat($scope.rowCollection);
   $scope.itemsByPage = 15;
-  $scope.predicates = [{key: "Filter by Host", "value": "host"}, {
-    key: "Filter by User IP",
+  $scope.predicates = [{key: "Filtrer par Host", "value": "host"}, {
+    key: "Filtrer par User IP",
     "value": "client_ip"
-  }, {key: "Filter by URI Path", "value": "path"}];
+  }, {key: "Filtrer par URI Path", "value": "path"}];
   $scope.selectedPredicate = $scope.predicates[0].value;
   $scope.isCollapsed = true;
   // Modal: called by "supprimer site"

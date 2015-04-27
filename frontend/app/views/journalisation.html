@@ -7,7 +7,7 @@
 
         <p class="input-group">
           <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtFrom" is-open="opened1"
-                 placeholder="Logs from date" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                 placeholder="Depuis la date" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event,'opened1')"><i
                   class="glyphicon glyphicon-calendar"></i></button>
@@ -18,7 +18,7 @@
 
         <p class="input-group">
           <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtTo" is-open="opened2"
-                 placeholder="Logs to date" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                 placeholder="Jusqu'à la date" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
               <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="open($event,'opened2')"><i
                   class="glyphicon glyphicon-calendar"></i></button>
@@ -27,7 +27,7 @@
       </div>
       <div class="col-md-2">
         <a class="btn btn-primary btn-sm" ng-click="getLog()" role="button"><span
-          class="glyphicon glyphicon-download"></span>Get logs</a>
+          class="glyphicon glyphicon-download"></span>Chercher</a>
         </p>
       </div>
     </div>
@@ -38,7 +38,7 @@
         <th colspan="2"><select class="form-control" id="predicate" ng-model="selectedPredicate"
                                 ng-options="predicate.value as predicate.key for predicate in predicates"></select></th>
 
-        <th colspan="9"><input class="form-control" placeholder="Filter..." st-search="{{selectedPredicate}}"/></th>
+        <th colspan="9"><input class="form-control" placeholder="Filtre..." st-search="{{selectedPredicate}}"/></th>
 
       </tr>
       <tr>

@@ -36,6 +36,7 @@ myApp
       naxsiConfDir: false,
       haproxyConfDir: false,
       siteCertDir: false,
+      ddosRate:false,
       whitelistRules: false
     };
 
@@ -45,6 +46,7 @@ myApp
       naxsiConfDir: "",
       haproxyConfDir: "",
       siteCertDir: "",
+      ddosRate:"",
       whitelistRules: []
     };
     $scope.enableEditor = function (elm) {

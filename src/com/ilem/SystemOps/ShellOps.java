@@ -42,15 +42,22 @@ public class ShellOps {
 
         p.waitFor();
 
-        BufferedReader reader = new BufferedReader(new InputStreamReader(
+        BufferedReader readerInput = new BufferedReader(new InputStreamReader(
                 p.getInputStream()));
+        BufferedReader readerError = new BufferedReader(new InputStreamReader(
+                p.getErrorStream()));
 
         String line;
-        while ((line = reader.readLine()) != null) {
+        while ((line = readerInput.readLine()) != null) {
             output.append(line + "\n");
 
         }
-        reader.close();
+        readerInput.close();
+        while ((line = readerError.readLine()) != null) {
+            output.append(line + "\n");
+
+        }
+        readerError.close();
         p.destroy();
 
     }catch (IOException e) {

@@ -4,6 +4,7 @@
   "siteCertDir": "/etc/nginx/certificate/",
   "nginxConfDir": "/etc/nginx/",
   "sitesEnabledDir": "/etc/nginx/sites-enabled/",
+  "ddosRate":100,
   "whitelistRules": [
     {
       "desc": "weird request, unable to parse",

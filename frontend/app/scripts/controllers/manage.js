@@ -92,7 +92,7 @@ myApp.controller('ModalCtrl', function ($scope, $modalInstance, domain, Site, mo
     $scope.modif = modif;
   } else {
     $scope.modif = false;
-  }
+   }
   //cancel and quit the modal dialog;
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
@@ -123,7 +123,7 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
 
   $scope.validate = function () {
     if ($scope.site["wlList"] == null)$scope.site["wlList"] = [];
-    var rx = /BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?;/;
+    var rx = /BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?( "str:[^|;]*")?;/;
     var wl = $scope.current == undefined ? "" : $scope.current;
     var wls = $scope.textarea == undefined ? [""] : $scope.textarea.split('\n');
     if (rx.test(wl) && $scope.site["wlList"].indexOf(wl) == -1) {
@@ -215,9 +215,9 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
   };
 
   //watch changes in inputs and reflect them in main input
-  $scope.$watch('[urlFltr,zone,urlContent,zoneContent,chkName,ids]', function () {
+  $scope.$watch('[urlFltr,zone,urlContent,zoneContent,chkName,ids,strmatch]', function () {
 
-    $scope.current = buildStrIds($scope.ids) + buildStrMz($scope.urlFltr, $scope.urlContent, $scope.zone, $scope.zoneContent, $scope.chkName) ;
+    $scope.current = buildStrIds($scope.ids) + buildStrMz($scope.urlFltr, $scope.urlContent, $scope.zone, $scope.zoneContent, $scope.chkName)+buildStrMatch($scope.strmatch) ;
     $scope.current ==""?$scope.current +="":$scope.current +=";";
   }, true);
 
@@ -232,7 +232,13 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
       return str.substring(0, str.lastIndexOf(','));
     } else return "";
   };
-
+  var buildStrMatch=function(input){
+    var str = "";
+    if(input!=undefined&&input!=""){
+      str=" \"str:"+input+"\""
+    }
+    return str;
+  }
   var buildStrMz = function (fltr, fltrc, zone, zonec, nm) {
     var str = "";
     if (fltr['value'] != "all" && zone['value'] != "$URL" && zone['value'] != "$URL_X") {
@@ -260,7 +266,7 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
   $scope.option = {
     words: [{
       color: '#37F230',
-      words: ['^BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\\s*("mz:(\\$?URL(_X)?(:[^|;]*)?)?(\\|?\\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\\|NAME)?)?")?;$']
+      words: ['^BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\\s*("mz:(\\$?URL(_X)?(:[^|;]*)?)?(\\|?\\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\\|NAME)?)?")?( "str:[^|;]*")?;$']
     }, {
       color: '#FF534F',
       words: ['^.*$']

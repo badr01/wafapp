@@ -70,7 +70,7 @@ public class FileHandling {
         Template t = Velocity.getTemplate("templates/haproxy_conf.vm");
         VelocityContext context = new VelocityContext();
         context.put("sites", list);
-        context.put("rate", "100");
+        context.put("rate", settings.getDdosRate());
         StringWriter writer = new StringWriter();
         t.merge(context, writer);
 

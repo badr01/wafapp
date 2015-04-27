@@ -18,7 +18,16 @@ public class Settings {
     private String naxsiConfDir;
     private String haproxyConfDir;
     private String siteCertDir;
+    private long ddosRate;
     private ArrayList<Wl> whitelistRules;
+
+    public long getDdosRate() {
+        return ddosRate;
+    }
+
+    public void setDdosRate(long ddosRate) {
+        this.ddosRate = ddosRate;
+    }
 
     public Settings() {
     }
@@ -30,7 +39,6 @@ public class Settings {
     public void setWhitelistRules(ArrayList<Wl> whitelistRules) {
         this.whitelistRules = whitelistRules;
     }
-
 
     public String getKey() {
         return key;
@@ -47,7 +55,6 @@ public class Settings {
     public void setNaxsiConfDir(String naxsiConfDir) {
         this.naxsiConfDir = naxsiConfDir;
     }
-
 
     public String getHaproxyConfDir() {
         return haproxyConfDir;

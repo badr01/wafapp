@@ -1,6 +1,14 @@
-<h1 class="cover-heading ng-scope">Règlages</h1>
-
 <div ng-controller="SettingsController">
+<div class="row">
+  <div class="col-md-6">
+    <h1 class="cover-heading ng-scope ">Règlages</h1>
+  </div>
+  <div class="col-md-6">
+    <button type="button" class="btn btn-success btn-lg pull-right" ng-click="open()"><span
+      class="glyphicon glyphicon-floppy-disk"></span>Enregistrer les modifications
+    </button>
+  </div>
+</div>
   <hr>
   <div>
     <label>Chemin de configuration nginx:</label>
@@ -108,27 +116,53 @@
     </div>
   </div>
   <div>
+    <label>Nombre de requêtes par seconde tolérées par haproxy:</label>
+
+    <div ng-hide="editorEnabled.ddosRate" class="relpos">
+      <pre>{{options.ddosRate}}</pre>
+      <div class="inplacepre">
+        <a class="btn btn-success btn-sm" ng-click="enableEditor('ddosRate')"><span
+          class="glyphicon glyphicon-pencil"></span></a>
+      </div>
+    </div>
+    <div ng-show="editorEnabled.ddosRate" class="relpos">
+      <input class="form-control" ng-model="editable.ddosRate">
+
+      <div class="inplaceinput">
+        <a class="btn btn-primary btn-sm" ng-click="save('ddosRate')"><span
+          class="glyphicon glyphicon-floppy-disk"></span></a>
+        <a class="btn btn-default btn-sm" ng-click="disableEditor('ddosRate')"><span
+          class="glyphicon glyphicon-remove"></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div>
     <label>Règles de white list:</label>
 
-    <div  class="relpos">
+    <div class="relpos">
       <pre class="pre-scrollable" style="height: 150px">
 
         <div ng-repeat="wl in options.whitelistRules track by $index"><span><label>ID:</label>{{wl.id}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span><label>Description:</label>{{wl.desc}}</span><a
-          ng-click="removeWL($index)" class="btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-trash"></span></a>
-             </div>
+          ng-click="removeWL($index)" class="btn btn-default btn-xs pull-right"><span
+          class="glyphicon glyphicon-trash"></span></a>
+        </div>
 
       </pre>
-      <div >
-        <a ng-hide="editorEnabled.whitelistRules" class="btn btn-primary btn-sm" ng-click="enableEditor('whitelistRules')"><span
+      <div>
+        <a ng-hide="editorEnabled.whitelistRules" class="btn btn-primary btn-sm"
+           ng-click="enableEditor('whitelistRules')"><span
           class="glyphicon glyphicon-plus"></span> Ajouter une règle</a>
+
         <div ng-show="editorEnabled.whitelistRules" class="relpos">
           <div class="row">
-          <div class="col-md-3">
-          <input class="form-control" type="text" placeholder="Saisir l'identifiant de la règle" ng-model="reg.id">
-          </div>
-          <div class="col-md-8">
-            <input class="form-control" type="text" placeholder="Saisir la description de la règle" ng-model="reg.desc">
-          </div>
+            <div class="col-md-3">
+              <input class="form-control" type="text" placeholder="Saisir l'identifiant de la règle" ng-model="reg.id">
+            </div>
+            <div class="col-md-8">
+              <input class="form-control" type="text" placeholder="Saisir la description de la règle"
+                     ng-model="reg.desc">
+            </div>
           </div>
           <div class="inplaceinput">
             <a class="btn btn-primary btn-sm" ng-click="savewl()"><span
@@ -141,16 +175,14 @@
 
     </div>
   </div>
-  <hr>
-  <button type="button" class="btn btn-success btn-lg" ng-click="open()"  ><span
-    class="glyphicon glyphicon-floppy-disk"></span>Enregistrer les modifications</button>
-  <hr>
+
 </div>
 <!--save settings action confiramtion modal template-->
 
 <script type="text/ng-template" id="saveModalDialog">
   <div class="modal-header ">
-    <h4 class="modal-title"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span>Confirmer la mise à jour des préférences</h4>
+    <h4 class="modal-title"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span>Confirmer la mise à jour
+      des préférences</h4>
   </div>
   <div class="modal-body">
     <p>Êtes-vous sûr de vouloir mettre à jour les préférences?</p>

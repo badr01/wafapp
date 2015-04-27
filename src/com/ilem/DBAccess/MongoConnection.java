@@ -220,7 +220,7 @@ public class MongoConnection {
         } catch (JSONException e) {
             log.error("error while serializing JSON array", e);
         }
-        log.debug("Leaving getExtLogs(from,to):returned {} ", AllJson);
+        log.debug("Leaving getExtLogs(from,to):returned {} element", AllJson.length());
         return AllJson;
     }
 
@@ -239,7 +239,7 @@ public class MongoConnection {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        log.debug("Leaving getAccessLogs(from,to):returned {} ", AllJson);
+        log.debug("Leaving getAccessLogs(from,to):returned {} element", AllJson.length());
 
         return AllJson;
     }
@@ -259,7 +259,7 @@ public class MongoConnection {
         while (cursor.hasNext()) {
             allBackups.add(cursor.next());
         }
-        log.debug("Leaving getBackups(isProjected): returned {}",allBackups);
+        log.debug("Leaving getBackups(isProjected): returned {} element",allBackups.size());
 
         return allBackups;
     }
