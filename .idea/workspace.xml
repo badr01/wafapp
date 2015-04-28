@@ -13,28 +13,12 @@
     <list default="true" id="fe24c54c-97ec-497e-9e89-9792f92af6b8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/WEB-INF/classes/com/ilem/DBAccess/MongoConnection.class" afterPath="$PROJECT_DIR$/target/WafWebApplication/WEB-INF/classes/com/ilem/DBAccess/MongoConnection.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ilem/DBAccess/MongoConnection.class" afterPath="$PROJECT_DIR$/target/classes/com/ilem/DBAccess/MongoConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/Gruntfile.js" afterPath="$PROJECT_DIR$/frontend/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/WafWebApplication/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/WAFApp_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/WAFApp_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/app.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/.tmp/concat/scripts/app.min.js" afterPath="$PROJECT_DIR$/frontend/.tmp/concat/scripts/app.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/index.html" afterPath="$PROJECT_DIR$/frontend/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/dist/index.html" afterPath="$PROJECT_DIR$/frontend/dist/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/index.html" afterPath="$PROJECT_DIR$/target/WafWebApplication/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/dist/views/journalisation.html" afterPath="$PROJECT_DIR$/frontend/dist/views/journalisation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/views/journalisation.html" afterPath="$PROJECT_DIR$/target/WafWebApplication/views/journalisation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/journalisation.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/journalisation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/journalisationb.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/journalisationb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/log4j2.xml" afterPath="$PROJECT_DIR$/src/log4j2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/login-error.html" afterPath="$PROJECT_DIR$/frontend/app/login-error.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/login.html" afterPath="$PROJECT_DIR$/frontend/app/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/WafWebApplication/login.html" afterPath="$PROJECT_DIR$/target/WafWebApplication/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/dist/views/manage.html" afterPath="$PROJECT_DIR$/frontend/dist/views/manage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/manage.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/manage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/settings.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/settings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/controllers/update.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/controllers/update.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/app/scripts/services/restservices.js" afterPath="$PROJECT_DIR$/frontend/app/scripts/services/restservices.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WAFApp.iws" />
@@ -72,38 +56,7 @@
     <favorites_list name="WAFApp" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.666666" vertical-offset="0" max-vertical-offset="1854">
-              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="httpInterceptor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/services/httpInterceptor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-              <caret line="14" column="67" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="restservices.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/app/scripts/services/restservices.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13349815" vertical-offset="0" max-vertical-offset="809">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,7 +73,6 @@
         <option value="$PROJECT_DIR$/profiles.xml" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/frontend/dist/styles/eb94500c.components.min.css" />
-        <option value="$PROJECT_DIR$/frontend/app/scripts/services/restservices.js" />
         <option value="$PROJECT_DIR$/frontend/app/views/partials/header.html" />
         <option value="$PROJECT_DIR$/frontend/app/styles/main.less" />
         <option value="$PROJECT_DIR$/src/logging.properties" />
@@ -162,6 +114,7 @@
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/manage.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/settings.js" />
         <option value="$PROJECT_DIR$/frontend/app/scripts/controllers/update.js" />
+        <option value="$PROJECT_DIR$/frontend/app/scripts/services/restservices.js" />
       </list>
     </option>
   </component>
@@ -466,84 +419,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WAFApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WAFApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WAFApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WAFApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WAFApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WAFApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1107,7 +982,7 @@
       <workItem from="1429860791284" duration="19646000" />
       <workItem from="1430125121078" duration="6036000" />
       <workItem from="1430140473409" duration="6827000" />
-      <workItem from="1430206785615" duration="14753000" />
+      <workItem from="1430206785615" duration="14885000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1426676170024</created>
@@ -1259,11 +1134,17 @@
       <option name="project" value="LOCAL" />
       <updated>1430150102749</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="update&#10;">
+      <created>1430241952822</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1430241952822</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="566837000" />
+    <option name="totallyTimeSpent" value="566969000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1776,26 +1657,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
+    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/services/restservices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.666666" vertical-offset="0" max-vertical-offset="1854">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.6674907" vertical-offset="0" max-vertical-offset="809">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/app/scripts/services/httpInterceptor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+        <state vertical-scroll-proportion="0.30656934" vertical-offset="0" max-vertical-offset="822">
           <caret line="14" column="67" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/app/scripts/services/restservices.js">
+    <entry file="file://$PROJECT_DIR$/frontend/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13349815" vertical-offset="0" max-vertical-offset="809">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.713555" vertical-offset="0" max-vertical-offset="1854">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
           <folding />
         </state>
       </provider>

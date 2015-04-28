@@ -4,29 +4,29 @@
 'use strict';
 //rest api services
 myApp
-  .factory("Site", function ($resource) {
+  .factory("Site", ['$resource',function ($resource) {
 
   return $resource("./api/site/:domain");
-})
-  .factory("Status", function($resource) {
+}])
+  .factory("Status", ['$resource',function($resource) {
   return $resource("./api/terminal",{cmd:'@cmd'},{query: { method: "GET", isArray: false }});
-})
-  .factory("Error", function($resource) {
+}])
+  .factory("Error",['$resource', function($resource) {
   return $resource("./api/logs/error",{from:'@from',to:'@to'});
-})
-  .factory("Access", function($resource) {
+}])
+  .factory("Access",['$resource', function($resource) {
   return $resource("./api/logs/access",{from:'@from',to:'@to'});
-})
-  .factory("Update", function ($resource) {
+}])
+  .factory("Update",['$resource', function ($resource) {
 
   return $resource("./api/update");
-})
-  .factory("Backups", function ($resource) {
+}])
+  .factory("Backups",['$resource', function ($resource) {
   return $resource("./api/backups");
-})
-  .factory("Restore", function ($resource) {
+}])
+  .factory("Restore",['$resource', function ($resource) {
   return $resource("./api/backups/restore/:key");
-})
-  .factory("Settings", function ($resource) {
+}])
+  .factory("Settings", ['$resource',function ($resource) {
   return $resource("/api/settings");
-});
+}]);
