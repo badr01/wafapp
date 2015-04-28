@@ -1,6 +1,6 @@
 'use strict';
 //site list controller
-myApp.controller('ListCtrl', function ($scope, $modal, Site, $timeout) {
+myApp.controller('ListCtrl',['$scope','$modal','Site','$timeout', function ($scope, $modal, Site, $timeout) {
   $scope.update = function () {
     Site.query(function (data) {
       $scope.sites = data;
@@ -71,20 +71,20 @@ myApp.controller('ListCtrl', function ($scope, $modal, Site, $timeout) {
   };
 
 
-});
+}]);
 
 //controls the removal confirmation modal dialog
-myApp.controller('ModalDialogCtrl', function ($scope, $modalInstance) {
+myApp.controller('ModalDialogCtrl',['$scope', '$modalInstance', function ($scope, $modalInstance) {
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
   $scope.ok = function () {
     $modalInstance.close();
   };
-});
+}]);
 
 // modal that controls "Ajouter site" and "enregistrer site"
-myApp.controller('ModalCtrl', function ($scope, $modalInstance, domain, Site, modif) {
+myApp.controller('ModalCtrl',['$scope','$modalInnstance', 'domain', 'Site', 'modif', function ($scope, $modalInstance, domain, Site, modif) {
   if (typeof domain !== 'undefined') {
     Site.get({domain: domain}, function (data) {
       $scope.site = data;
@@ -92,7 +92,7 @@ myApp.controller('ModalCtrl', function ($scope, $modalInstance, domain, Site, mo
     $scope.modif = modif;
   } else {
     $scope.modif = false;
-   }
+  }
   //cancel and quit the modal dialog;
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
@@ -110,12 +110,12 @@ myApp.controller('ModalCtrl', function ($scope, $modalInstance, domain, Site, mo
     $modalInstance.close();
 
   };
-});
+}]);
 
 
 //whitelist modal controller
 
-myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $http, growl) {
+myApp.controller('WlModalCtrl',['$scope', '$modalInstance', 'site', 'Site', '$http', 'growl', function ($scope, $modalInstance, site, Site, $http, growl) {
   //dismiss and quit the modal dialog;
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
@@ -131,7 +131,7 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
     }
     ;
     wls.forEach(function (elt, ix, array) {
-       if (rx.test(elt) && $scope.site["wlList"].indexOf(elt) == -1) {
+      if (rx.test(elt) && $scope.site["wlList"].indexOf(elt) == -1) {
         $scope.site["wlList"].push(elt);
       }
     });
@@ -217,12 +217,12 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
   //watch changes in inputs and reflect them in main input
   $scope.$watch('[urlFltr,zone,urlContent,zoneContent,chkName,ids,strmatch]', function () {
 
-    $scope.current = buildStrIds($scope.ids) + buildStrMz($scope.urlFltr, $scope.urlContent, $scope.zone, $scope.zoneContent, $scope.chkName)+buildStrMatch($scope.strmatch) ;
-    $scope.current ==""?$scope.current +="":$scope.current +=";";
+    $scope.current = buildStrIds($scope.ids) + buildStrMz($scope.urlFltr, $scope.urlContent, $scope.zone, $scope.zoneContent, $scope.chkName) + buildStrMatch($scope.strmatch);
+    $scope.current == "" ? $scope.current += "" : $scope.current += ";";
   }, true);
 
 
-  //useful functions
+  //conditional string building functions
   var buildStrIds = function (ids) {
     if (ids.length != 0) {
       var str = "BasicRule wl:"
@@ -232,10 +232,11 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
       return str.substring(0, str.lastIndexOf(','));
     } else return "";
   };
-  var buildStrMatch=function(input){
+
+  var buildStrMatch = function (input) {
     var str = "";
-    if(input!=undefined&&input!=""){
-      str=" \"str:"+input+"\""
+    if (input != undefined && input != "") {
+      str = " \"str:" + input + "\""
     }
     return str;
   }
@@ -272,5 +273,5 @@ myApp.controller('WlModalCtrl', function ($scope, $modalInstance, site, Site, $h
       words: ['^.*$']
     }]
   };
-});
+}]);
 

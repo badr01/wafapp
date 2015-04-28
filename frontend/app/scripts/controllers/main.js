@@ -1,15 +1,15 @@
 'use strict';
 //header page controlller
 myApp
-  .controller('MainCtrl', function ($scope, $location, version) {
+  .controller('MainCtrl',['$scope','$location','version', function ($scope, $location, version) {
 
     $scope.$path = $location.path.bind($location);
     $scope.version = version;
 
-  })
+  }])
 //Status controller
 myApp
-  .controller('EtatCtrl', function ($scope, Status, growl) {
+  .controller('EtatCtrl',['$scope','Status','growl', function ($scope, Status, growl) {
     $scope.status = {output: "", nginxStatus: false, haproxyStatus: false};
     $scope.execute = function (cmd) {
       Status.query({cmd: cmd}, function (data) {
@@ -27,6 +27,6 @@ myApp
       growl.error(data.output);
     });
 
-  });
+  }]);
 
 

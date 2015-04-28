@@ -1,7 +1,7 @@
 'use strict';
 //settings controller
 myApp
-  .controller('SettingsController', function ($scope, Settings, growl, $modal, $timeout) {
+  .controller('SettingsController',['$scope', 'Settings', 'growl', '$modal', '$timeout', function ($scope, Settings, growl, $modal, $timeout) {
     //loading settings
     Settings.get(function (data) {
       $scope.options = data;
@@ -75,13 +75,13 @@ myApp
         $scope.options['whitelistRules'].push(angular.copy($scope.reg));
     }
 
-  });
+  }]);
 
-myApp.controller('SaveModalController', function ($scope, $modalInstance) {
+myApp.controller('SaveModalController',['$scope', '$modalInstance', function ($scope, $modalInstance) {
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
   $scope.ok = function () {
     $modalInstance.close();
   };
-});
+}]);

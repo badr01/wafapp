@@ -1,6 +1,6 @@
 'use strict';
 var loading=false;
-var myApp=angular.module('mgcrea.WafApp', ['angular-growl','ngResource','ngTagsInput','ui.bootstrap','smart-table', 'ngRoute', 'angularHighlightTextarea'])
+var myApp=angular.module('WafApp', ['angular-growl','ngResource','ngTagsInput','ui.bootstrap','smart-table', 'ngRoute', 'angularHighlightTextarea'])
 
   .constant('version', 'v0.1.0')
 

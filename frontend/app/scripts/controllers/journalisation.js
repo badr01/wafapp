@@ -36,7 +36,7 @@ myApp
 
 /*date picker controller logic*/
 
-myApp.controller('DatepickerCtrl', function ($scope, Access) {
+myApp.controller('DatepickerCtrl',['$scope','Access', function ($scope, Access) {
    $scope.today = function (dt) {
     $scope[dt] = new Date();
   };
@@ -70,5 +70,5 @@ myApp.controller('DatepickerCtrl', function ($scope, Access) {
 
   $scope.format = 'MM/dd/yyyy, HH:mm:ss';
 
-});
+}]);
 

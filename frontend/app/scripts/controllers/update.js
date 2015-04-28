@@ -1,7 +1,6 @@
 'use strict';
 
-var myApp = angular.module('mgcrea.WafApp');
-myApp.controller('UpdateCntrl', function ($scope, Backups, Update, Restore, $timeout, $modal, growl) {
+myApp.controller('UpdateCntrl',['$scope', 'Backups', 'Update', 'Restore', '$timeout', '$modal', 'growl', function ($scope, Backups, Update, Restore, $timeout, $modal, growl) {
   Backups.query(function (data) {
     $scope.ops = data;
   });
@@ -64,25 +63,25 @@ myApp.controller('UpdateCntrl', function ($scope, Backups, Update, Restore, $tim
   $scope.toDate = function (ts) {
     return new Date(ts).toLocaleString('en-US', { hour12: false });
   };
-})
+}])
 
 
 //controls the restore action confirmation modal dialog
-myApp.controller('RestoreDialogCtrl', function ($scope, $modalInstance) {
+myApp.controller('RestoreDialogCtrl',['$scope', '$modalInstance', function ($scope, $modalInstance) {
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
   $scope.ok = function () {
     $modalInstance.close();
   };
-});
+}]);
 
 //controls the update action confirmation modal dialog
-myApp.controller('UpdateDialogCtrl', function ($scope, $modalInstance) {
+myApp.controller('UpdateDialogCtrl',['$scope', '$modalInstance', function ($scope, $modalInstance) {
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
   $scope.ok = function () {
     $modalInstance.close();
   };
-});
+}]);

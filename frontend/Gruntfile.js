@@ -127,7 +127,6 @@ module.exports = function(grunt) {
             '.tmp',
             '<%= yo.dist %>/*',
             '!<%= yo.dist %>/.git*',
-            '!<%= yo.dist %>/index.jsp',
             '!<%= yo.dist %>/WEB-INF/**'
           ]
         }]

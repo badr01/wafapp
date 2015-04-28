@@ -67,7 +67,7 @@ myApp.filter('highlight', function ($sce) {
 
 /*date picker controller logic*/
 
-myApp.controller('DatepickerBCtrl', function ($scope, Error) {
+myApp.controller('DatepickerBCtrl',['$scope','Error', function ($scope, Error) {
   $scope.today = function (dt) {
     $scope[dt] = new Date();
   };
@@ -103,4 +103,4 @@ myApp.controller('DatepickerBCtrl', function ($scope, Error) {
 
 
   $scope.format = 'MM/dd/yyyy, HH:mm:ss';
-});
+}]);

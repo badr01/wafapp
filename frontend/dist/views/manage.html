@@ -48,11 +48,11 @@
           <div class="form-group">
             <label for="msgError">Message d'erreur</label>
             <textarea type="textarea" class="form-control" id="msgError" ng-model="site.msgError"
-                      placeholder="Entrer message d'erreur ..." required/>
+                      placeholder="Entrer message d'erreur ..." required></textarea>
           </div>
           <div class="form-group">
             <label for="mode">Mode</label>
-            <input type="checkbox" id="mode" ng-model="site.mode">
+            <input ng-init="site.mode=true" type="checkbox" id="mode" ng-model="site.mode">
             <span ng-if="site.mode" class="label label-success">Learning</span>
             <span ng-if="!site.mode" class="label label-danger">Blocking</span>
           </div>
@@ -165,11 +165,16 @@
 
           </div>
         </div>
+        <div class="form-group">
+          <label>Correspondre à une chaine de caractères</label>
+              <input type="text" class="form-control" ng-model="strmatch"
+                     placeholder="Entrer le contenu">
+          </div>
         <form name="wlForm">
           <div class="form-group has-feedback"
                ng-class="{'has-error':wlForm.current.$error.pattern,'has-success':!wlForm.current.$error.pattern}">
             <input type="text" class="form-control" name="current" id="current" ng-model="current"
-                   ng-pattern='/BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?;/'
+                   ng-pattern='/BasicRule wl:[0-9]{1,4}(,[0-9]{1,4})*\s("mz:(\$?URL(_X)?(:[^|;]*)?)?(\|?\$?(ARGS|ARGS_VAR:[^|;]*|ARGS_VAR_X:[^|;]*|HEADERS|HEADERS_VAR:[^|;]*|HEADERS_VAR_X:[^|;]|BODY|BODY_VAR:[^|;]*|BODY_VAR_X:[^|;]|URL|URL:[^|;]*|URL_X:[^|;]*)(\|NAME)?)?")?( "str:[^|;]*")?;/'
                    placeholder="Entrer une règle" required>
             <span ng-show="!wlForm.current.$error.pattern" class="glyphicon glyphicon-ok form-control-feedback"
                   aria-hidden="true"></span>
